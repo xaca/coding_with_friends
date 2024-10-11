@@ -21,4 +21,4 @@ Participa de un evento de tecnología con contenido interesante y de vanguardia.
 
 ## Recursos
 
-- [https://codepen.io/xaca/pen/jbYEJL](Plantilla tabla de posiciones)
+- [Plantilla tabla de posiciones](https://codepen.io/xaca/pen/jbYEJL)
