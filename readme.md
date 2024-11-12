@@ -4,20 +4,23 @@ Repositorio informativo sobre los eventos de la comunidad Codign with friends de
 
 ## Mensaje para compartir en whatsApp
 
-*(◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)*
+(◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
 
-◦•●❤♡ ¢hårlå§ ♡❤●•◦
+🎄 *Última charla del 2024* 🦌
 
-🎨 Gobierno de un Design System  
-🧙‍♂️ Debugging tech interviews  
+👨‍💻 *Explorando Angular y React: ¿Cuál elegir?*
+🎤 *Speakers:* Axel & Felipe
 
-📍 *Lugar:* Aula 327 bloque 10 Arquidiseño.  
-🏫 *Dirección:* UPB, campus Laureles.  
-⏰ *Hora:* 17:30 - 20:00.  
-🌐 *Website:* https://xaca.github.io/eventos  
+Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descubrelo en nuestro último evento del año, disfrutaremos de un espacio de finalización de semestre lleno de mucho conocimiento, sorpresas y buenos amigos, cordialmente invitados. 🌟
 
-*¡Te invitamos a un nuevo evento!*
-Participa de un evento de tecnología con contenido interesante y de vanguardia.
+🎅 *Presencial, para todo público*🤶
+
+🗓️ *Fecha:* 14 de Noviembre
+⏰ *Hora:* 17:00 - 20:00
+🌐 *Website:* https://www.codingwithfriends.club
+📍 *Lugar:* Aula 616 bloque 11, UPB.
+
+¡Te invitamos a un nuevo evento! Participa de un evento de tecnología con contenido interesante y de vanguardia.
 
 ## Recursos
 
