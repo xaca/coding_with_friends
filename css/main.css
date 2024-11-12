@@ -1,5 +1,5 @@
 
-:root{
+/*:root{
   --color-titulos:#ce11be;
   --color-texto:#F7B7F2;
   --color-boton:#4FF2D9;
@@ -18,6 +18,26 @@
   --color-fecha:#160c34;
   --color-fondo-destacado:#190830;
   --color-destacado:#160c34;
+}*/
+:root{
+  --color-titulos: #c0392b; /* Rojo borgoña */
+  --color-texto: #ffd700; /* Blanco */
+  --color-boton: #228b22; /* Verde oscuro */
+  --color-texto-boton: #ffd700;
+  --color-borde-tarjetas: #c0392b;
+  --color-lista-par: #ffffff;
+  --color-lista-texto-par: #c0392b;
+  --color-lista-impar: #228b22;
+  --color-lista-texto-impar: #ffffff;
+  --color-fondo: #d9f0f2; /* Gris oscuro */
+  --color-enlaces_menu: #c0392b;
+  --color-enlaces_general: #c0392b;
+  --color-pata: #228b22; /* Dorado */
+  --color-texto-pata: #242424;
+  --color-sombra: #c0392b;
+  --color-fecha: #228b22;
+  --color-fondo-destacado: #c0392b;
+  --color-destacado: #228b22;
 }
 body,html{
   overflow-x: hidden;
