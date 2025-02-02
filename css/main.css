@@ -1,43 +1,33 @@
-
-/*:root{
-  --color-titulos:#ce11be;
-  --color-texto:#F7B7F2;
-  --color-boton:#4FF2D9;
-  --color-texto-boton:#240538;
-  --color-borde-tarjetas:#4FF2D9;
-  --color-lista-par:#F7B7F2;
-  --color-lista-texto-par:#3d126f;
-  --color-lista-impar:#AA7FDB;
-  --color-lista-texto-impar:#75156d;
-  --color-fondo:#240538;
-  --color-enlaces_menu:#4FF2D9;
-  --color-enlaces_general:#ea38db;
-  --color-pata:#AA7FDB;
-  --color-texto-pata:#240538;
-  --color-sombra:#F7B7F2;
-  --color-fecha:#160c34;
-  --color-fondo-destacado:#190830;
-  --color-destacado:#160c34;
-}*/
 :root{
-  --color-titulos: #c0392b; /* Rojo borgoña */
-  --color-texto: #ffd700; /* Blanco */
-  --color-boton: #228b22; /* Verde oscuro */
-  --color-texto-boton: #ffd700;
-  --color-borde-tarjetas: #c0392b;
-  --color-lista-par: #ffffff;
-  --color-lista-texto-par: #c0392b;
-  --color-lista-impar: #228b22;
+  
+  --color-titulos: #bef720; 
+  --color-texto: #A6A39F; 
+  --color-boton: #242424; 
+  --color-texto-boton: #A6A39F;
+  --color-borde-tarjetas: #F2F2F0;
+  --color-lista-par: #403D38;
+  --color-lista-texto-par: #F2F2F0;
+  --color-lista-impar: #242424;
   --color-lista-texto-impar: #ffffff;
-  --color-fondo: #d9f0f2; /* Gris oscuro */
-  --color-enlaces_menu: #c0392b;
-  --color-enlaces_general: #c0392b;
-  --color-pata: #228b22; /* Dorado */
-  --color-texto-pata: #242424;
-  --color-sombra: #c0392b;
-  --color-fecha: #228b22;
-  --color-fondo-destacado: #c0392b;
-  --color-destacado: #228b22;
+  --color-fondo:white; /* Gris oscuro */
+  --color-enlaces_menu: #011204;
+  --color-enlaces_general: #F2F2F0;
+  --color-pata: #242424; /* Dorado */
+  --color-texto-pata: white;
+  --color-sombra: #F2F2F0;
+  --color-fecha: #242424;
+  --color-fondo-destacado: #F2F2F0;
+  --color-destacado: #242424;
+  --color-home:#090A0A;
+  --color-frase:#DDED63;
+  --color-fondo-cine:#090A0A;
+  --color-fondo-menu:#b6cb15;
+}
+#cine{
+  background-color: var(--color-fondo-cine);
+}
+#home,#deportes{
+  background-color: var(--color-home);
 }
 body,html{
   overflow-x: hidden;
@@ -53,6 +43,9 @@ ul {
 }
 h1,h2{
   color: var(--color-titulos);
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
 }
 h1{
   font-weight: 900;
@@ -111,11 +104,20 @@ div {
   width: 100%;
   text-align: center;
 }
-
-div > img {
+.foto{
+  width: 20%;
+}
+.frase{
+  width:70%;
+  margin:60px auto;
+  font-size: 24pt;
+  text-align: center;
+  color:var(--color-frase);
+}
+.logo_principal {
   width: 90%;
   max-width: 682px;
-  margin: 20px;
+  /*margin: 20px;*/
 }
 #btn_registro{
   display: block;
@@ -214,6 +216,9 @@ div > img {
 .lista_generica{
   margin-left: 40px;
 }
+.lista_generica a{
+  color:var(--color-lista-impar);
+}
 .torneos{
   text-align: center;
   margin:0 auto;
@@ -251,19 +256,34 @@ div > img {
   margin: 0 auto;
   padding: 20px;
   margin-bottom: 20px;
-  background: rgba(13, 9, 36, 0.84);
+  background: var(--color-fondo-menu);
   border-radius: 20px;
+}
+.menu .seleccion{
+  background: white;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 30px;
+  width: 8vw;
+  text-align: center;
+  border-radius: 6px;
 }
 .menu a{
   color:var(--color-enlaces_menu);
   text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
 }
 .menu a:hover{
   text-decoration: underline;
 }
-#deportes{
-  background: var(--color-fondo);
-  color:var(--color-enlaces_general);
+.seccion{
+  width: 80%;
+  margin: 20px auto;
+}
+iframe .teQAzf{
+  background-color: white;
 }
 /* Celuar Pro Max */
 @media (min-width: 421px) and (max-width:500px) {
@@ -289,6 +309,7 @@ div > img {
     display: flex;
     flex-direction: column;
   }
+  .menu .seleccion{width: 20vw;}
 }
 /*Celular*/
 @media (max-width: 420px)  {
@@ -332,6 +353,7 @@ div > img {
     width: 250px;
     margin:10px auto;
   }
+  .menu .seleccion{width: 20vw;}
 }
 /*Tablet*/
 @media (min-width: 501px) and (max-width:810px) {
@@ -342,6 +364,7 @@ div > img {
     width: 700px;
     margin: 0 auto;
   }
+  .menu .seleccion{width: 12vw;}
 }
 /*Escritorio*/
 @media (min-width: 811px){

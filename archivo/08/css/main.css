@@ -1,0 +1,385 @@
+
+/*:root{
+  --color-titulos:#ce11be;
+  --color-texto:#F7B7F2;
+  --color-boton:#4FF2D9;
+  --color-texto-boton:#240538;
+  --color-borde-tarjetas:#4FF2D9;
+  --color-lista-par:#F7B7F2;
+  --color-lista-texto-par:#3d126f;
+  --color-lista-impar:#AA7FDB;
+  --color-lista-texto-impar:#75156d;
+  --color-fondo:#240538;
+  --color-enlaces_menu:#4FF2D9;
+  --color-enlaces_general:#ea38db;
+  --color-pata:#AA7FDB;
+  --color-texto-pata:#240538;
+  --color-sombra:#F7B7F2;
+  --color-fecha:#160c34;
+  --color-fondo-destacado:#190830;
+  --color-destacado:#160c34;
+}*/
+:root{
+  --color-titulos: #c0392b; /* Rojo borgoña */
+  --color-texto: #ffd700; /* Blanco */
+  --color-boton: #228b22; /* Verde oscuro */
+  --color-texto-boton: #ffd700;
+  --color-borde-tarjetas: #c0392b;
+  --color-lista-par: #ffffff;
+  --color-lista-texto-par: #c0392b;
+  --color-lista-impar: #228b22;
+  --color-lista-texto-impar: #ffffff;
+  --color-fondo: #d9f0f2; /* Gris oscuro */
+  --color-enlaces_menu: #c0392b;
+  --color-enlaces_general: #c0392b;
+  --color-pata: #228b22; /* Dorado */
+  --color-texto-pata: #242424;
+  --color-sombra: #c0392b;
+  --color-fecha: #228b22;
+  --color-fondo-destacado: #c0392b;
+  --color-destacado: #228b22;
+}
+body,html{
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+ul {
+  padding: 0;
+}
+h1,h2{
+  color: var(--color-titulos);
+}
+h1{
+  font-weight: 900;
+  font-size: 22px;
+}
+h2{
+  font-weight: 700;
+  font-size: 18px;
+}
+.mensaje_importante{
+  font-weight: 400;
+  font-size: 16px;
+  color:var(--color-destacado);
+}
+section{
+  padding: 20px;
+  margin-bottom: 60px;
+}
+.item {
+  list-style-type: none;
+  font-weight: 400;
+  height: auto;
+  line-height: 50px;
+  padding-left: 30px;
+}
+.item span:nth-child(2){
+  line-height: 23px; /* Titulo de la actividad */
+  margin-left: 20px;
+  display: block;
+}
+.item:nth-child(even) {
+  background: var(--color-lista-par);
+  color: var(--color-lista-texto-par);
+}
+.item:nth-child(odd) {
+  background:var(--color-lista-impar);
+  color: var(--color-lista-texto-impar);
+}
+.item span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.speaker {
+  font-weight: normal;
+}
+a {
+  color:var(--color-enlaces_general);
+}
+a.autor{
+  color:var(--color-fondo);
+  text-decoration: underline;
+  margin-top: 10px;
+  font-size: 16px;
+}
+div {
+  width: 100%;
+  text-align: center;
+}
+
+div > img {
+  width: 90%;
+  max-width: 682px;
+  margin: 20px;
+}
+#btn_registro{
+  display: block;
+  text-decoration: none;
+  color: var(--color-texto-boton);
+  background: var(--color-boton);
+  padding: 12px 60px;
+  width:80%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+  text-align: center;
+  margin:0 auto;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px  var(--color-sombra);
+}
+#btn_registro:hover{
+  background: var(--color-texto-boton);
+  color: var(--color-boton);
+}
+#speakers section{
+  display: flex;
+  justify-content: space-around;
+}
+.tarjeta_speaker{
+  width: 200px;
+  border: 1px solid var(--color-borde-tarjetas);
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 15px;
+}
+.tarjeta_speaker ul{
+  text-align: left;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.nombre_tarjeta{
+  font-weight: 600;
+  font-size: 14px;
+  color:var(--color-primario);
+}
+.fecha{
+  color: var(--color-texto);
+  font-weight: 600;
+}
+.descripcion{
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+.avatar{
+  border:1px solid var(--color-terciario);
+  border-radius: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.speaker_1{
+  background-image: url(../img/01_speaker.jpg);
+}
+.speaker_2{
+  background-image: url(../img/02_speaker.jpg);
+}
+.speaker_3{
+  background-image: url(../img/03_speaker.jpg);
+}
+.enlace{
+  text-decoration: none;
+}
+#sponsors{
+  width: 100%;
+  background-color: var(--color-pata);
+  margin:0;
+  height: auto;
+  padding-bottom: 30px;
+}
+#sponsors h2{
+  margin-left: 20px;
+  padding-top:30px;
+  color:var(--color-texto-pata);
+}
+.enlace_sponsor{
+  margin-right: 10px;
+  text-decoration: none;
+}
+#agenda li:first-child{
+  border-radius: 20px 20px 0 0;
+}
+#agenda li:last-child{
+  border-radius: 0 0 20px 20px;
+}
+.lista_generica{
+  margin-left: 40px;
+}
+.torneos{
+  text-align: center;
+  margin:0 auto;
+  width: 800px;
+  height: 900px;
+  padding-bottom: 20px;
+  display: none;
+}
+.torneos section{
+  display: inline-block;
+  border-radius:10px;
+  border:1px solid var(--color-terciario);
+  height: 320px;
+  vertical-align: top;
+}
+.anuncio{
+  text-align: left;
+  margin:30px;
+}
+.destacado{
+  width: 70%;
+  margin:0 auto;
+  text-align: left;
+  margin-bottom: 60px;
+  background: var(--color-fondo-destacado);
+  border-radius: 10px;
+  padding: 40px;
+}
+.imagen_evento{
+  display: block;
+  margin: 0 auto;
+}
+.menu{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: rgba(13, 9, 36, 0.84);
+  border-radius: 20px;
+}
+.menu a{
+  color:var(--color-enlaces_menu);
+  text-decoration: none;
+}
+.menu a:hover{
+  text-decoration: underline;
+}
+#deportes{
+  background: var(--color-fondo);
+  color:var(--color-enlaces_general);
+}
+/* Celuar Pro Max */
+@media (min-width: 421px) and (max-width:500px) {
+  .tarjeta_speaker{
+    width: 320px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 10px auto;
+  }
+  .descripcion{
+    text-align: left;
+  }
+  .avatar{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .enlace_sponsor{
+    display: block;
+  }
+  #speakers section{
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*Celular*/
+@media (max-width: 420px)  {
+  .torneos{
+    width: 300px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .anuncio{
+    width: 300px;
+  }
+  li {
+    height: auto;
+    padding: 2px 10px;
+    line-height: 30px;
+  }
+  li > span {
+    display: block;
+  }
+  .speaker {
+    font-weight: 500;
+    display: block;
+  }
+  #speakers section{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .tarjeta_speaker{
+    margin-bottom: 20px;
+  }
+  .enlace_sponsor{
+    height: 20%;
+  }
+  .avatar{
+    margin: 0 auto;
+  }
+  #sponsors img{
+    /*width: 100px;*/
+  }
+  .tarjeta_speaker{
+    width: 250px;
+    margin:10px auto;
+  }
+}
+/*Tablet*/
+@media (min-width: 501px) and (max-width:810px) {
+  .enlace_sponsor{
+    width: 100%;
+  }
+  .anuncio{
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+/*Escritorio*/
+@media (min-width: 811px){
+  .avatar{
+  
+  }
+  .tarjeta_speaker{
+    width: 850px;
+    margin: 50px auto;
+  
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+  }
+  #speakers section{
+    flex-direction: column;
+  }
+  .descripcion{
+    width: 300px;
+    margin-left: 20px;
+  }
+  .vertical_escritorio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .redes{
+    width: 100px;
+  }
+  .nombre_tarjeta{
+    font-size: 23px;
+    width: 130px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .egreso{
+    width: 120px;
+  }
+}
