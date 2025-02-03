@@ -353,7 +353,7 @@ iframe .teQAzf{
     width: 250px;
     margin:10px auto;
   }
-  .menu .seleccion{width: 20vw;}
+  .menu .seleccion{width: 25vw;}
 }
 /*Tablet*/
 @media (min-width: 501px) and (max-width:810px) {
