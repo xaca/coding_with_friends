@@ -1,0 +1,42 @@
+ul {
+    padding: 0;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+.item {
+    list-style-type: none;
+    font-weight: 400;
+    height: auto;
+    line-height: 50px;
+    padding-left: 30px;
+}
+.item span:nth-child(2){
+    line-height: 23px; /* Titulo de la actividad */
+    margin-left: 20px;
+    display: block;
+}
+.item span {
+    font-size: 18px;
+    font-weight: 500;
+}
+.lista_generica{
+    margin-left: 40px;
+}
+.item:nth-child(even) {
+    background: var(--color-lista-par);
+    color: var(--color-lista-texto-par);
+}
+.item:nth-child(odd) {
+    background:var(--color-lista-impar);
+    color: var(--color-lista-texto-impar);
+}
+.lista_generica a{
+    color:var(--color-lista-impar);
+}
+#agenda li:first-child{
+    border-radius: 20px 20px 0 0;
+}
+#agenda li:last-child{
+    border-radius: 0 0 20px 20px;
+}

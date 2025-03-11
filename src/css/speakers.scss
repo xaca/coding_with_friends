@@ -1,0 +1,36 @@
+.tarjeta_speaker{
+    width: 200px;
+    border: 1px solid var(--color-borde-tarjetas);
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 15px;
+}
+.tarjeta_speaker ul{
+    text-align: left;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.nombre_tarjeta{
+    font-weight: 600;
+    font-size: 14px;
+    color:var(--color-primario);
+}
+.speaker {
+    font-weight: normal;
+}
+#speakers section{
+    display: flex;
+    justify-content: space-around;
+}
+.avatar{
+    border:1px solid var(--color-terciario);
+    border-radius: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.enlace{
+   margin-left: 7px;
+}

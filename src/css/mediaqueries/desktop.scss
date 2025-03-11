@@ -1,0 +1,45 @@
+/*Escritorio*/
+@media (min-width: 811px){
+    .avatar{
+
+    }
+    .tarjeta_speaker{
+        width: 850px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+    }
+    #speakers section{
+        flex-direction: column;
+    }
+    .descripcion{
+        width: 300px;
+        margin-left: 20px;
+    }
+    .vertical_escritorio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .redes{
+        width: 100px;
+    }
+    .nombre_tarjeta{
+        font-size: 23px;
+        width: 130px;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .egreso{
+        width: 120px;
+    }
+    .separador{
+        display: none;
+    }
+    .menu .seleccion{
+        width: 12vw;
+    }
+}

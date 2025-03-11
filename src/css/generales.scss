@@ -1,0 +1,117 @@
+body,html{
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+h1,h2{
+    color: var(--color-titulos);
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+h1{
+    font-weight: 900;
+    font-size: 22px;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+.mensaje_importante{
+    font-weight: 400;
+    font-size: 16px;
+    color:var(--color-destacado);
+}
+section{
+    padding: 20px;
+    margin-bottom: 60px;
+}
+div {
+    width: 100%;
+    text-align: center;
+}
+.foto{
+    width: 20%;
+}
+.frase{
+    width:70%;
+    margin:60px auto;
+    font-size: 24pt;
+    text-align: center;
+    color:var(--color-frase);
+}
+.logo_principal {
+    width: 90%;
+    max-width: 682px;
+    /*margin: 20px;*/
+}
+#btn_registro{
+    display: block;
+    text-decoration: none;
+    color: var(--color-texto-boton);
+    background: var(--color-boton);
+    padding: 12px 60px;
+    width:80%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 10px;
+    text-align: center;
+    margin:0 auto;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px  var(--color-sombra);
+}
+#btn_registro:hover{
+    background: var(--color-texto-boton);
+    color: var(--color-boton);
+}
+.fecha{
+    color: var(--color-texto);
+}
+.fecha span{
+    font-weight: 600;
+}
+.descripcion{
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: -.5px;
+}
+.anuncio{
+    text-align: left;
+    margin:30px;
+}
+.destacado{
+    width: 70%;
+    margin:0 auto;
+    text-align: left;
+    margin-bottom: 60px;
+    background: var(--color-fondo-destacado);
+    border-radius: 10px;
+    padding: 40px;
+}
+.imagen_evento{
+    display: block;
+    margin: 0 auto;
+}
+.seccion{
+    width: 80%;
+    margin: 20px auto;
+}
+iframe .teQAzf{
+    background-color: white;
+}
+#about p, #register p, #info p, #eventos_anteriores{
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+#eventos_anteriores a{
+    color:var(--color-frase);
+} 
+
+  

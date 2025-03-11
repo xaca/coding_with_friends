@@ -1,0 +1,39 @@
+.menu{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--color-fondo-menu);
+    border-radius: 20px;
+}
+.menu a{
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 30px;
+    height: 30px;
+    width: 8vw;
+    color:var(--color-enlaces_menu);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.active{
+    background: white;
+    text-align: center;
+    border-radius: 6px;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+a{
+    color:var(--color-enlaces_general);
+}
+a.autor{
+    color:var(--color-fondo);
+    text-decoration: underline;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.enlace{
+    text-decoration: none;
+}
