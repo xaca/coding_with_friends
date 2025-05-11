@@ -1,6 +1,10 @@
 /*Tablet*/
 @media (min-width: 501px) and (max-width:810px) {
-
+    
+    .avatar{
+        display: inline-block;
+        margin:0 auto;
+    }
     .enlace_sponsor{
         width: 100%;
     }
@@ -11,6 +15,9 @@
     .menu .seleccion{
         width: 12vw;
     }
+    .imagen_intro_evento{
+        width: 90%;
+    }    
     #speakers section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -19,6 +26,7 @@
         grid-row-gap: 10px;
     }
     .tarjeta_speaker{
+        width: 80%;
         margin: 12px auto;
     }
 }

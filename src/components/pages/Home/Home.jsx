@@ -4,6 +4,11 @@ import Slider from "../../ui/Slider/Slider";
 import Header from "../../ui/Header/Header";
 import Footer from "../../ui/Footer/Footer";
 import Menu from "../../ui/Menu/Menu";
+import '../../../css/variables.scss';
+import '../../../css/generales.scss';
+import '../../../css/mediaqueries/mobile.scss';
+import '../../../css/mediaqueries/tablet.scss';
+import '../../../css/mediaqueries/desktop.scss';
 import "./Home.scss";
 
 function Home(){

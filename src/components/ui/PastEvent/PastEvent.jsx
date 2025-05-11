@@ -1,3 +1,4 @@
+
 function OpenPastEvent(){
 
   const childUrl = window.open('/preview', '_blank');
@@ -6,36 +7,39 @@ function OpenPastEvent(){
 
 }
 function PastEvent(){
-    return (<>
-      <section id="eventos_anteriores">
-      <h2>Eventos anteriores</h2>
-      <ul className="lista_generica">
-        <li>
-          🌱 <a href="https://codingwithfriends.club/archivo/01/" target="_blank">CWF - CONF (el inicio)</a>
-        </li>
-        <li>
-          🍼 <a href="https://codingwithfriends.club/archivo/02/" target="_blank">CWF - Renacimiento</a>
-        </li>
-        <li>
-          🎙️ <a href="https://codingwithfriends.club/archivo/03/" target="_blank">CWF - Día de la mujer</a>
-        </li>
-        <li>
-          🕵️ <a href="https://codingwithfriends.club/archivo/04/" target="_blank">CWF - Hackerone</a>
-        </li>
-        <li>
-          🕹️ <a href="https://codingwithfriends.club/archivo/05/" target="_blank">CWF - VR / Touchdesigner</a>
-        </li>
-        <li>
-          🖲️ <a href="https://codingwithfriends.club/archivo/06/" target="_blank">CWF - Design / WebGL</a>
-        </li>
-        <li>
-          🏛️ <a href="https://codingwithfriends.club/archivo/07/" target="_blank">CWF - G.D.S. / Hacking Interviews</a>
-        </li>
-        <li>
-          ⚔️ <a href="https://codingwithfriends.club/archivo/08/" target="_blank">CWF - React vs Angular</a>
-        </li>
-      </ul>
-    </section>
-    </>);
+    const eventos = [
+        { id: '01', emoji: '🌱', title: 'CWF - CONF (el inicio)' },
+        { id: '02', emoji: '🍼', title: 'CWF - Renacimiento' },
+        { id: '03', emoji: '🎙️', title: 'CWF - Día de la mujer' },
+        { id: '04', emoji: '🕵️', title: 'CWF - Hackerone' },
+        { id: '05', emoji: '🕹️', title: 'CWF - VR / Touchdesigner' },
+        { id: '06', emoji: '🖲️', title: 'CWF - Design / WebGL' },
+        { id: '07', emoji: '🏛️', title: 'CWF - G.D.S. / Hacking Interviews' },
+        { id: '08', emoji: '⚔️', title: 'CWF - React vs Angular' }
+    ];
+
+    return (
+        <section id="eventos_anteriores" className="eventos-anteriores">
+            <h2>Eventos anteriores</h2>
+            <ul className="lista-generica">
+                {eventos.map((evento) => (
+                    <li key={evento.id}>
+                        {evento.emoji}{' '}
+                        <a 
+                            href={`/archivo/${evento.id}/index.html`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const childUrl = window.open(`/archivo/${evento.id}/index.html`, '_blank');
+                            }}
+                        >
+                            {evento.title}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
 }
 export default PastEvent;

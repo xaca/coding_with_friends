@@ -31,8 +31,8 @@ $destacado:#F2B90F;
     /*color:var(--color-lista-impar);*/
 }
 .imagen_intro_evento{
+    width: 60%;
     border-radius: 10px;
-    height: 550px;
     display: block;
     margin: 0 auto;
 }
@@ -47,7 +47,7 @@ $destacado:#F2B90F;
     width: 100%;
 }
 .logo_evento{
-    width: 80%;
+    width: 100%;
     display: block;
     margin: 30px auto;
 }

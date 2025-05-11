@@ -1,9 +1,7 @@
 .tarjeta_speaker{
-    width: 200px;
     border: 1px solid var(--color-borde-tarjetas);
     border-radius: 10px;
     padding: 20px;
-    margin-right: 15px;
 }
 .tarjeta_speaker ul{
     text-align: left;
@@ -17,10 +15,6 @@
 }
 .speaker {
     font-weight: normal;
-}
-#speakers section{
-    display: flex;
-    justify-content: space-around;
 }
 .avatar{
     border:1px solid var(--color-terciario);
