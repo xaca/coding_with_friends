@@ -49,3 +49,10 @@ Humanizing Tech: An Online Conversation with Bibiana Souza
 ## Recursos
 
 - [Plantilla tabla de posiciones](https://codepen.io/xaca/pen/jbYEJL)
+
+# TODO
+
+- Ajustar responsive iphone mini videos
+- Cargar videos no listados
+- Abrir la ruta respectiva al navegar desde enlace
+- Activar sección cine

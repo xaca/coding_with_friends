@@ -6,7 +6,7 @@ function Menu(){
     <nav className="menu">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/charlas">Charlas</NavLink>
-        <NavLink to="/cine">Cine</NavLink>
+        {/*<NavLink to="/cine">Cine</NavLink>*/}
         <NavLink to="/online-events">Online</NavLink>
         {/*<NavLink to="/deportes">Deportes</NavLink>*/}
     </nav>
