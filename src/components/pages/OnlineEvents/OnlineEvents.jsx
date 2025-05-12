@@ -44,20 +44,31 @@ function OnlineEvents() {
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 2 });
   const [isAnimating, setIsAnimating] = useState(false);
   const thumbnailsRef = useRef(null);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
-    // This will run once when the component mounts
     const randomIndex = getRandomIndex();
     setCurrentIndex(randomIndex);
     setSelectedVideo(videoData[randomIndex]);
     
-    // Set initial visible range based on the random index
     const start = Math.max(0, Math.floor(randomIndex / 3) * 3);
     setVisibleRange({
       start,
       end: Math.min(start + 2, videoData.length - 1)
     });
-  }, []); // Empty dependency array means this runs once on mount
+
+    // Add resize listener to detect viewport changes
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 810);
+    };
+    
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const getVideoId = (url) => {
     return url.split('v=')[1];
@@ -69,7 +80,6 @@ function OnlineEvents() {
   };
 
   const formatTitle = (title) => {
-    // Remove hashtags and their content
     return title.replace(/#\w+/g, '').trim();
   };
 
@@ -77,29 +87,32 @@ function OnlineEvents() {
     const newIndex = (currentIndex - 1 + videoData.length) % videoData.length;
     setCurrentIndex(newIndex);
     setSelectedVideo(videoData[newIndex]);
+
+    if (isMobileView && (newIndex < visibleRange.start || newIndex > visibleRange.end)) {
+      handleThumbnailNavigation('prev');
+    }
   };
 
   const handleNextVideo = () => {
     const newIndex = (currentIndex + 1) % videoData.length;
     setCurrentIndex(newIndex);
     setSelectedVideo(videoData[newIndex]);
-  };
 
-  const handleVideoSelect = (video, index) => {
-    setSelectedVideo(video);
-    setCurrentIndex(index);
+    if (isMobileView && (newIndex < visibleRange.start || newIndex > visibleRange.end)) {
+      handleThumbnailNavigation('next');
+    }
   };
 
   const handleThumbnailNavigation = (direction) => {
-    if (isAnimating) return;
+    if (!isMobileView || isAnimating) return;
+    
+    setIsAnimating(true);
     
     const increment = direction === 'next' ? 1 : -1;
     const newStart = Math.max(0, visibleRange.start + increment);
     const newEnd = Math.min(newStart + 2, videoData.length - 1);
     
     if (newStart >= 0 && newStart < videoData.length) {
-      setIsAnimating(true);
-      
       if (thumbnailsRef.current) {
         const thumbnailWidth = thumbnailsRef.current.offsetWidth / 3;
         const currentScroll = thumbnailsRef.current.scrollLeft;
@@ -121,77 +134,108 @@ function OnlineEvents() {
     }
   };
 
+  const handleVideoSelect = (video, index) => {
+    setSelectedVideo(video);
+    setCurrentIndex(index);
+  };
+
+  const renderThumbnails = () => {
+    if (isMobileView) {
+      return videoData.slice(visibleRange.start, visibleRange.end + 1).map((video, index) => (
+        <div
+          key={visibleRange.start + index}
+          className={`thumbnail ${selectedVideo.URL === video.URL ? 'active' : ''}`}
+          onClick={() => handleVideoSelect(video, visibleRange.start + index)}
+        >
+          <img
+            src={getThumbnailUrl(video.URL)}
+            alt={video.Title}
+            loading="lazy"
+          />
+          <h3>{formatTitle(video.Title)}</h3>
+          <p>{video["Publish Date"]}</p>
+        </div>
+      ));
+    }
+
+    return videoData.map((video, index) => (
+      <div
+        key={index}
+        className={`thumbnail ${selectedVideo.URL === video.URL ? 'active' : ''}`}
+        onClick={() => handleVideoSelect(video, index)}
+      >
+        <img
+          src={getThumbnailUrl(video.URL)}
+          alt={video.Title}
+          loading="lazy"
+        />
+        <h3>{formatTitle(video.Title)}</h3>
+        <p>{video["Publish Date"]}</p>
+      </div>
+    ));
+  };
+
   return (
     <MainLayout>
-    <div className="online-events">
-      <h1>Online Events</h1>
-      <div className="video-container">
-        <div className="main-video">
-          <iframe
-            width="100%"
-            height="480"
-            src={`https://www.youtube.com/embed/${getVideoId(selectedVideo.URL)}`}
-            title={selectedVideo.Title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="video-info">
-            <h2 className="title-two-lines">{formatTitle(selectedVideo.Title)}</h2>
-            <p>Published: {selectedVideo["Publish Date"]}</p>
-          </div>
-          <div className="navigation-buttons">
-            <button 
-              onClick={handlePrevVideo}
-              className="nav-button prev"
-              title="Previous video"
-            >
-              ← Previous
-            </button>
-            <button 
-              onClick={handleNextVideo}
-              className="nav-button next"
-              title="Next video"
-            >
-              Next →
-            </button>
-          </div>
-        </div>
-        <div className="video-thumbnails-container">
-          <button 
-            className="thumbnail-nav"
-            onClick={() => handleThumbnailNavigation('prev')}
-            disabled={visibleRange.start === 0 || isAnimating}
-          >
-            ←
-          </button>
-          <div className="video-thumbnails" ref={thumbnailsRef}>
-            {videoData.slice(visibleRange.start, visibleRange.end + 1).map((video, index) => (
-              <div
-                key={visibleRange.start + index}
-                className={`thumbnail ${selectedVideo.URL === video.URL ? 'active' : ''}`}
-                onClick={() => handleVideoSelect(video, visibleRange.start + index)}
+      <div className="online-events">
+        <h1>Online Events</h1>
+        <div className="video-container">
+          <div className="main-video">
+            <iframe
+              width="100%"
+              height="480"
+              src={`https://www.youtube.com/embed/${getVideoId(selectedVideo.URL)}`}
+              title={selectedVideo.Title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <div className="video-info">
+              <h2 className="title-two-lines">{formatTitle(selectedVideo.Title)}</h2>
+              <p>Published: {selectedVideo["Publish Date"]}</p>
+            </div>
+            <div className="navigation-buttons">
+              <button 
+                onClick={handlePrevVideo}
+                className="nav-button prev"
+                title="Previous video"
               >
-                <img
-                  src={getThumbnailUrl(video.URL)}
-                  alt={video.Title}
-                  loading="lazy"
-                />
-                <h3>{formatTitle(video.Title)}</h3>
-                <p>{video["Publish Date"]}</p>
-              </div>
-            ))}
+                ← Previous
+              </button>
+              <button 
+                onClick={handleNextVideo}
+                className="nav-button next"
+                title="Next video"
+              >
+                Next →
+              </button>
+            </div>
           </div>
-          <button 
-            className="thumbnail-nav"
-            onClick={() => handleThumbnailNavigation('next')}
-            disabled={visibleRange.end >= videoData.length - 1 || isAnimating}
-          >
-            →
-          </button>
+          <div className="video-thumbnails-container">
+            {isMobileView && (
+              <button 
+                className="thumbnail-nav"
+                onClick={() => handleThumbnailNavigation('prev')}
+                disabled={visibleRange.start === 0 || isAnimating}
+              >
+                ←
+              </button>
+            )}
+            <div className="video-thumbnails" ref={thumbnailsRef}>
+              {renderThumbnails()}
+            </div>
+            {isMobileView && (
+              <button 
+                className="thumbnail-nav"
+                onClick={() => handleThumbnailNavigation('next')}
+                disabled={visibleRange.end >= videoData.length - 1 || isAnimating}
+              >
+                →
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
     </MainLayout>
   );
 }
