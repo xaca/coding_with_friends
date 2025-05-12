@@ -2,9 +2,7 @@ import About from "../../ui/About/About";
 import Agenda from "../../ui/Agenda/Agenda";
 import Register from "../../ui/Register/Register";
 import Speaker from "../../ui/Speaker/Speaker";
-import Header from "../../ui/Header/Header";
-import Menu from "../../ui/Menu/Menu";
-import Footer from "../../ui/Footer/Footer";
+import MainLayout from "../../ui/MainLayout/MainLayout";
 import Info from "../../ui/Info/Info";
 import PastEvent from "../../ui/PastEvent/PastEvent";
 import logo_evento from "../../../assets/img/logo_evento_datasoul.svg";
@@ -65,25 +63,26 @@ function DecoracionIzquierda(){
 
 function InPersonEvent(){
     return (<>
-        <section id="in_person_event">
-        <DecoracionDerecha />
-        <DecoracionIzquierda />
-        <Header logoPersonalizado={logo_evento} />
-        <Menu />
-        <Info info={{
+        <MainLayout logoPersonalizado={logo_evento}>
+            <section id="in_person_event">
+            <DecoracionDerecha />
+            <DecoracionIzquierda />
+            {/*<Header logoPersonalizado={logo_evento} />
+            <Menu />*/}
+            <Info info={{
             logo:datasoul_logo,
             image:datasoul_retrato,
             date: `Miércoles 12 de marzo de 2025`,
             venue: `Auditorio Ignacio Viera (Arquidiseño)`,
             time: `17:00 - 20:00`
-        }} />
-        <About />
-        <Register />
-        <img src={disco_top} alt="Disco top" />
-        <Agenda />
-        <section id="speakers">
-        <h1>Biografías</h1>
-        <section>
+            }} />
+            <About />
+            <Register />
+            <img src={disco_top} alt="Disco top" />
+            <Agenda />
+            <section id="speakers">
+            <h1>Biografías</h1>
+            <section>
             <Speaker speaker={{
                 name:"Valen Ariza Gómez",
                 avatar:avatar_speaker_2,
@@ -125,12 +124,12 @@ function InPersonEvent(){
                 graduation_year:2019,
                 description:`Soy Ingeniera de Sistemas de la UPB, cuento con ocho años de experiencia en el sector de TI. Actualmente, me desempeño como Coordinadora de equipos TI y comercial en Pragma, una empresa colombiana de desarrollo de software, donde lidero equipos de mercadeo y tecnología. Además, combino mi profesión con mi pasión por compartir conocimiento y experiencias, desempeñándome como profesora de cátedra para estudiantes de Ingeniería de Sistemas en la UPB,donde guío y preparo a futuros profesionales para enfrentar los retos del sector`
             }} />
-        </section>
-        </section> 
-        <img src={disco_bottom} alt="Disco bottom"  />
-        <PastEvent />
-    </section>
-    <Footer />
+            </section>
+            </section> 
+            <img src={disco_bottom} alt="Disco bottom"  />
+            <PastEvent />
+            </section>
+        </MainLayout>
     </>);
 }
 export default InPersonEvent;

@@ -1,9 +1,6 @@
 
 import Gallery from "../../ui/Gallery/Gallery";
 import Slider from "../../ui/Slider/Slider";
-import Header from "../../ui/Header/Header";
-import Footer from "../../ui/Footer/Footer";
-import Menu from "../../ui/Menu/Menu";
 import '../../../css/variables.scss';
 import '../../../css/generales.scss';
 import '../../../css/mediaqueries/mobile.scss';
@@ -13,11 +10,8 @@ import "./Home.scss";
 
 function Home(){
     return(<>
-            <Header />
-            <Menu />
-            <Slider id_slider={"slider_1"} />
-            <Gallery />
-            <Footer />
+        <Slider id_slider={"slider_1"} />
+        <Gallery />
     </>);
 }
 

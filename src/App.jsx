@@ -1,12 +1,10 @@
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
-//import './App.css'
+import MainLayout from "./components/ui/MainLayout/MainLayout";
+import Home from "./components/pages/Home/Home";
 
-function App() {
-  
+export default function App(){
   return(<>
-    <Home />
+    <MainLayout>
+      <Home />
+    </MainLayout>
   </>);
 }
-
-export default App;
