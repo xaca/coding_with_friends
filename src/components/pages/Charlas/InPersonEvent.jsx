@@ -72,7 +72,7 @@ function InPersonEvent(){
             date: `Miércoles 14 de mayo de 2025`,
             venue: `Online - youtube`,
             time: `10:00 - 12:00`,
-            youtube_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            youtube_url: "https://youtube.com/live/5Fw5QuW0JT4",
             description: `La charla abordará los fundamentos de Git y cómo utilizarlo eficazmente para el control de versiones. Se explicarán distintas estrategias de branching como Git Flow, GitHub Flow y trunk-based development, destacando sus ventajas, desventajas y casos de uso. Además, se mostrará cómo sería un flujo de trabajo con un ejercicio práctico.`
             }} />
             <About />
