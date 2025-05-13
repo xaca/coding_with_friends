@@ -1,9 +1,11 @@
 $texto_lista:#132632;
 $fondo_lista:#3FB2BF;
-$titulos:#8F1A2A;
-$texto:#F27294;
-$destacado:#F2B90F;
-
+$titulos:#080653;
+$texto:#174b11;
+$destacado:#231b04;
+body{
+    background-color: #d3e3b9;
+}
 #in_person_event h1{
     color: $titulos;
     font-size: 32px;
@@ -50,4 +52,7 @@ $destacado:#F2B90F;
     width: 100%;
     display: block;
     margin: 30px auto;
+}
+a{
+    color:rgb(26, 122, 45);
 }

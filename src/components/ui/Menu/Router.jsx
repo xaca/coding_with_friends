@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import Deportes from "../../pages/Deportes/Deportes";
 import Home from "../../pages/Home/Home";
 import Cine from "../../pages/Cine/Cine";
@@ -8,7 +8,7 @@ import App from "../../../App";
 
 function Router(){
     return(<>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="cine" element={<Cine />} />
@@ -17,7 +17,7 @@ function Router(){
                 <Route path="online-events" element={<OnlineEvents />} />
                 <Route path="*" element={<Home />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </>);
 }
 

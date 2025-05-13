@@ -5,17 +5,14 @@ import Speaker from "../../ui/Speaker/Speaker";
 import MainLayout from "../../ui/MainLayout/MainLayout";
 import Info from "../../ui/Info/Info";
 import PastEvent from "../../ui/PastEvent/PastEvent";
-import logo_evento from "../../../assets/img/logo_evento_datasoul.svg";
-import avatar_speaker_1 from "../../../assets/img/01_speaker.png";
-import avatar_speaker_2 from "../../../assets/img/02_speaker.png";
-import avatar_speaker_3 from "../../../assets/img/03_speaker.png";
-import avatar_speaker_4 from "../../../assets/img/04_speaker.png";
+import avatar_speaker_1 from "../../../assets/img/speaker_01.jpg";
+import avatar_speaker_2 from "../../../assets/img/speaker_02.jpg";
 import fondo_derecha from "../../../assets/img/esquina_derecha.png";
 import fondo_izquierda from "../../../assets/img/cassete_izquierda.png";
 import disco_top from "../../../assets/img/disco_top.png";
 import disco_bottom from "../../../assets/img/disco_bottom.png";
-import datasoul_retrato from "../../../assets/img/datasoul_retrato.jpg";
-import datasoul_logo from "../../../assets/img/datasoul_logo.jpg";
+import logo_evento from "../../../assets/img/logo_talk.png";
+import talks_logo from "../../../assets/img/talks_logo.png";
 import "./events.scss";
 import "../../../css/speakers.scss";
 import "../../../css/lista.scss";
@@ -32,8 +29,8 @@ function DecoracionDerecha(){
         position:"absolute",
         right:0,
         top:0,
-        width:"567px",
-        height:"136px",
+        width:"525px",
+        height:"170px",
         zIndex: "-1",
         backgroundImage: `url(${fondo_derecha})`
     }
@@ -70,8 +67,8 @@ function InPersonEvent(){
             {/*<Header logoPersonalizado={logo_evento} />
             <Menu />*/}
             <Info info={{
-            logo:datasoul_logo,
-            image:datasoul_retrato,
+            logo:talks_logo,
+            image:"",
             date: `Miércoles 14 de mayo de 2025`,
             venue: `Online - youtube`,
             time: `10:00 - 12:00`,
@@ -81,7 +78,7 @@ function InPersonEvent(){
             <About />
             <Register />
             <img src={disco_top} alt="Disco top" />
-            <Agenda />
+            {/*<Agenda />*/}
             <section id="speakers">
             <h1>Biografías</h1>
             <section>
@@ -94,7 +91,8 @@ function InPersonEvent(){
                 ],
                 is_alumni:false,
                 graduation_year:0,
-                description:``
+                description:`Stefany Cárdenas Martínez es Ingeniera de Sistemas egresada de la Universidad de La Amazonia y actualmente se desempeña como Desarrolladora de Software en PRAGMA S.A., con más de tres años de experiencia en desarrollo frontend. Ha trabajado con tecnologías como React.js, TypeScript, Gatsby, Next.js y Contentful, participando en proyectos digitales en sectores educativos y corporativos.
+Se caracteriza por ser una persona responsable, atenta al detalle y con buen desempeño en el trabajo en equipo, lo que le ha permitido adaptarse a diferentes entornos y aportar de manera efectiva en los proyectos en los que participa.`
             }} />
             <Speaker speaker={{
                 name:"Santiago Quintero García",

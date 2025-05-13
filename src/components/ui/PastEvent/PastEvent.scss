@@ -1,0 +1,13 @@
+$color_frase:#061a04;
+$color_titulos:#021c05;
+#about p, #register p, #info p, #eventos_anteriores{
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+#eventos_anteriores a{
+    color:$color_frase;
+} 
+#eventos_anteriores h2{
+    color: $color_titulos;
+}

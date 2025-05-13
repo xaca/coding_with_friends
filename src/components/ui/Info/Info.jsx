@@ -1,3 +1,4 @@
+import { FaYoutube } from "react-icons/fa";
 function Intro({info}){
     return(<>
     <section className="intro_evento">
@@ -31,7 +32,7 @@ function Intro({info}){
             <div>
               <p className="enlace_evento">
                 <strong>Lugar:</strong> &nbsp;
-                <a href={info.youtube_url} target="_blank">Online - youtube</a>
+                <a href={info.youtube_url} target="_blank"><FaYoutube /> Online - youtube</a>
               </p>
               <br />
             </div>
@@ -40,7 +41,7 @@ function Intro({info}){
         <p className="fecha">
           <span>Hora:</span> {info.time}
         </p><br />
-        {info.youtube_url != "" ? <span className="mensaje_importante">
+        {info.youtube_url === "" ? <span className="mensaje_importante">
           * Traer documento de identidad para poder ingresar a la universidad.
         </span> : ""}
       </section>

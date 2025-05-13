@@ -1,4 +1,4 @@
-
+import './PastEvent.scss';
 function OpenPastEvent(){
 
   const childUrl = window.open('/preview', '_blank');
