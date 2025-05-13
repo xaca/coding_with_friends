@@ -2,6 +2,8 @@ import "./Sponsor.scss";
 import pragma from "../../../assets/img/pragma.png";
 import upb_tec from "../../../assets/img/upb_tec_logo.png";
 import upb_logo from "../../../assets/img/logo_upb.png";
+import { BsInstagram } from "react-icons/bs";
+import { TbWorldHeart } from "react-icons/tb";
 
 function Footer() {
     return (
@@ -21,7 +23,10 @@ function Footer() {
             </a>
             <br />
             <a className="enlace_sponsor autor" href="http://www.xacarana.com" target="_blank">
-            Diseño: xacarana
+            <TbWorldHeart /> xacarana
+            </a>
+            <a className="enlace_sponsor autor" href="https://www.instagram.com/coding.with.friends" target="_blank">
+            <BsInstagram /> CWF
             </a>
         </div>
     </footer>

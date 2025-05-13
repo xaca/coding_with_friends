@@ -1,0 +1,53 @@
+$texto_lista:#132632;
+$fondo_lista:#3FB2BF;
+$titulos:#8F1A2A;
+$texto:#F27294;
+$destacado:#F2B90F;
+
+#in_person_event h1{
+    color: $titulos;
+    font-size: 32px;
+}
+#in_person_event .mensaje_importante{
+    color: $destacado;
+}
+#in_person_event #btn_registro {
+    color: $texto_lista;
+    background-color: $fondo_lista;
+}
+#in_person_event #btn_registro:hover {
+    color: $fondo_lista;
+    background-color: $texto_lista;
+}
+#in_person_event .item:nth-child(even) {
+    color: $fondo_lista;
+    background: $texto_lista;
+}
+#in_person_event .item:nth-child(odd) {
+    color: $texto_lista;
+    background:$fondo_lista;
+}
+.lista_generica a{
+    /*color:var(--color-lista-impar);*/
+}
+.imagen_intro_evento{
+    width: 60%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.intro_evento{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+.intro_evento h2{
+    color: $texto;
+    text-align: left;
+    width: 100%;
+}
+.logo_evento{
+    width: 100%;
+    display: block;
+    margin: 30px auto;
+}

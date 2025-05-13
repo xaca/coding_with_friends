@@ -28,6 +28,18 @@ const videoData = [
     "Publish Date": "2025-03-14",
     "URL": "http://www.youtube.com/watch?v=OwpSRfhhJB8"
   },
+  {"Title":"Arquitectura como código",
+    "Publish Date": "2025-04-02",
+    "URL": "http://www.youtube.com/watch?v=OwcPzx-sF38"
+  },
+  {"Title":"Patrones de diseño para mobile",
+    "Publish Date": "2025-02-28",
+    "URL": "http://www.youtube.com/watch?v=bzY78exHi7E"
+  },
+  {"Title":"¿Como crear una APP?",
+    "Publish Date": "2025-02-21",
+    "URL": "http://www.youtube.com/watch?v=n1-zDSUDgds"
+  },
   {
     "Title": "Mi vida como programador en Dubai #dubai #programacion #empleo #videojuegos",
     "Publish Date": "2025-02-20",

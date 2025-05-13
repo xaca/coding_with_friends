@@ -56,3 +56,5 @@ Humanizing Tech: An Online Conversation with Bibiana Souza
 - Cargar videos no listados
 - Abrir la ruta respectiva al navegar desde enlace
 - Activar sección cine
+- Agregar opción instagram
+- Call for speakers al correo (firebase + gap + google docs mail)
