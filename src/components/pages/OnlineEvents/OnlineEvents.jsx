@@ -2,7 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import MainLayout from '../../ui/MainLayout/MainLayout';
 import './OnlineEvents.scss';
 
-const videoData = [
+const videoData = [  
+  {
+    "Title": "Entrega proyectos - Videojuegos / Scripting 2025",
+    "Publish Date": "2025-05-29",
+    "URL": "https://www.youtube.com/watch?v=zGnNmPctqJs"
+  },
+  {
+    "Title": "De una tarea a una oportunidad de negocio",
+    "Publish Date": "2025-05-21",
+    "URL": "https://www.youtube.com/watch?v=EoW2WeaP54Q"
+  },
+  {
+    "Title": "Git, estrategias de Branching y su aplicación",
+    "Publish Date": "2025-05-14",
+    "URL": "https://www.youtube.com/watch?v=5Fw5QuW0JT4"
+  },
   {
     "Title": "Using AI Agents to boost your productivity by 500%",
     "Publish Date": "2025-05-01",

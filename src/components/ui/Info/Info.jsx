@@ -5,6 +5,7 @@ function Intro({info}){
       <img src={info.logo} className="logo_evento" alt="" />
       <img src={info.image} className="imagen_intro_evento" alt="" />
       <br />
+      <h1>{info.title}</h1>
       <p>
        {info.description}
       </p>

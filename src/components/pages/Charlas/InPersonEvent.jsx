@@ -64,9 +64,8 @@ function InPersonEvent(){
             <section id="in_person_event">
             <DecoracionDerecha />
             <DecoracionIzquierda />
-            {/*<Header logoPersonalizado={logo_evento} />
-            <Menu />*/}
             <Info info={{
+                title:"Git, estrategias de Branching y su aplicación",
             logo:talks_logo,
             image:"",
             date: `Miércoles 14 de mayo de 2025`,
