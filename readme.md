@@ -22,6 +22,23 @@ Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descubrelo e
 
 ¡Te invitamos a un nuevo evento! Participa de un evento de tecnología con contenido interesante y de vanguardia.
 
+## Salidas a cine
+
+(◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
+
+📽️ Nuevo semestre, nuevas actividades 🎉🍿
+
+Te invitamos a un nuevo evento de Coding with friends, en esta oportunidad vamos a ver el estreno de la pelicula "The Fantastic Four: First Steps"
+
+🎬 ¡No te lo pierdas!
+¡Cordialmente invitados!
+
+🗓️ Fecha: 23 de Julio 
+⏰ Hora: 7:00 PM
+🌐 Website: https://codingwithfriends.club/#/cine
+📍 Lugar: Cinecolombia Unicentro (al frente de la U)
+
+ℹ️ En el sitio web esta toda la información para reservar tu entrada.
 
 ## Última charla
 
