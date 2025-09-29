@@ -1,7 +1,7 @@
 import MainLayout from "../../ui/MainLayout/MainLayout";
 
 function Cine(){
-    const form_url = "https://forms.gle/BgLGkXwJEPBq3ri76"
+    const form_url = "https://forms.gle/jAQCRADMF272XX8V8"
     return(<MainLayout>
        <div>
        <h1>Salida Cine</h1>
