@@ -2,6 +2,12 @@
 
 Repositorio informativo sobre los eventos de la comunidad Codign with friends de la Universidad Pontificia Bolivariana
 
+Para hacer el despliegue, correr el comando
+
+```bash
+npm run cwf
+```
+
 ## Mensaje para compartir en whatsApp
 
 (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
@@ -26,17 +32,17 @@ Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descubrelo e
 
 (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
 
-📽️ Nuevo semestre, nuevas actividades 🎉🍿
+📽️ Película de la semana 🎉🍿
 
-Te invitamos a un nuevo evento de Coding with friends, en esta oportunidad vamos a ver el estreno de la pelicula "The Fantastic Four: First Steps"
+Te invitamos a un nuevo evento de Coding with friends, en esta oportunidad vamos a ver el estreno de la pelicula "One Battle After Another"
 
 🎬 ¡No te lo pierdas!
 ¡Cordialmente invitados!
 
-🗓️ Fecha: 23 de Julio 
-⏰ Hora: 7:00 PM
+🗓️ Fecha: 30 de Julio 
+⏰ Hora: 6:00 PM
 🌐 Website: https://codingwithfriends.club/#/cine
-📍 Lugar: Cinecolombia Unicentro (al frente de la U)
+📍 Lugar: Cinecolombia Centro comercial los Molinos
 
 ℹ️ En el sitio web esta toda la información para reservar tu entrada.
 
