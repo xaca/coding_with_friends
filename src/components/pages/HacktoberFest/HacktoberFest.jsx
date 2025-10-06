@@ -181,15 +181,6 @@ export default function HacktoberFest() {
   const vibecodersChallenges = [
     {
       id: 1,
-      title: "Corregir Errores en README",
-      description: "Ayuda a mejorar la documentación de nuestro proyecto corrigiendo errores ortográficos",
-      difficulty: "Súper Fácil",
-      time: "5-10 min",
-      reward: "Insignia de Comunidad",
-      example: "Corregir 'recieve' por 'receive' en README.md"
-    },
-    {
-      id: 2,
       title: "Agregar Tu Nombre a Contribuidores",
       description: "Agrega tu nombre a nuestra lista de contribuidores para ser parte de la comunidad",
       difficulty: "Súper Fácil",
@@ -198,7 +189,7 @@ export default function HacktoberFest() {
       example: "Agregar tu nombre al archivo CONTRIBUTORS.md"
     },
     {
-      id: 3,
+      id: 2,
       title: "Mejorar Comentarios del Código",
       description: "Agrega comentarios útiles al código existente para hacerlo más legible",
       difficulty: "Fácil",
@@ -207,31 +198,40 @@ export default function HacktoberFest() {
       example: "Agregar comentarios explicando qué hace una función"
     },
     {
-      id: 4,
-      title: "Crear una Animación CSS Simple",
-      description: "Agrega un efecto hover genial o animación a nuestro sitio web",
+      id: 3,
+      title: "Agregar Sonidos de Interacción",
+      description: "Implementa sonidos sutiles para botones y hover effects",
       difficulty: "Fácil",
-      time: "20-30 min",
-      reward: "Insignia de Diseñador",
-      example: "Agregar una animación hover a un botón"
+      time: "15-25 min",
+      reward: "Insignia de Diseñador de Audio",
+      example: "Sonido suave al hacer hover en botones o al hacer clic"
+    },
+    {
+      id: 4,
+      title: "Corregir Errores en README",
+      description: "Ayuda a mejorar la documentación de nuestro proyecto corrigiendo errores ortográficos",
+      difficulty: "Súper Fácil",
+      time: "5-10 min",
+      reward: "Insignia de Comunidad",
+      example: "Corregir 'recieve' por 'receive' en README.md"
     },
     {
       id: 5,
-      title: "Traducir Texto al Español",
-      description: "Ayuda a hacer nuestro contenido accesible para hispanohablantes",
+      title: "Crear un Generador de Frases Motivacionales",
+      description: "Agrega un botón que muestre frases motivacionales aleatorias para desarrolladores",
       difficulty: "Fácil",
-      time: "10-15 min",
-      reward: "Insignia de Traductor",
-      example: "Traducir texto de botones o descripciones"
+      time: "15-20 min",
+      reward: "Insignia de Motivador",
+      example: "Botón que muestre '¡Sigue codificando! 💪' o 'Los errores son oportunidades de aprendizaje 🚀'"
     },
     {
       id: 6,
-      title: "Agregar Enlaces de Redes Sociales",
-      description: "Ayúdanos a conectar agregando enlaces de redes sociales a nuestras páginas",
-      difficulty: "Fácil",
-      time: "15-20 min",
-      reward: "Insignia de Conector",
-      example: "Agregar enlaces de Instagram, Twitter, LinkedIn"
+      title: "Agregar Emojis a los Títulos",
+      description: "Haz que los títulos sean más divertidos agregando emojis relevantes",
+      difficulty: "Súper Fácil",
+      time: "3-5 min",
+      reward: "Insignia de Emoji Master",
+      example: "Cambiar 'Eventos' por '🎉 Eventos' o 'Contacto' por '📞 Contacto'"
     },
     {
       id: 7,
@@ -244,30 +244,21 @@ export default function HacktoberFest() {
     },
     {
       id: 8,
-      title: "Mejorar Responsividad Móvil",
-      description: "Corrige problemas de diseño en dispositivos móviles",
+      title: "Implementar Efecto de 'Typing' en Texto",
+      description: "Haz que algunos textos aparezcan como si se estuvieran escribiendo en tiempo real",
       difficulty: "Fácil",
-      time: "20-25 min",
-      reward: "Insignia de Experto Móvil",
-      example: "Ajustar tamaños de botones para pantallas móviles"
+      time: "20-30 min",
+      reward: "Insignia de Escriba Digital",
+      example: "El título principal aparece letra por letra con efecto de cursor parpadeante"
     },
     {
       id: 9,
-      title: "Agregar Mensajes de Error",
-      description: "Crea mensajes de error amigables para formularios",
+      title: "Agregar Enlaces de Redes Sociales",
+      description: "Ayúdanos a conectar agregando enlaces de redes sociales a nuestras páginas",
       difficulty: "Fácil",
       time: "15-20 min",
-      reward: "Insignia de Ayudante UX",
-      example: "Agregar mensajes de validación a campos de entrada"
-    },
-    {
-      id: 10,
-      title: "Crear un Componente de Pie Simple",
-      description: "Diseña e implementa un pie de página para nuestro sitio web",
-      difficulty: "Fácil",
-      time: "20-25 min",
-      reward: "Insignia de Maestro de Diseño",
-      example: "Agregar información de copyright y enlaces"
+      reward: "Insignia de Conector",
+      example: "Agregar enlaces de Instagram, Twitter, LinkedIn"
     }
   ];
 
@@ -459,12 +450,12 @@ export default function HacktoberFest() {
                     <div className="challenge-example">
                       <strong>Ejemplo:</strong> {challenge.example}
                     </div>
-                    <div className="challenge-reward">
+                    {/*<div className="challenge-reward">
                       <span className="reward-icon">🏆</span>
                       <span className="reward-text">{challenge.reward}</span>
-                    </div>
+                    </div>*/}
                   </div>
-                  <button className="vibecoder-challenge-btn">Iniciar Desafío</button>
+                  {/*<button className="vibecoder-challenge-btn">Iniciar Desafío</button>*/}
                 </div>
               ))}
             </div>
