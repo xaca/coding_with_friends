@@ -418,7 +418,7 @@
             line-height: 1.6;
             margin-bottom: 25px;
             font-weight: 500;
-            min-height: 48px;
+            height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -437,7 +437,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             width: 100%;
             max-width: 200px;
-
+            
             &:hover {
               background: var(--color-texto-boton);
               color: var(--color-boton);
@@ -474,7 +474,7 @@
 
         .vibecoders-challenges-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 30px;
           margin: 0 auto 40px auto;
           max-width: 1200px;
@@ -484,25 +484,34 @@
 
         .vibecoder-challenge-card {
           background: var(--color-fondo-destacado);
-          border-radius: 15px;
-          padding: 20px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          border-radius: 8px;
+          padding: 25px 25px 0 25px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
-          border-left: 5px solid var(--color-frase);
+          border: 2px solid var(--color-boton);
           text-align: left;
           width: 100%;
           min-width: 0;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
-          height: 100%;
           overflow: hidden;
-          margin: 0 5px;
+          margin: 0;
+          justify-content: space-between;
 
           &:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            border-left-color: var(--color-boton);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: var(--color-frase);
+          }
+
+          .challenge-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+            height: 100%;
           }
 
           .challenge-header {
@@ -583,7 +592,6 @@
             width: 90%;
             align-items: center;
             gap: 8px;
-            margin-bottom: 15px;
             padding: 10px 12px;
             background: var(--color-fondo-destacado);
             border-radius: 10px;
@@ -606,23 +614,26 @@
 
           .vibecoder-challenge-btn {
             width: 100%;
-            background: var(--color-boton);
-            color: var(--color-texto-boton);
-            border: none;
+            background: var(--color-fondo-destacado);
+            color: var(--color-boton);
+            border: 2px solid var(--color-boton);
             padding: 12px 20px;
-            border-radius: 10px;
+            border-radius: 0 0 6px 6px;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            margin-top: auto;
+            text-shadow: none;
+            margin: 0;
+            align-self: stretch;
+            flex-shrink: 0;
+            margin: 10px auto;
 
             &:hover {
-              background: var(--color-texto-boton);
-              color: var(--color-boton);
-              transform: translateY(-2px);
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              background: var(--color-boton);
+              color: var(--color-texto-boton);
+              transform: translateY(-1px);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             }
           }
         }
@@ -1024,6 +1035,7 @@
           }
 
           .vibecoder-btn {
+            border: 2px solid red;
             padding: 12px 20px;
             font-size: 14px;
           }
@@ -1041,15 +1053,19 @@
         }
 
         .vibecoders-challenges-grid {
-          grid-template-columns: 1fr;
-          gap: 25px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
           margin: 0 auto 40px auto;
           max-width: 100%;
           padding: 0 15px;
 
           .vibecoder-challenge-card {
-            padding: 22px;
+            padding: 20px 20px 0 20px;
             width: 100%;
+            justify-content: space-between;
+            border-radius: 8px;
+            border: 2px solid var(--color-boton);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
             .challenge-title {
               font-size: 18px;
@@ -1084,6 +1100,14 @@
             .vibecoder-challenge-btn {
               padding: 12px 20px;
               font-size: 14px;
+              margin: 20px auto;
+              align-self: stretch;
+              flex-shrink: 0;
+              background: var(--color-fondo-destacado);
+              color: var(--color-boton);
+              border: 2px solid var(--color-boton);
+              border-radius: 0 0 6px 6px;
+              font-weight: 600;
             }
           }
         }
@@ -1217,15 +1241,20 @@
         }
 
         .vibecoders-challenges-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 25px;
           margin: 0 auto 40px auto;
           max-width: 100%;
           padding: 0 15px;
 
           .vibecoder-challenge-card {
-            padding: 20px;
-            margin: 0 3px;
+            padding: 20px 20px 0 20px;
+            margin: 0;
+            height: 380px;
+            justify-content: space-between;
+            border-radius: 8px;
+            border: 2px solid var(--color-boton);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
             .challenge-title {
               font-size: 19px;
@@ -1259,6 +1288,14 @@
             .vibecoder-challenge-btn {
               padding: 13px 22px;
               font-size: 14px;
+              align-self: stretch;
+              flex-shrink: 0;
+              background: var(--color-fondo-destacado);
+              color: var(--color-boton);
+              border: 2px solid var(--color-boton);
+              border-radius: 0 0 6px 6px;
+              font-weight: 600;
+              margin: 10px auto;
             }
           }
         }

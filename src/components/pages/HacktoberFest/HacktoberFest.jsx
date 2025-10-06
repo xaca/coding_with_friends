@@ -110,7 +110,7 @@ export default function HacktoberFest() {
       title: "Integración con Instagram",
       description: "Conéctate con nuestras últimas publicaciones y destacados de la comunidad",
       icon: "📸",
-      action: "Seguir @codingwithfriends"
+      action: "Seguir @coding.with.friends"
     },
     {
       title: "Llamada a Ponentes",
@@ -404,18 +404,20 @@ export default function HacktoberFest() {
             <div className="vibecoders-challenges-grid">
               {vibecodersChallenges.map((challenge) => (
                 <div key={challenge.id} className="vibecoder-challenge-card">
-                  <div className="challenge-header">
-                    <span className="difficulty-badge vibecoder">{challenge.difficulty}</span>
-                    <span className="time-estimate">{challenge.time}</span>
-                  </div>
-                  <h4 className="challenge-title">{challenge.title}</h4>
-                  <p className="challenge-description">{challenge.description}</p>
-                  <div className="challenge-example">
-                    <strong>Ejemplo:</strong> {challenge.example}
-                  </div>
-                  <div className="challenge-reward">
-                    <span className="reward-icon">🏆</span>
-                    <span className="reward-text">{challenge.reward}</span>
+                  <div className="challenge-content">
+                    <div className="challenge-header">
+                      <span className="difficulty-badge vibecoder">{challenge.difficulty}</span>
+                      <span className="time-estimate">{challenge.time}</span>
+                    </div>
+                    <h4 className="challenge-title">{challenge.title}</h4>
+                    <p className="challenge-description">{challenge.description}</p>
+                    <div className="challenge-example">
+                      <strong>Ejemplo:</strong> {challenge.example}
+                    </div>
+                    <div className="challenge-reward">
+                      <span className="reward-icon">🏆</span>
+                      <span className="reward-text">{challenge.reward}</span>
+                    </div>
                   </div>
                   <button className="vibecoder-challenge-btn">Iniciar Desafío</button>
                 </div>
