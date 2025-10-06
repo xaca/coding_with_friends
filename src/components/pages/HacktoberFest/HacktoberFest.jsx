@@ -7,6 +7,17 @@ import '../../../css/mediaqueries/desktop.scss';
 import './HacktoberFest.scss';
 
 export default function HacktoberFest() {
+  // Smooth scroll function
+  const scrollToChallenges = () => {
+    const challengesSection = document.getElementById('challenges');
+    if (challengesSection) {
+      challengesSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   // Coding challenges data
   const challenges = [
     // Easy Level
@@ -343,12 +354,12 @@ export default function HacktoberFest() {
               >
                 Regístrate en HacktoberFest
               </a>
-              <a 
-                href="#challenges" 
+              <button 
+                onClick={scrollToChallenges}
                 className="btn-secondary"
               >
                 Ver Desafíos
-              </a>
+              </button>
             </div>
           </div>
         </section>
