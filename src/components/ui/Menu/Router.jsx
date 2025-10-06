@@ -4,6 +4,8 @@ import Home from "../../pages/Home/Home";
 import Cine from "../../pages/Cine/Cine";
 import InPersonEvent from "../../pages/Charlas/InPersonEvent";
 import OnlineEvents from "../../pages/OnlineEvents/OnlineEvents";
+import CursosSapiencia from "../../pages/CursosSapiencia/CursosSapiencia";
+import HacktoberFest from "../../pages/HacktoberFest/HacktoberFest";
 import App from "../../../App";
 
 function Router(){
@@ -15,6 +17,8 @@ function Router(){
                 <Route path="charlas" element={<InPersonEvent />} />
                 <Route path="deportes" element={<Deportes />} />
                 <Route path="online-events" element={<OnlineEvents />} />
+                <Route path="cursos-sapiencia" element={<CursosSapiencia />} />
+                <Route path="hacktoberfest" element={<HacktoberFest />} />
                 <Route path="*" element={<Home />} />
             </Routes>
         </HashRouter>

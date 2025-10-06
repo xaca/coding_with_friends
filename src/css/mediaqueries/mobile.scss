@@ -41,12 +41,12 @@
         margin:10px auto;
     }
     .menu .seleccion{
-        width: 25vw;
+        /*width: 25vw;*/
     }
     .menu a {
         display: block;
         padding-left: 9px;
-        width: 22vw;
+        /*width: 22vw;*/
         text-align: left;
     }
    
@@ -79,13 +79,14 @@
         flex-direction: column;
     }
     .menu .seleccion{
-        width: 20vw;
+        /*width: 20vw;*/
     }
     .menu a {
         display: block;
         padding-left: 9px;
-        width: 22vw;
+        /*width: 22vw;*/
         text-align: left;
+        line-height: 1.7;
     }
     .imagen_intro_evento{
         width: 90%;
@@ -99,4 +100,4 @@
         margin: 0 auto;
     }
     
-}
+}   

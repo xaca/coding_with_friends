@@ -76,8 +76,7 @@ Humanizing Tech: An Online Conversation with Bibiana Souza
 # TODO
 
 - Ajustar responsive iphone mini videos
-- Cargar videos no listados
-- Abrir la ruta respectiva al navegar desde enlace
-- Activar sección cine
-- Agregar opción instagram
+- Revisar y ajustar diseño responsive
+- Agregar una sección que se llame instagram, con el feed de las últimas publicaciones de CWF en instagram
 - Call for speakers al correo (firebase + gap + google docs mail)
+- Agregar traducción al ingles con [polyglot de airbnb](https://airbnb.io/polyglot.js/)

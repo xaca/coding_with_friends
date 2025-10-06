@@ -1,29 +1,37 @@
 .menu{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
-    margin-bottom: 20px;
-    background: var(--color-fondo-menu);
+    background:var(--color-fondo-menu);
     border-radius: 20px;
+    display: flex;
+    box-sizing:border-box;
+    text-align: center;
 }
 .menu a{
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
-    line-height: 30px;
-    height: 30px;
-    width: 8vw;
-    color:var(--color-enlaces_menu);
+    line-height: 1.4;
+    padding: 8px 15px;
+    margin-right: 10px;
+    color: var(--color-enlaces_menu);
     text-decoration: none;
-    margin-right: 15px;
     font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .active{
     background: white;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .menu a:hover{
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transform: translateY(-1px);
 }
 a{
     color:var(--color-enlaces_general);
@@ -36,4 +44,55 @@ a.autor{
 }
 .enlace{
     text-decoration: none;
+}
+
+// Mobile responsive styles
+@media (max-width: 768px) {
+    .menu {
+        width: 90%;
+        margin: 15px 0;
+        padding: 15px;
+        gap: 6px;
+    }
+    
+    .menu a {
+        min-height: 36px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding: 12px;
+    }
+    
+    .menu a {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 13px;
+        line-height: 1.2;
+    }
+}
+
+// For very small screens, make it horizontal again
+@media (max-width: 360px) {
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 8px 0;
+        padding: 10px;
+    }
+    
+    .menu a {
+        min-width: 90%;
+        min-height: 30px;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
 }
