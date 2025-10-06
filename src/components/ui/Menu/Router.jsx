@@ -7,10 +7,12 @@ import OnlineEvents from "../../pages/OnlineEvents/OnlineEvents";
 import CursosSapiencia from "../../pages/CursosSapiencia/CursosSapiencia";
 import HacktoberFest from "../../pages/HacktoberFest/HacktoberFest";
 import App from "../../../App";
+import { ViewTransitionWrapper } from "../PageTransition/ViewTransition";
 
 function Router(){
     return(<>
         <HashRouter>
+        <ViewTransitionWrapper>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="cine" element={<Cine />} />
@@ -21,6 +23,7 @@ function Router(){
                 <Route path="hacktoberfest" element={<HacktoberFest />} />
                 <Route path="*" element={<Home />} />
             </Routes>
+        </ViewTransitionWrapper>
         </HashRouter>
     </>);
 }
