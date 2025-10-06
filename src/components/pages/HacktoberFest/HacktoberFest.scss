@@ -404,7 +404,7 @@
           }
 
           h3 {
-            color: var(--color-frase);
+            color: var(--color-fondo);
             font-size: 22px;
             margin-bottom: 18px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -650,7 +650,7 @@
       margin:0 auto;
 
       h3 {
-        color: var(--color-frase);
+        color: var(--color-fondo);
         font-size: 24px;
         margin-bottom: 20px;
         text-align: center;
@@ -694,7 +694,7 @@
     }
 
     .pr-intro {
-      color: var(--color-destacado);
+      color: white;
       font-size: 18px;
       text-align: center;
       margin-bottom: 40px;
@@ -775,7 +775,7 @@
       text-align: center;
 
       h3 {
-        color: var(--color-frase);
+        color: var(--color-fondo);
         font-size: 24px;
         margin-bottom: 20px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -864,12 +864,13 @@
           
 
           h3 {
-            color: var(--color-frase);
+            color: var(--color-fondo);
             font-size: 20px;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
             text-align: left;
             align-self: flex-start;
+            font-weight: 700;
           }
 
           .partner-logos {
@@ -1077,6 +1078,9 @@
           h3 {
             font-size: 20px;
             margin-bottom: 15px;
+            color: var(--color-frase);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            font-weight: 700;
           }
 
           p {
@@ -1286,6 +1290,9 @@
           h3 {
             font-size: 21px;
             margin-bottom: 16px;
+            color: var(--color-frase);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            font-weight: 700;
           }
 
           p {
