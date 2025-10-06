@@ -497,18 +497,94 @@ export default function HacktoberFest() {
             <div className="partner-categories">
               <div className="partner-category">
                 <h3>Socios de Plataforma</h3>
+                <div className="ppartner-category">
                 <div className="partner-logos">
-                  <span>GitHub</span>
-                  <span>GitLab</span>
-                  <span>GitHub Education</span>
+                  <a 
+                    href="https://github.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    GitHub
+                  </a>
+                  <a 
+                    href="https://gitlab.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    GitLab
+                  </a>
+                  <a 
+                    href="https://education.github.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    GitHub Education
+                  </a>
+                  <a 
+                    href="https://bitbucket.org" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    Bitbucket
+                  </a>
+                  <a 
+                    href="https://sourceforge.net" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    SourceForge
+                  </a>
+                  </div>
                 </div>
               </div>
               <div className="partner-category">
                 <h3>Organizaciones de la Comunidad</h3>
                 <div className="partner-logos">
-                  <span>Cloud Native Computing Foundation</span>
-                  <span>Open Source Initiative</span>
-                  <span>DEV Community</span>
+                  <a 
+                    href="https://cncf.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    Cloud Native Computing Foundation
+                  </a>
+                  <a 
+                    href="https://opensource.org" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    Open Source Initiative
+                  </a>
+                  <a 
+                    href="https://dev.to" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    DEV Community
+                  </a>
+                  <a 
+                    href="https://stackoverflow.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    Stack Overflow
+                  </a>
+                  <a 
+                    href="https://www.freecodecamp.org" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="partner-link"
+                  >
+                    freeCodeCamp
+                  </a>
                 </div>
               </div>
             </div>
