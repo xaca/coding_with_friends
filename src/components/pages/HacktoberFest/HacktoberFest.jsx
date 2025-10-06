@@ -9,98 +9,143 @@ import './HacktoberFest.scss';
 export default function HacktoberFest() {
   // Coding challenges data
   const challenges = [
-    // Beginner Level
+    // Easy Level
     {
       id: 1,
-      title: "Corregir Errores de Documentación",
-      description: "Ayuda a mejorar la documentación del proyecto corrigiendo errores ortográficos y gramaticales.",
-      difficulty: "Principiante",
-      tags: ["Documentación", "Escritura"],
-      points: 10,
-      example: "Corregir errores tipográficos en archivos README.md de varios repositorios"
+      title: "Implementar Toggle de Modo Oscuro",
+      description: "Agregar un interruptor de modo oscuro/claro al sitio web con transiciones suaves y persistencia de preferencias del usuario.",
+      difficulty: "Fácil",
+      tags: ["UI/UX", "CSS", "JavaScript"],
+      points: 15,
+      example: "Crear un botón toggle que cambie entre temas claro y oscuro con persistencia en localStorage"
     },
     {
       id: 2,
-      title: "Agregar Traducciones Faltantes",
-      description: "Contribuye con traducciones para hacer los proyectos accesibles a audiencias globales.",
-      difficulty: "Principiante",
-      tags: ["i18n", "Traducción"],
-      points: 15,
-      example: "Agregar traducciones al español a proyectos de código abierto"
+      title: "Corregir Problemas de Responsive Móvil",
+      description: "Resolver problemas de visualización de videos en iPhone mini y problemas de diseño móvil mencionados en la sección TODO.",
+      difficulty: "Fácil",
+      tags: ["Responsive", "Mobile", "CSS"],
+      points: 20,
+      example: "Corregir problemas de tamaño de video y diseño en iPhone mini y otros dispositivos móviles pequeños"
     },
     {
       id: 3,
-      title: "Mejorar Archivos README",
-      description: "Mejora la documentación del proyecto con mejores descripciones, ejemplos e instrucciones de configuración.",
-      difficulty: "Principiante",
-      tags: ["Documentación", "README"],
-      points: 12,
-      example: "Agregar instrucciones de instalación y ejemplos de uso"
+      title: "Agregar Integración de Feed de Instagram",
+      description: "Crear una sección que muestre las últimas publicaciones de Instagram de CWF usando Instagram Basic Display API.",
+      difficulty: "Fácil",
+      tags: ["API", "Redes Sociales", "React"],
+      points: 25,
+      example: "Mostrar las últimas 6 publicaciones de Instagram de la cuenta @coding.with.friends"
     },
-    // Intermediate Level
     {
       id: 4,
-      title: "Agregar Nuevas Funcionalidades",
-      description: "Implementa funcionalidades solicitadas o mejoras a proyectos existentes.",
-      difficulty: "Intermedio",
-      tags: ["Funcionalidad", "Mejora"],
-      points: 25,
-      example: "Agregar un interruptor de modo oscuro a una aplicación web"
+      title: "Mejorar Diseño Responsive Móvil",
+      description: "Revisar y corregir problemas de diseño responsive en todos los tamaños y orientaciones de dispositivos.",
+      difficulty: "Fácil",
+      tags: ["Responsive", "CSS", "Mobile"],
+      points: 18,
+      example: "Asegurar que todos los componentes se vean bien en móvil, tablet y escritorio"
     },
     {
       id: 5,
-      title: "Corregir Errores y Problemas",
-      description: "Identifica y resuelve errores reportados en los rastreadores de problemas.",
-      difficulty: "Intermedio",
-      tags: ["Corrección de Errores", "Depuración"],
-      points: 30,
-      example: "Corregir problemas de diseño responsivo en dispositivos móviles"
+      title: "Agregar Soporte de Traducción al Inglés",
+      description: "Implementar Polyglot.js para cambio de idioma inglés/español en todo el sitio web.",
+      difficulty: "Fácil",
+      tags: ["i18n", "Traducción", "JavaScript"],
+      points: 22,
+      example: "Agregar selector de idioma y traducir todo el contenido de texto al inglés"
     },
+    // Medium Level
     {
       id: 6,
-      title: "Mejorar Documentación del Código",
-      description: "Agrega comentarios comprensivos y documentación a bases de código existentes.",
-      difficulty: "Intermedio",
-      tags: ["Documentación", "Calidad del Código"],
-      points: 20,
-      example: "Agregar comentarios JSDoc a funciones JavaScript"
+      title: "Crear Formulario de Llamada a Ponentes",
+      description: "Diseñar e implementar una integración con Google Forms para aplicaciones de ponentes con estilos personalizados.",
+      difficulty: "Medio",
+      tags: ["Formularios", "Google Forms", "Integración"],
+      points: 30,
+      example: "Crear un formulario estilizado que envíe a Google Forms para aplicaciones de ponentes"
     },
     {
       id: 7,
-      title: "Crear Pruebas Unitarias",
-      description: "Escribe suites de pruebas comprensivas para mejorar la confiabilidad del código.",
-      difficulty: "Intermedio",
-      tags: ["Pruebas", "Aseguramiento de Calidad"],
+      title: "Implementar Optimización SEO",
+      description: "Agregar meta tags, datos estructurados, sitemap y mejorar la visibilidad en motores de búsqueda.",
+      difficulty: "Medio",
+      tags: ["SEO", "Meta Tags", "Datos Estructurados"],
       points: 35,
-      example: "Agregar pruebas Jest para componentes React"
+      example: "Agregar etiquetas Open Graph, Twitter cards y datos estructurados JSON-LD"
     },
-    // Advanced Level
     {
       id: 8,
-      title: "Refactorizar Código Legacy",
-      description: "Moderniza y mejora bases de código existentes manteniendo la funcionalidad.",
-      difficulty: "Avanzado",
-      tags: ["Refactorización", "Arquitectura"],
-      points: 50,
-      example: "Convertir componentes de clase a componentes funcionales con hooks"
+      title: "Agregar Estados de Carga y Animaciones",
+      description: "Implementar indicadores de carga suaves y micro-animaciones en todo el sitio.",
+      difficulty: "Medio",
+      tags: ["Animaciones", "UX", "CSS"],
+      points: 28,
+      example: "Agregar skeleton loaders, efectos hover de botones y animaciones de transición de página"
     },
     {
       id: 9,
-      title: "Implementar Nuevos Algoritmos",
-      description: "Desarrolla e implementa algoritmos eficientes para problemas complejos.",
-      difficulty: "Avanzado",
-      tags: ["Algoritmos", "Rendimiento"],
-      points: 60,
-      example: "Implementar un nuevo algoritmo de ordenamiento con complejidad O(n log n)"
+      title: "Mejorar Características de Accesibilidad",
+      description: "Implementar etiquetas ARIA, navegación por teclado, soporte para lectores de pantalla y cumplimiento WCAG.",
+      difficulty: "Medio",
+      tags: ["Accesibilidad", "ARIA", "WCAG"],
+      points: 32,
+      example: "Agregar etiquetas ARIA apropiadas, navegación por teclado y soporte para lectores de pantalla"
     },
     {
       id: 10,
-      title: "Contribuir a Funcionalidad Principal",
-      description: "Haz contribuciones significativas a las características principales de proyectos de código abierto.",
+      title: "Mejorar Compartir en Redes Sociales y Marca",
+      description: "Agregar favicon personalizado, botones de compartir en redes sociales y mejorar la consistencia de marca.",
+      difficulty: "Medio",
+      tags: ["Marca", "Compartir Social", "Favicon"],
+      points: 25,
+      example: "Crear favicon personalizado, agregar botones de compartir WhatsApp/Twitter, mejorar consistencia visual"
+    },
+    // Advanced Level
+    {
+      id: 11,
+      title: "Diseñar Micro-interacciones Avanzadas",
+      description: "Crear efectos hover sofisticados, animaciones de botones y sistemas de retroalimentación interactiva.",
       difficulty: "Avanzado",
-      tags: ["Núcleo", "Arquitectura"],
-      points: 75,
-      example: "Agregar soporte para nuevos formatos de datos en una librería de análisis"
+      tags: ["Micro-interacciones", "CSS", "UX"],
+      points: 40,
+      example: "Agregar efectos hover complejos, animaciones de estado de botones y retroalimentación interactiva"
+    },
+    {
+      id: 12,
+      title: "Agregar Transiciones Suaves de Página",
+      description: "Implementar transiciones de página y animaciones de ruta para una mejor experiencia de navegación.",
+      difficulty: "Avanzado",
+      tags: ["Animaciones", "Routing", "UX"],
+      points: 35,
+      example: "Agregar transiciones suaves entre páginas y cambios de ruta"
+    },
+    {
+      id: 13,
+      title: "Agregar Pruebas Unitarias e Integración",
+      description: "Escribir suites de pruebas para componentes e interacciones de usuario usando Jest y React Testing Library.",
+      difficulty: "Avanzado",
+      tags: ["Testing", "Jest", "React Testing Library"],
+      points: 45,
+      example: "Escribir pruebas comprensivas para componentes React e interacciones de usuario"
+    },
+    {
+      id: 14,
+      title: "Mejorar Estilos de Botones y Enlaces",
+      description: "Mejorar estados hover de botones, indicadores de foco e interacciones de enlaces para mejor UX.",
+      difficulty: "Avanzado",
+      tags: ["CSS", "UX", "Estilos"],
+      points: 30,
+      example: "Crear estilos de botones consistentes con estados hover, focus y active"
+    },
+    {
+      id: 15,
+      title: "Agregar Animaciones de Scroll",
+      description: "Implementar animaciones activadas por scroll y efectos de revelado para secciones de contenido.",
+      difficulty: "Avanzado",
+      tags: ["Animaciones", "Scroll", "CSS"],
+      points: 38,
+      example: "Agregar animaciones de fade-in y efectos de revelado mientras los usuarios hacen scroll por el contenido"
     }
   ];
 
@@ -347,7 +392,7 @@ export default function HacktoberFest() {
         <section id="challenges" className="challenges">
           <h2>🎯 Desafíos de Programación</h2>
           <p className="challenges-intro">
-            Elige entre estos 10 desafíos para contribuir a proyectos de código abierto. 
+            Elige entre estos 15 desafíos para contribuir a proyectos de código abierto. 
             Cada desafío está diseñado para ayudarte a aprender mientras generas un impacto real.
           </p>
           
