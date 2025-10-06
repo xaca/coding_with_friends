@@ -27,6 +27,7 @@ export default function HacktoberFest() {
       description: "Agregar un interruptor de modo oscuro/claro al sitio web con transiciones suaves y persistencia de preferencias del usuario.",
       difficulty: "Fácil",
       tags: ["UI/UX", "CSS", "JavaScript"],
+      href: 'https://github.com/xaca/coding_with_friends/issues/8',
       points: 15,
       example: "Crear un botón toggle que cambie entre temas claro y oscuro con persistencia en localStorage"
     },
@@ -36,6 +37,7 @@ export default function HacktoberFest() {
       description: "Resolver problemas de visualización de videos en iPhone mini y problemas de diseño móvil mencionados en la sección TODO.",
       difficulty: "Fácil",
       tags: ["Responsive", "Mobile", "CSS"],
+      href:'https://github.com/xaca/coding_with_friends/issues/9',
       points: 20,
       example: "Corregir problemas de tamaño de video y diseño en iPhone mini y otros dispositivos móviles pequeños"
     },
@@ -45,6 +47,7 @@ export default function HacktoberFest() {
       description: "Crear una sección que muestre las últimas publicaciones de Instagram de CWF usando Instagram Basic Display API.",
       difficulty: "Fácil",
       tags: ["API", "Redes Sociales", "React"],
+      href:'https://github.com/xaca/coding_with_friends/issues/10',
       points: 25,
       example: "Mostrar las últimas 6 publicaciones de Instagram de la cuenta @coding.with.friends"
     },
@@ -54,6 +57,7 @@ export default function HacktoberFest() {
       description: "Revisar y corregir problemas de diseño responsive en todos los tamaños y orientaciones de dispositivos.",
       difficulty: "Fácil",
       tags: ["Responsive", "CSS", "Mobile"],
+      href:'https://github.com/xaca/coding_with_friends/issues/11',
       points: 18,
       example: "Asegurar que todos los componentes se vean bien en móvil, tablet y escritorio"
     },
@@ -63,6 +67,7 @@ export default function HacktoberFest() {
       description: "Implementar Polyglot.js para cambio de idioma inglés/español en todo el sitio web.",
       difficulty: "Fácil",
       tags: ["i18n", "Traducción", "JavaScript"],
+      href:'https://github.com/xaca/coding_with_friends/issues/12',
       points: 22,
       example: "Agregar selector de idioma y traducir todo el contenido de texto al inglés"
     },
@@ -73,6 +78,7 @@ export default function HacktoberFest() {
       description: "Diseñar e implementar una integración con Google Forms para aplicaciones de ponentes con estilos personalizados.",
       difficulty: "Medio",
       tags: ["Formularios", "Google Forms", "Integración"],
+      href:'https://github.com/xaca/coding_with_friends/issues/13',
       points: 30,
       example: "Crear un formulario estilizado que envíe a Google Forms para aplicaciones de ponentes"
     },
@@ -82,6 +88,7 @@ export default function HacktoberFest() {
       description: "Agregar meta tags, datos estructurados, sitemap y mejorar la visibilidad en motores de búsqueda.",
       difficulty: "Medio",
       tags: ["SEO", "Meta Tags", "Datos Estructurados"],
+      href:'https://github.com/xaca/coding_with_friends/issues/14',
       points: 35,
       example: "Agregar etiquetas Open Graph, Twitter cards y datos estructurados JSON-LD"
     },
@@ -91,6 +98,7 @@ export default function HacktoberFest() {
       description: "Implementar indicadores de carga suaves y micro-animaciones en todo el sitio.",
       difficulty: "Medio",
       tags: ["Animaciones", "UX", "CSS"],
+      href:'https://github.com/xaca/coding_with_friends/issues/15',
       points: 28,
       example: "Agregar skeleton loaders, efectos hover de botones y animaciones de transición de página"
     },
@@ -100,6 +108,7 @@ export default function HacktoberFest() {
       description: "Implementar etiquetas ARIA, navegación por teclado, soporte para lectores de pantalla y cumplimiento WCAG.",
       difficulty: "Medio",
       tags: ["Accesibilidad", "ARIA", "WCAG"],
+      href:'https://github.com/xaca/coding_with_friends/issues/16',
       points: 32,
       example: "Agregar etiquetas ARIA apropiadas, navegación por teclado y soporte para lectores de pantalla"
     },
@@ -109,6 +118,7 @@ export default function HacktoberFest() {
       description: "Agregar favicon personalizado, botones de compartir en redes sociales y mejorar la consistencia de marca.",
       difficulty: "Medio",
       tags: ["Marca", "Compartir Social", "Favicon"],
+      href:'https://github.com/xaca/coding_with_friends/issues/17',
       points: 25,
       example: "Crear favicon personalizado, agregar botones de compartir WhatsApp/Twitter, mejorar consistencia visual"
     },
@@ -119,6 +129,7 @@ export default function HacktoberFest() {
       description: "Crear efectos hover sofisticados, animaciones de botones y sistemas de retroalimentación interactiva.",
       difficulty: "Avanzado",
       tags: ["Micro-interacciones", "CSS", "UX"],
+      href:'https://github.com/xaca/coding_with_friends/issues/18',
       points: 40,
       example: "Agregar efectos hover complejos, animaciones de estado de botones y retroalimentación interactiva"
     },
@@ -128,6 +139,7 @@ export default function HacktoberFest() {
       description: "Implementar transiciones de página y animaciones de ruta para una mejor experiencia de navegación.",
       difficulty: "Avanzado",
       tags: ["Animaciones", "Routing", "UX"],
+      href:'https://github.com/xaca/coding_with_friends/issues/19',
       points: 35,
       example: "Agregar transiciones suaves entre páginas y cambios de ruta"
     },
@@ -137,6 +149,7 @@ export default function HacktoberFest() {
       description: "Escribir suites de pruebas para componentes e interacciones de usuario usando Jest y React Testing Library.",
       difficulty: "Avanzado",
       tags: ["Testing", "Jest", "React Testing Library"],
+      href:'https://github.com/xaca/coding_with_friends/issues/20',
       points: 45,
       example: "Escribir pruebas comprensivas para componentes React e interacciones de usuario"
     },
@@ -146,6 +159,7 @@ export default function HacktoberFest() {
       description: "Mejorar estados hover de botones, indicadores de foco e interacciones de enlaces para mejor UX.",
       difficulty: "Avanzado",
       tags: ["CSS", "UX", "Estilos"],
+      href:'https://github.com/xaca/coding_with_friends/issues/21',
       points: 30,
       example: "Crear estilos de botones consistentes con estados hover, focus y active"
     },
@@ -155,6 +169,7 @@ export default function HacktoberFest() {
       description: "Implementar animaciones activadas por scroll y efectos de revelado para secciones de contenido.",
       difficulty: "Avanzado",
       tags: ["Animaciones", "Scroll", "CSS"],
+      href:'https://github.com/xaca/coding_with_friends/issues/22',
       points: 38,
       example: "Agregar animaciones de fade-in y efectos de revelado mientras los usuarios hacen scroll por el contenido"
     }
@@ -166,7 +181,7 @@ export default function HacktoberFest() {
       title: "Integración con Instagram",
       description: "Conéctate con nuestras últimas publicaciones y destacados de la comunidad",
       icon: "📸",
-      action: "Seguir @coding.with.friends"
+      action: "Seguir @coding.with.friends",
     },
     {
       title: "Llamada a Ponentes",
@@ -197,7 +212,8 @@ export default function HacktoberFest() {
       difficulty: "Súper Fácil",
       time: "5 min",
       reward: "Insignia de Contribuidor",
-      example: "Agregar tu nombre al archivo CONTRIBUTORS.md"
+      example: "Agregar tu nombre al archivo CONTRIBUTORS.md",
+      href:'https://github.com/xaca/coding_with_friends/issues/23'
     },
     {
       id: 2,
@@ -206,7 +222,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "15-20 min",
       reward: "Insignia de Ayudante",
-      example: "Agregar comentarios explicando qué hace una función"
+      example: "Agregar comentarios explicando qué hace una función",
+      href:'https://github.com/xaca/coding_with_friends/issues/26'
     },
     {
       id: 3,
@@ -215,7 +232,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "15-25 min",
       reward: "Insignia de Diseñador de Audio",
-      example: "Sonido suave al hacer hover en botones o al hacer clic"
+      example: "Sonido suave al hacer hover en botones o al hacer clic",
+      href:'https://github.com/xaca/coding_with_friends/issues/27'
     },
     {
       id: 4,
@@ -224,7 +242,8 @@ export default function HacktoberFest() {
       difficulty: "Súper Fácil",
       time: "5-10 min",
       reward: "Insignia de Comunidad",
-      example: "Corregir 'recieve' por 'receive' en README.md"
+      example: "Corregir 'recieve' por 'receive' en README.md",
+      href:'https://github.com/xaca/coding_with_friends/issues/24'
     },
     {
       id: 5,
@@ -233,7 +252,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "15-20 min",
       reward: "Insignia de Motivador",
-      example: "Botón que muestre '¡Sigue codificando! 💪' o 'Los errores son oportunidades de aprendizaje 🚀'"
+      example: "Botón que muestre '¡Sigue codificando! 💪' o 'Los errores son oportunidades de aprendizaje 🚀'",
+      href:'https://github.com/xaca/coding_with_friends/issues/28'
     },
     {
       id: 6,
@@ -242,7 +262,8 @@ export default function HacktoberFest() {
       difficulty: "Súper Fácil",
       time: "3-5 min",
       reward: "Insignia de Emoji Master",
-      example: "Cambiar 'Eventos' por '🎉 Eventos' o 'Contacto' por '📞 Contacto'"
+      example: "Cambiar 'Eventos' por '🎉 Eventos' o 'Contacto' por '📞 Contacto'",
+      href:'https://github.com/xaca/coding_with_friends/issues/25'
     },
     {
       id: 7,
@@ -251,7 +272,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "25-30 min",
       reward: "Insignia de Constructor",
-      example: "Crear una animación de círculo giratorio"
+      example: "Crear una animación de círculo giratorio",
+      href:'https://github.com/xaca/coding_with_friends/issues/29'
     },
     {
       id: 8,
@@ -260,7 +282,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "20-30 min",
       reward: "Insignia de Escriba Digital",
-      example: "El título principal aparece letra por letra con efecto de cursor parpadeante"
+      example: "El título principal aparece letra por letra con efecto de cursor parpadeante",
+      href:'https://github.com/xaca/coding_with_friends/issues/30'
     },
     {
       id: 9,
@@ -269,7 +292,8 @@ export default function HacktoberFest() {
       difficulty: "Fácil",
       time: "15-20 min",
       reward: "Insignia de Conector",
-      example: "Agregar enlaces de Instagram, Twitter, LinkedIn"
+      example: "Agregar enlaces de Instagram, Twitter, LinkedIn",
+      href:'https://github.com/xaca/coding_with_friends/issues/31'
     }
   ];
 
@@ -415,7 +439,12 @@ export default function HacktoberFest() {
                 <div className="challenge-example">
                   <strong>Example:</strong> {challenge.example}
                 </div>
-                <button className="challenge-btn">Iniciar Desafío</button>
+                <button
+                  onClick={() => { if (challenge.href) window.location.href = challenge.href }}
+                  className="challenge-btn"
+                >
+                  Iniciar Desafío
+                </button>
               </div>
             ))}
           </div>
@@ -466,7 +495,12 @@ export default function HacktoberFest() {
                       <span className="reward-text">{challenge.reward}</span>
                     </div>*/}
                   </div>
-                  {/*<button className="vibecoder-challenge-btn">Iniciar Desafío</button>*/}
+                  <button
+                    onClick={() => { if (challenge.href) window.location.href = challenge.href }}
+                    className="vibecoder-challenge-btn"
+                  >
+                    Iniciar Desafío
+                  </button>
                 </div>
               ))}
             </div>
