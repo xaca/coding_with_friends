@@ -808,6 +808,113 @@
     }
   }
 
+  // PR Video Section
+  .pr-video {
+    margin-bottom: 60px;
+    width: 80%;
+    margin: 0 auto 60px auto;
+    text-align: center;
+
+    h2 {
+      color: var(--color-frase);
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-intro {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: #000;
+      border: 2px solid #333;
+
+      .youtube-player {
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-radius: 15px;
+      }
+    }
+
+    .video-description {
+      background: linear-gradient(135deg, var(--color-fondo-destacado) 0%, var(--color-boton) 100%);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid #e0d5b8;
+
+      h3 {
+        color: var(--color-fondo);
+        font-size: 28px;
+        margin-bottom: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .video-benefits {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        li {
+          color: #2c3e50;
+          font-size: 16px;
+          margin-bottom: 15px;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease;
+
+          &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+
+          &:before {
+            content: "✅";
+            margin-right: 12px;
+            font-size: 18px;
+            flex-shrink: 0;
+          }
+
+          &:hover {
+            color: #e74c3c;
+            transform: translateX(8px);
+            background: rgba(255, 255, 255, 0.9);
+            padding-left: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+
   // Partners Section
   .partners {
     margin-bottom: 60px;
@@ -1192,6 +1299,56 @@
       }
     }
 
+    .pr-video {
+      width: 95%;
+      margin: 0 auto 40px auto;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .video-intro {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      .video-container {
+        margin-bottom: 30px;
+
+        .youtube-player {
+          height: 250px;
+        }
+      }
+
+      .video-description {
+        padding: 25px;
+
+        h3 {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+
+        .video-benefits {
+          padding: 20px;
+
+          li {
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding: 10px 0;
+
+            &:before {
+              font-size: 16px;
+              margin-right: 10px;
+            }
+
+            &:hover {
+              padding-left: 12px;
+            }
+          }
+        }
+      }
+    }
+
     .partners {
       .partners-content {
         .partner-categories {
@@ -1388,6 +1545,35 @@
         }
       }
     }
+
+    .pr-video {
+      .video-container {
+        .youtube-player {
+          height: 350px;
+        }
+      }
+
+      .video-description {
+        padding: 30px;
+
+        h3 {
+          font-size: 24px;
+        }
+
+        .video-benefits {
+          padding: 22px;
+
+          li {
+            font-size: 15px;
+            margin-bottom: 13px;
+
+            &:before {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1427,6 +1613,39 @@
         .pr-step {
           &:hover {
             transform: translateX(10px);
+          }
+        }
+      }
+    }
+
+    .pr-video {
+      .video-container {
+        .youtube-player {
+          height: 500px;
+        }
+      }
+
+      .video-description {
+        h3 {
+          font-size: 30px;
+        }
+
+        .video-benefits {
+          padding: 30px;
+
+          li {
+            font-size: 17px;
+            margin-bottom: 16px;
+
+            &:before {
+              font-size: 20px;
+              margin-right: 15px;
+            }
+
+            &:hover {
+              transform: translateX(10px);
+              padding-left: 20px;
+            }
           }
         }
       }

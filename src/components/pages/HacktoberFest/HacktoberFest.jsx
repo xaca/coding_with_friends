@@ -425,7 +425,7 @@ export default function HacktoberFest() {
             </div>
           </div>
 
-          <div className="community-features">
+          {/*<div className="community-features">
             <h3>Características de la Comunidad</h3>
             <ul>
               <li>📱 Integración de feed de Instagram para las últimas publicaciones de CWF</li>
@@ -435,7 +435,7 @@ export default function HacktoberFest() {
               <li>📧 Notificaciones automáticas por email para eventos</li>
               <li>🌍 Soporte de traducción al inglés con Polyglot.js</li>
             </ul>
-          </div>
+          </div>*/}
         </section>
 
         {/* Pull Request Guide */}
@@ -458,35 +458,41 @@ export default function HacktoberFest() {
               </div>
             ))}
           </div>
+        </section>
 
-          <div className="pr-resources">
-            <h3>Recursos Adicionales</h3>
-            <div className="resource-links">
-              <a 
-                href="https://www.youtube.com/watch?v=8MQN0U1AwgU" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="resource-link"
-              >
-                📺 Video Tutorial Detallado de PR
-              </a>
-              <a 
-                href="https://docs.github.com/en/pull-requests" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="resource-link"
-              >
-                📚 Documentación de PR de GitHub
-              </a>
-              <a 
-                href="https://opensource.guide/how-to-contribute/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="resource-link"
-              >
-                🚀 Guía de Contribución de Código Abierto
-              </a>
-            </div>
+        {/* PR Explanation Video */}
+        <section className="pr-video">
+          <h2>🎥 Explicación Detallada de Pull Requests</h2>
+          <p className="video-intro">
+            Aprende paso a paso cómo crear y gestionar pull requests de manera efectiva. 
+            Este video tutorial te guiará a través del proceso completo con ejemplos prácticos.
+          </p>
+          
+          <div className="video-container">
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/8MQN0U1AwgU"
+              title="Tutorial de Pull Requests - HacktoberFest 2025"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="youtube-player"
+            ></iframe>
+          </div>
+          
+          <div className="video-description">
+            <h3>¿Qué aprenderás en este video?</h3>
+            <ul className="video-benefits">
+              <li>Cómo hacer fork de un repositorio correctamente</li>
+              <li>Configuración del entorno de desarrollo local</li>
+              <li>Creación y gestión de ramas de Git</li>
+              <li>Mejores prácticas para commits descriptivos</li>
+              <li>Proceso completo de creación de Pull Request</li>
+              <li>Cómo responder a comentarios y revisiones</li>
+              <li>Resolución de conflictos de merge</li>
+              <li>Tips para PRs exitosos en HacktoberFest</li>
+            </ul>
           </div>
         </section>
 
@@ -615,6 +621,37 @@ export default function HacktoberFest() {
             >
               Únete a Discord
             </a>
+          </div>
+        </section>
+        <section className="pr-guide">
+        <div className="pr-resources">
+            <h3>Recursos Adicionales</h3>
+            <div className="resource-links">
+              <a 
+                href="https://www.youtube.com/watch?v=8MQN0U1AwgU" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="resource-link"
+              >
+                📺 Video Tutorial Detallado de PR
+              </a>
+              <a 
+                href="https://docs.github.com/en/pull-requests" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="resource-link"
+              >
+                📚 Documentación de PR de GitHub
+              </a>
+              <a 
+                href="https://opensource.guide/how-to-contribute/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="resource-link"
+              >
+                🚀 Guía de Contribución de Código Abierto
+              </a>
+            </div>
           </div>
         </section>
       </div>
