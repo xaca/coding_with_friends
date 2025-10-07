@@ -1,3 +1,4 @@
+// Intro component displays introductory information (old version)
 function Intro({info}){
   return(<>
   <section className="intro_evento">
@@ -20,6 +21,7 @@ function Intro({info}){
 </section>
   </>);
 }
+// Info component displays detailed information (old version)
 function Info({info})
 {
     return (<>

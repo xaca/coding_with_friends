@@ -1,3 +1,4 @@
+// Router component handles navigation between pages using React Router
 import { HashRouter, Routes, Route } from "react-router";
 import Deportes from "../../pages/Deportes/Deportes";
 import Home from "../../pages/Home/Home";
@@ -9,11 +10,13 @@ import HacktoberFest from "../../pages/HacktoberFest/HacktoberFest";
 import App from "../../../App";
 import { ViewTransitionWrapper } from "../PageTransition/ViewTransition";
 
+// Main Router function for page navigation
 function Router(){
     return(<>
         <HashRouter>
         <ViewTransitionWrapper>
             <Routes>
+                {/* Define routes for each page */}
                 <Route path="/" element={<App />} />
                 <Route path="cine" element={<Cine />} />
                 <Route path="charlas" element={<InPersonEvent />} />

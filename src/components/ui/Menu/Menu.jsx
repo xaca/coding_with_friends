@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import "./Menu.scss";
 
+// Menu component displays the navigation menu
 function Menu(){
     return(<>
     <nav className="menu">

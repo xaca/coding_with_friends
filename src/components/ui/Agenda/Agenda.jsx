@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
+// Agenda component displays the schedule of events
 function Agenda() {
   return (
     <section id="agenda">

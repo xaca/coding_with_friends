@@ -5,6 +5,7 @@ import upb_logo from "../../../assets/img/logo_upb.png";
 import { BsInstagram } from "react-icons/bs";
 import { TbWorldHeart } from "react-icons/tb";
 
+// Footer component displays the bottom section of the page
 function Footer() {
     return (
         <footer id="sponsors">

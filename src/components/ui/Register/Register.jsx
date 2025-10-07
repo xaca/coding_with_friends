@@ -1,3 +1,4 @@
+// Register component handles user registration for events
 function Register(){
     return(
         <section id="register">
