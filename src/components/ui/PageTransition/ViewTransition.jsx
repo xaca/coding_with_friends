@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
+// ViewTransitionWrapper component handles page transition animations
 export function ViewTransitionWrapper({ children }) {
   const location = useLocation();
 

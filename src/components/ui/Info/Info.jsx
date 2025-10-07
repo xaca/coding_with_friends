@@ -1,4 +1,5 @@
 import { FaYoutube } from "react-icons/fa";
+// Intro component displays introductory information
 function Intro({info}){
     return(<>
     <section className="intro_evento">
@@ -12,6 +13,7 @@ function Intro({info}){
   </section>
     </>);
   }
+  // Info component displays detailed information
   function Info({info})
   {
       return (<>
