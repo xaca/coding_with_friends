@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import MainLayout from '../../ui/MainLayout/MainLayout';
 import './OnlineEvents.scss';
 
-const videoData = [  
+const videoData = [
   {
     "Title": "Entrega proyectos - Videojuegos / Scripting 2025",
     "Publish Date": "2025-05-29",
@@ -43,15 +43,18 @@ const videoData = [
     "Publish Date": "2025-03-14",
     "URL": "http://www.youtube.com/watch?v=OwpSRfhhJB8"
   },
-  {"Title":"Arquitectura como código",
+  {
+    "Title": "Arquitectura como código",
     "Publish Date": "2025-04-02",
     "URL": "http://www.youtube.com/watch?v=OwcPzx-sF38"
   },
-  {"Title":"Patrones de diseño para mobile",
+  {
+    "Title": "Patrones de diseño para mobile",
     "Publish Date": "2025-02-28",
     "URL": "http://www.youtube.com/watch?v=bzY78exHi7E"
   },
-  {"Title":"¿Como crear una APP?",
+  {
+    "Title": "¿Como crear una APP?",
     "Publish Date": "2025-02-21",
     "URL": "http://www.youtube.com/watch?v=n1-zDSUDgds"
   },
@@ -65,7 +68,7 @@ const videoData = [
 function OnlineEvents() {
   const getRandomIndex = () => Math.floor(Math.random() * videoData.length);
   const initialIndex = getRandomIndex();
-  
+
   const [selectedVideo, setSelectedVideo] = useState(videoData[initialIndex]);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 2 });
@@ -77,7 +80,7 @@ function OnlineEvents() {
     const randomIndex = getRandomIndex();
     setCurrentIndex(randomIndex);
     setSelectedVideo(videoData[randomIndex]);
-    
+
     const start = Math.max(0, Math.floor(randomIndex / 3) * 3);
     setVisibleRange({
       start,
@@ -88,10 +91,10 @@ function OnlineEvents() {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 810);
     };
-    
+
     handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -132,24 +135,24 @@ function OnlineEvents() {
 
   const handleThumbnailNavigation = (direction) => {
     if (!isMobileView || isAnimating) return;
-    
+
     setIsAnimating(true);
-    
+
     const increment = direction === 'next' ? 1 : -1;
     const newStart = Math.max(0, visibleRange.start + increment);
     const newEnd = Math.min(newStart + 2, videoData.length - 1);
-    
+
     if (newStart >= 0 && newStart < videoData.length) {
       if (thumbnailsRef.current) {
         const thumbnailWidth = thumbnailsRef.current.offsetWidth / 3;
         const currentScroll = thumbnailsRef.current.scrollLeft;
         const targetScroll = currentScroll + (increment * thumbnailWidth);
-        
+
         thumbnailsRef.current.scrollTo({
           left: targetScroll,
           behavior: 'smooth'
         });
-        
+
         setTimeout(() => {
           setVisibleRange({
             start: newStart,
@@ -205,7 +208,7 @@ function OnlineEvents() {
   return (
     <MainLayout>
       <div className="online-events">
-        <h1>Online Events</h1>
+        <h1>Online Events💻 </h1>
         <div className="video-container">
           <div className="main-video">
             <iframe
@@ -222,14 +225,14 @@ function OnlineEvents() {
               <p>Published: {selectedVideo["Publish Date"]}</p>
             </div>
             <div className="navigation-buttons">
-              <button 
+              <button
                 onClick={handlePrevVideo}
                 className="nav-button prev"
                 title="Previous video"
               >
                 ← Previous
               </button>
-              <button 
+              <button
                 onClick={handleNextVideo}
                 className="nav-button next"
                 title="Next video"
@@ -240,7 +243,7 @@ function OnlineEvents() {
           </div>
           <div className="video-thumbnails-container">
             {isMobileView && (
-              <button 
+              <button
                 className="thumbnail-nav"
                 onClick={() => handleThumbnailNavigation('prev')}
                 disabled={visibleRange.start === 0 || isAnimating}
@@ -252,7 +255,7 @@ function OnlineEvents() {
               {renderThumbnails()}
             </div>
             {isMobileView && (
-              <button 
+              <button
                 className="thumbnail-nav"
                 onClick={() => handleThumbnailNavigation('next')}
                 disabled={visibleRange.end >= videoData.length - 1 || isAnimating}
