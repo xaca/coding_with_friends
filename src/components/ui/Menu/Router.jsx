@@ -6,6 +6,7 @@ import InPersonEvent from "../../pages/Charlas/InPersonEvent";
 import OnlineEvents from "../../pages/OnlineEvents/OnlineEvents";
 import CursosSapiencia from "../../pages/CursosSapiencia/CursosSapiencia";
 import HacktoberFest from "../../pages/HacktoberFest/HacktoberFest";
+import FrasesMotivacionales from "../../pages/FrasesMotivacionales/FrasesMotivacionales";
 import App from "../../../App";
 import { ViewTransitionWrapper } from "../PageTransition/ViewTransition";
 
@@ -20,6 +21,7 @@ function Router(){
                 <Route path="deportes" element={<Deportes />} />
                 <Route path="online-events" element={<OnlineEvents />} />
                 <Route path="cursos-sapiencia" element={<CursosSapiencia />} />
+                <Route path="frases-motivacionales" element={<FrasesMotivacionales />} />
                 <Route path="hacktoberfest" element={<HacktoberFest />} />
                 <Route path="*" element={<Home />} />
             </Routes>

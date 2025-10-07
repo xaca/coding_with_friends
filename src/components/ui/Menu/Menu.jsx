@@ -10,6 +10,7 @@ function Menu(){
         <NavLink to="/online-events">Online</NavLink>
         <NavLink to="/cursos-sapiencia">Cursos Sapiencia</NavLink>
         <NavLink to="/hacktoberfest">HacktoberFest</NavLink>
+        <NavLink to="/frases-motivacionales">Frases Motivacionales</NavLink>
         {/*<NavLink to="/deportes">Deportes</NavLink>*/}
     </nav>
     </>);
