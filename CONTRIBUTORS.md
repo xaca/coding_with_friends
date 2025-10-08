@@ -1,2 +1,3 @@
 - sebas_vitz
+- Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
