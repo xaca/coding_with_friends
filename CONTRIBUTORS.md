@@ -1,4 +1,5 @@
 - sebas_vitz
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
--Manuela Victoria Giraldo Osorio 
+- Ricardo Guanilo
+-Manuela Giraldo 
