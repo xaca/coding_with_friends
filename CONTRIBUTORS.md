@@ -1,10 +1,8 @@
 - sebas_vitz
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
-
-
-
-
-
-
--Sara Sierra
+- Ricardo Guanilo
+- Manuela Giraldo 
+- Maicol Gutierrez / Maicolguti
+- DahianaGuzman
+- -Sara Sierra
