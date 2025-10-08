@@ -1,6 +1,7 @@
 - sebas_vitz
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
+- Ricardo Guanilo
+- Manuela Giraldo 
 - Maicol Gutierrez / Maicolguti
 - DahianaGuzman
-- Ricardo Guanilo
