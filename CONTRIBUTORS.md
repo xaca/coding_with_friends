@@ -2,3 +2,4 @@
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
 - Maicol Gutierrez / Maicolguti
+- Ricardo Guanilo 
