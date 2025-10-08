@@ -1,3 +1,5 @@
+import soundPlayer from '../../../utils/soundPlayer';
+
 // Register component handles user registration for events
 function Register(){
     return(
@@ -6,7 +8,7 @@ function Register(){
         <p>
             La participación en el evento es gratuita, es un evento público. Sin embargo pedimos el favor de realizar el registro para saber cuantas personas esperamos. 
             <br /><br /><br />
-            <a href="http://bit.ly/codingupb" target="_blank" id="btn_registro">Registro</a>
+            <a href="http://bit.ly/codingupb" target="_blank" id="btn_registro" onMouseEnter={()=>soundPlayer.playHover()} onClick={()=>soundPlayer.playClick()}>Registro</a>
         </p>
         </section>
     );

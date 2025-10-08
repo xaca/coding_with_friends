@@ -1,3 +1,4 @@
+import soundPlayer from '../../../utils/soundPlayer';
 //edited form Ryan Morr
 // SliderConfig class defines configuration for the slider component
 class SliderConfig{
@@ -41,8 +42,8 @@ class SliderConfig{
       }
       this.bullets = [].slice.call(parent_node.querySelectorAll('.carousel-bullet'));
       this.bullets[this.currentIndex].classList.add('active-bullet');
-      this.prevBtn.addEventListener('click', this.prev.bind(null,this), false);
-      this.nextBtn.addEventListener('click', this.next.bind(null,this), false);
+  this.prevBtn.addEventListener('click', (e)=>{ soundPlayer.playClick(); this.prev.bind(null,this)(e); }, false);
+  this.nextBtn.addEventListener('click', (e)=>{ soundPlayer.playClick(); this.next.bind(null,this)(e); }, false);
       
       this.pagination.addEventListener('click', function(ref,e) {
         var index = ref.bullets.indexOf(e.target);
@@ -50,6 +51,8 @@ class SliderConfig{
           ref.slideTo(index);
         }
       }.bind(null,this), false);
+      // add hover sound on bullets
+      this.bullets.forEach(b=> b.addEventListener('mouseenter', ()=>{ soundPlayer.playHover(); }, false));
   }
 
   createSlider(parent_node){
