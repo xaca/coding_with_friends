@@ -1,7 +1,10 @@
 import { NavLink } from "react-router";
 import "./Menu.scss";
+import { useTheme } from "../Theme/ThemeProvider";
 
 function Menu(){
+    const { theme, toggleTheme } = useTheme();
+    const isDark = theme === "dark";
     return(<>
     <nav className="menu">
         <NavLink to="/">Home</NavLink>
@@ -11,6 +14,9 @@ function Menu(){
         <NavLink to="/cursos-sapiencia">Cursos Sapiencia</NavLink>
         <NavLink to="/hacktoberfest">HacktoberFest</NavLink>
         {/*<NavLink to="/deportes">Deportes</NavLink>*/}
+        <button className="theme-toggle" aria-label="Toggle dark mode" onClick={toggleTheme}>
+            {isDark ? "Light" : "Dark"}
+        </button>
     </nav>
     </>);
 }

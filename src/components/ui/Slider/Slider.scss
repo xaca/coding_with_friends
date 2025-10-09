@@ -166,3 +166,13 @@
 }
 /*Tablet*/
 @media (min-width: 501px) and (max-width:810px) {}
+
+// Modo oscuro: cambiar el fondo del carousel a oscuro
+[data-theme="dark"] .carousel {
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+}
+
+[data-theme="dark"] .carousel-container {
+    background-color: var(--color-fondo);
+}

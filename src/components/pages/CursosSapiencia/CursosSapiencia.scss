@@ -2,51 +2,66 @@
   padding: 20px;
   width: 90%;
   margin: 0 auto;
+  background: var(--color-home);
+  min-height: 100vh;
+  transition: var(--transition-theme);
 
   .intro {
     text-align: center;
     margin-bottom: 40px;
+    background: var(--color-fondo-destacado);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     
     h1 {
-      color: var(--color-titulos);
+      color: var(--color-frase);
       font-size: 28px;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: none;
+      font-weight: 700;
     }
     
     .mensaje_importante {
-      background: var(--color-fondo-destacado);
+      background: var(--color-frase);
+      color: var(--color-fondo);
       padding: 20px;
       border-radius: 10px;
       margin: 20px 0;
       font-size: 18px;
-      color: var(--color-destacado);
       font-weight: 600;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      text-shadow: none;
     }
     
     p {
       color: var(--color-texto);
       font-weight: 500;
       line-height: 1.6;
+      font-size: 16px;
     }
   }
 
   .requirements {
     margin-bottom: 40px;
+    background: var(--color-fondo-destacado);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     
     h2 {
-      color: var(--color-titulos);
+      color: var(--color-frase);
       font-size: 24px;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: none;
+      font-weight: 700;
     }
     
     h3 {
-      color: var(--color-titulos);
+      color: var(--color-frase);
       font-size: 20px;
       margin: 30px 0 15px 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: none;
+      font-weight: 600;
     }
     
     ol, ul {
@@ -58,19 +73,28 @@
         line-height: 1.6;
         color: var(--color-texto);
         font-weight: 500;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin-bottom: 8px;
       }
     }
   }
 
   .courses-with-links {
     margin-bottom: 40px;
+    background: var(--color-fondo-destacado);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     
     h2 {
-      color: var(--color-titulos);
+      color: var(--color-frase);
       font-size: 24px;
       margin-bottom: 30px;
       text-align: center;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: none;
+      font-weight: 700;
     }
     
     .course-buttons {
@@ -87,39 +111,39 @@
       margin-top: 20px;
       
       .course-level {
-        background: var(--color-boton);
-        color: var(--color-texto-boton);
-        padding: 5px 15px;
-        border-radius: 20px;
+        background: var(--color-frase);
+        color: var(--color-fondo);
+        padding: 8px 20px;
+        border-radius: 25px;
         font-size: 12px;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         text-transform: uppercase;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
       
       .course-button {
         display: block;
         text-decoration: none;
-        color: var(--color-texto-boton);
-        background: var(--color-boton);
-        padding: 15px 30px;
-        border-radius: 10px;
+        color: var(--color-fondo);
+        background: var(--color-frase);
+        padding: 18px 30px;
+        border-radius: 12px;
         font-size: 16px;
         font-weight: 700;
         text-align: center;
-        border: 1px solid var(--color-borde-tarjetas);
-        box-shadow: 5px 5px var(--color-sombra);
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         width: 100%;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: none;
         
         &:hover {
-          background: var(--color-texto-boton);
-          color: var(--color-boton);
-          transform: translateY(-2px);
-          box-shadow: 7px 7px var(--color-sombra);
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          background: var(--color-boton);
+          color: var(--color-texto-boton);
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -211,12 +235,17 @@
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    background: var(--color-fondo-destacado);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     
     h2 {
-      color: var(--color-titulos);
+      color: var(--color-frase);
       font-size: 24px;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: none;
+      font-weight: 700;
     }
     
     p {
@@ -225,25 +254,26 @@
     }
     
     .contact-info {
-      background: var(--color-fondo-destacado);
-      color: var(--color-destacado);
-      padding: 10px;
-      border-radius: 10px;
+      background: var(--color-boton);
+      color: var(--color-texto-boton);
+      padding: 20px;
+      border-radius: 12px;
       box-sizing: border-box;
-      /*margin: 20px 0;*/
+      margin: 20px 0;
       
       p {
         margin: 10px 0;
         font-weight: 600;
         
         a {
-          color: var(--color-boton);
+          color: var(--color-frase);
           text-decoration: none;
           font-weight: 700;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          text-shadow: none;
           
           &:hover {
             text-decoration: underline;
+            color: var(--color-texto-boton);
           }
         }
       }
@@ -252,14 +282,15 @@
     .final-message {
       font-style: italic;
       font-size: 18px;
-      color: var(--color-frase);
+      color: var(--color-fondo);
       margin-top: 30px;
-      padding: 20px;
-      background: rgba(221, 237, 99, 0.2);
-      border-radius: 10px;
+      padding: 25px;
+      background: var(--color-frase);
+      border-radius: 12px;
       font-weight: 600;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-      border: 2px solid rgba(221, 237, 99, 0.3);
+      text-shadow: none;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
   }
 }
