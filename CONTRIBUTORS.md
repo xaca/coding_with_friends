@@ -2,6 +2,7 @@
 - Danibeta33
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
+- Matias Bedoya Rojas 
 - Ricardo Guanilo
 - Manuela Giraldo 
 - Maicol Gutierrez / Maicolguti
