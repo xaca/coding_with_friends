@@ -7,5 +7,6 @@
 - Manuela Giraldo 
 - Maicol Gutierrez / Maicolguti
 - DahianaGuzman
-- -Sara Sierra
+- Sara Sierra
 - Alfonso Jiménez / alfonsoj03
+- Julian Rodriguez / RdzJJ
