@@ -1,4 +1,5 @@
 - sebas_vitz
+- Danibeta33
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
 - Ricardo Guanilo
@@ -6,3 +7,4 @@
 - Maicol Gutierrez / Maicolguti
 - DahianaGuzman
 - Purvansh Bhatt / purvanshbhatt
+- Alfonso Jiménez / alfonsoj03
