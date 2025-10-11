@@ -58,8 +58,15 @@ jobs:
             console.log(`✅ Issues filtrados (sin PRs): ${recentIssues.length}`);
 
             // Formatear en Markdown
-            let markdown = `# 🧩 Issues Cerrados Recientemente\n\n`;
-            markdown += `> _Última actualización: **${new Date().toLocaleString('es-ES')}**_\n\n---\n\n`;
+            let markdown = `# 🧩 Issues cerrados recientemente\n\n`;
+            markdown += `> _Última actualización: **${new Date().toLocaleString('es-CO', { 
+              timeZone: 'America/Bogota',
+              year: 'numeric',
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}**_\n\n---\n\n`;
 
             if (recentIssues.length === 0) {
               markdown += `No hay issues cerrados recientemente.\n\n`;
@@ -73,7 +80,12 @@ jobs:
                   ? issue.labels.map(l => `\`${l.name}\``).join(' ') 
                   : '—';
                 const assignee = issue.assignee ? `@${issue.assignee.login}` : '—';
-                const date = new Date(issue.closed_at).toLocaleDateString('es-ES');
+                const date = new Date(issue.closed_at).toLocaleDateString('es-CO', {
+                  timeZone: 'America/Bogota',
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit'
+                });
                 
                 // Truncar título si es muy largo
                 const title = issue.title.length > 50 
@@ -82,17 +94,10 @@ jobs:
                   
                 markdown += `| [#${issue.number}](${issue.html_url}) | ${title} | ${date} | ${labels} | ${assignee} |\n`;
               });
-
-              markdown += `\n---\n\n`;
-              markdown += `### 📊 Estadísticas\n\n`;
-              markdown += `- **Total mostrado:** ${recentIssues.length} issues\n`;
-              markdown += `- **Período:** Últimos issues cerrados\n`;
-              markdown += `- **Actualización:** Automática (lunes + al cerrar issues)\n\n`;
             }
 
+            markdown += `\n---\n\n`;
             markdown += `> 🕒 Este archivo se actualiza automáticamente cuando se cierran issues.\n`;
-            markdown += `> 💬 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues) | `;
-            markdown += `🆕 [Issues abiertos](https://github.com/${context.repo.owner}/${context.repo.repo}/issues?q=is%3Aissue+is%3Aopen)\n`;
 
             const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
             fs.writeFileSync(filePath, markdown);
