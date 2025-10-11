@@ -56,17 +56,20 @@ jobs:
                         .slice(0, 5);
 
                       // Formatear en Markdown
-                      const markdown = [
-                        `# Recently Closed Issues`,
-                        ``,
-                        `Última actualización: ${new Date().toISOString()}`,
-                        ``,
-                        ...filtered.map(issue => 
-                          `- [#${issue.number}](${issue.html_url}) **${issue.title}** — cerrado el ${new Date(issue.closed_at).toLocaleDateString()}`
-                        ),
-                        ``,
-                        `_Generado automáticamente por GitHub Actions_`
-                      ].join('\n');
+                      let markdown = `# 🧩 Issues cerrados recientemente\n\n`;
+                      markdown += `> _Última actualización: **${new Date().toLocaleString('es-ES')}**_\n\n---\n\n`;
+                      markdown += `| # | Título | Cerrado el | Labels | Asignado |\n`;
+                      markdown += `|:-:|:--------|:------------|:--------|:----------|\n`;
+
+                      recentIssues.forEach((issue) => {
+                      const labels = issue.labels.map(l => `\`${l.name}\``).join(' ');
+                      const assignee = issue.assignee ? `@${issue.assignee.login}` : '—';
+                      const date = new Date(issue.closed_at).toLocaleDateString('es-ES');
+                      markdown += `| [#${issue.number}](${issue.html_url}) | ${issue.title} |        {date} | ${labels} | ${assignee} |\n`;
+                      });
+
+                      markdown += `\n---\n\n> 🕒 Este archivo se actualiza automáticamente cuando se cierran issues.\n`;
+                      markdown += `> 💬 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues)\n`;
 
                       const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
                       fs.writeFileSync(filePath, markdown);
