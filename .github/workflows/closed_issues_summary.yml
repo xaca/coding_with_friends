@@ -78,11 +78,17 @@ jobs:
                   git config user.name "GitHub Action Bot"
                   git config user.email "action@github.com"
 
-                  if git diff --quiet RECENTLY_CLOSED.md; then
-                    echo "No hay cambios detectados. Nada que commitear."
+                  if [ ! -f RECENTLY_CLOSED.md ]; then
+                    echo "⚠️ El archivo RECENTLY_CLOSED.md no existe, abortando commit."
+                    exit 0
+                  fi
+
+                  git add RECENTLY_CLOSED.md
+
+                  if git diff --cached --quiet; then
+                    echo "ℹ️ No hay cambios detectados. Nada que commitear."
                   else
-                    git add RECENTLY_CLOSED.md
+                    echo "✅ Commit detectado, enviando cambios..."
                     git commit -m "ci: actualizar resumen de issues cerrados recientemente [skip ci]"
                     git push
-                    echo "✅ Cambios enviados exitosamente."
                   fi
