@@ -1,97 +1,120 @@
 name: Recently Closed Issues Summary
 
 on:
-    # Ejecutar cada lunes a las 9:00 AM UTC
-    schedule:
-        - cron: "0 9 * * 1"
+  # Ejecutar cada lunes a las 9:00 AM UTC
+  schedule:
+    - cron: "0 9 * * 1"
 
-    # Ejecutar cuando un issue se cierre
-    issues:
-        types: [closed]
+  # Ejecutar cuando un issue se cierre
+  issues:
+    types: [closed]
 
-    # Permitir ejecución manual
-    workflow_dispatch:
+  # Permitir ejecución manual
+  workflow_dispatch:
 
 jobs:
-    update-summary:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: write # para actualizar el archivo
-            issues: read # para leer los issues
-            pull-requests: read # filtrar correctamente
+  update-summary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # para actualizar el archivo
+      issues: read # para leer los issues
+      pull-requests: read # filtrar correctamente
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0 # necesario para commits automáticos confiables
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # necesario para commits automáticos confiables
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 20
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-            - name: Generate Issues Report
-              id: generate
-              uses: actions/github-script@v7
-              with:
-                  script: |
-                      const fs = require('fs');
-                      const path = require('path');
+      - name: Generate Issues Report
+        id: generate
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
 
-                      const { owner, repo } = context.repo;
+            const { owner, repo } = context.repo;
 
-                      // Buscar los 5 issues cerrados más recientes (excluyendo PRs)
-                      const { data: issues } = await github.rest.issues.listForRepo({
-                        owner,
-                        repo,
-                        state: "closed",
-                        per_page: 10, // recuperamos más para filtrar
-                        sort: "updated",
-                        direction: "desc",
-                      });
+            // Buscar los 5 issues cerrados más recientes (excluyendo PRs)
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "closed",
+              per_page: 10, // recuperamos más para filtrar
+              sort: "updated",
+              direction: "desc",
+            });
 
-                      const filtered = issues
-                        .filter(issue => !issue.pull_request)
-                        .slice(0, 5);
+            const recentIssues = issues
+              .filter(issue => !issue.pull_request)
+              .slice(0, 8);
 
-                      // Formatear en Markdown
-                      let markdown = `# 🧩 Issues cerrados recientemente\n\n`;
-                      markdown += `> _Última actualización: **${new Date().toLocaleString('es-ES')}**_\n\n---\n\n`;
-                      markdown += `| # | Título | Cerrado el | Labels | Asignado |\n`;
-                      markdown += `|:-:|:--------|:------------|:--------|:----------|\n`;
+            console.log(`✅ Issues filtrados (sin PRs): ${recentIssues.length}`);
 
-                      recentIssues.forEach((issue) => {
-                      const labels = issue.labels.map(l => `\`${l.name}\``).join(' ');
-                      const assignee = issue.assignee ? `@${issue.assignee.login}` : '—';
-                      const date = new Date(issue.closed_at).toLocaleDateString('es-ES');
-                      markdown += `| [#${issue.number}](${issue.html_url}) | ${issue.title} |        {date} | ${labels} | ${assignee} |\n`;
-                      });
+            // Formatear en Markdown
+            let markdown = `# 🧩 Issues Cerrados Recientemente\n\n`;
+            markdown += `> _Última actualización: **${new Date().toLocaleString('es-ES')}**_\n\n---\n\n`;
 
-                      markdown += `\n---\n\n> 🕒 Este archivo se actualiza automáticamente cuando se cierran issues.\n`;
-                      markdown += `> 💬 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues)\n`;
+            if (recentIssues.length === 0) {
+              markdown += `No hay issues cerrados recientemente.\n\n`;
+              markdown += `> 🔍 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues)\n`;
+            } else {
+              markdown += `| # | Título | Cerrado el | Labels | Asignado |\n`;
+              markdown += `|:-:|:--------|:------------|:--------|:----------|\n`;
 
-                      const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
-                      fs.writeFileSync(filePath, markdown);
+              recentIssues.forEach((issue) => {
+                const labels = issue.labels.length > 0 
+                  ? issue.labels.map(l => `\`${l.name}\``).join(' ') 
+                  : '—';
+                const assignee = issue.assignee ? `@${issue.assignee.login}` : '—';
+                const date = new Date(issue.closed_at).toLocaleDateString('es-ES');
+                
+                // Truncar título si es muy largo
+                const title = issue.title.length > 50 
+                  ? issue.title.substring(0, 47) + '...' 
+                  : issue.title;
+                  
+                markdown += `| [#${issue.number}](${issue.html_url}) | ${title} | ${date} | ${labels} | ${assignee} |\n`;
+              });
 
-                      console.log("✅ Archivo actualizado:", filePath);
+              markdown += `\n---\n\n`;
+              markdown += `### 📊 Estadísticas\n\n`;
+              markdown += `- **Total mostrado:** ${recentIssues.length} issues\n`;
+              markdown += `- **Período:** Últimos issues cerrados\n`;
+              markdown += `- **Actualización:** Automática (lunes + al cerrar issues)\n\n`;
+            }
 
-            - name: Commit and Push changes
-              run: |
-                  git config user.name "GitHub Action Bot"
-                  git config user.email "action@github.com"
+            markdown += `> 🕒 Este archivo se actualiza automáticamente cuando se cierran issues.\n`;
+            markdown += `> 💬 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues) | `;
+            markdown += `🆕 [Issues abiertos](https://github.com/${context.repo.owner}/${context.repo.repo}/issues?q=is%3Aissue+is%3Aopen)\n`;
 
-                  if [ ! -f RECENTLY_CLOSED.md ]; then
-                    echo "⚠️ El archivo RECENTLY_CLOSED.md no existe, abortando commit."
-                    exit 0
-                  fi
+            const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
+            fs.writeFileSync(filePath, markdown);
 
-                  git add RECENTLY_CLOSED.md
+            console.log("✅ Archivo actualizado:", filePath);
 
-                  if git diff --cached --quiet; then
-                    echo "ℹ️ No hay cambios detectados. Nada que commitear."
-                  else
-                    echo "✅ Commit detectado, enviando cambios..."
-                    git commit -m "ci: actualizar resumen de issues cerrados recientemente [skip ci]"
-                    git push
-                  fi
+      - name: Commit and Push changes
+        run: |
+          git config user.name "GitHub Action Bot"
+          git config user.email "action@github.com"
+
+          if [ ! -f RECENTLY_CLOSED.md ]; then
+            echo "⚠️ El archivo RECENTLY_CLOSED.md no existe, abortando commit."
+            exit 0
+          fi
+
+          git add RECENTLY_CLOSED.md
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ No hay cambios detectados. Nada que commitear."
+          else
+            echo "✅ Commit detectado, enviando cambios..."
+            git commit -m "ci: actualizar resumen de issues cerrados recientemente [skip ci]"
+            git push
+          fi
