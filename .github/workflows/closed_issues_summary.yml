@@ -1,0 +1,88 @@
+name: Recently Closed Issues Summary
+
+on:
+    # Ejecutar cada lunes a las 9:00 AM UTC
+    schedule:
+        - cron: "0 9 * * 1"
+
+    # Ejecutar cuando un issue se cierre
+    issues:
+        types: [closed]
+
+    # Permitir ejecución manual
+    workflow_dispatch:
+
+jobs:
+    update-summary:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write # para actualizar el archivo
+            issues: read # para leer los issues
+            pull-requests: read # filtrar correctamente
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # necesario para commits automáticos confiables
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Generate Issues Report
+              id: generate
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const fs = require('fs');
+                      const path = require('path');
+
+                      const { owner, repo } = context.repo;
+
+                      // Buscar los 5 issues cerrados más recientes (excluyendo PRs)
+                      const { data: issues } = await github.rest.issues.listForRepo({
+                        owner,
+                        repo,
+                        state: "closed",
+                        per_page: 10, // recuperamos más para filtrar
+                        sort: "updated",
+                        direction: "desc",
+                      });
+
+                      const filtered = issues
+                        .filter(issue => !issue.pull_request)
+                        .slice(0, 5);
+
+                      // Formatear en Markdown
+                      const markdown = [
+                        `# Recently Closed Issues`,
+                        ``,
+                        `Última actualización: ${new Date().toISOString()}`,
+                        ``,
+                        ...filtered.map(issue => 
+                          `- [#${issue.number}](${issue.html_url}) **${issue.title}** — cerrado el ${new Date(issue.closed_at).toLocaleDateString()}`
+                        ),
+                        ``,
+                        `_Generado automáticamente por GitHub Actions_`
+                      ].join('\n');
+
+                      const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
+                      fs.writeFileSync(filePath, markdown);
+
+                      console.log("✅ Archivo actualizado:", filePath);
+
+            - name: Commit and Push changes
+              run: |
+                  git config user.name "GitHub Action Bot"
+                  git config user.email "action@github.com"
+
+                  if git diff --quiet RECENTLY_CLOSED.md; then
+                    echo "No hay cambios detectados. Nada que commitear."
+                  else
+                    git add RECENTLY_CLOSED.md
+                    git commit -m "ci: actualizar resumen de issues cerrados recientemente [skip ci]"
+                    git push
+                    echo "✅ Cambios enviados exitosamente."
+                  fi
