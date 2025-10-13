@@ -100,4 +100,25 @@
         margin: 0 auto;
     }
     
+    /* Estilos específicos para Cine en móvil */
+    .skeleton-inner {
+        padding: 20px;
+    }
+
+    .skeleton-title {
+        height: 28px;
+    }
+
+    .skeleton-subtitle {
+        height: 18px;
+    }
+
+    .skeleton-large-card {
+        height: 40px;
+    }
+
+    .skeleton-small-card {
+        height: 40px;
+    }
+    
 }   
