@@ -51,6 +51,37 @@ div {
     width: 90%;
     max-width: 682px;
     /*margin: 20px;*/
+    /* Animación de entrada del logo */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+    animation: logoEntrada 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    /* Efecto hover del logo */
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover que funciona después de la animación */
+.logo_principal:hover {
+    transform: scale(1.05);
+    animation-play-state: paused;
+}
+
+/* Animación de entrada del logo */
+@keyframes logoEntrada {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Estado final después de la animación */
+.logo_principal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 #btn_registro{
     display: block;
