@@ -1,0 +1,136 @@
+name: Recently Closed Issues Summary
+
+on:
+  # Ejecutar cada lunes a las 9:00 AM UTC
+  schedule:
+    - cron: "0 9 * * 1"
+
+  # Ejecutar cuando un issue se cierre
+  issues:
+    types: [closed]
+
+  # Permitir ejecución manual
+  workflow_dispatch:
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # para actualizar el archivo
+      issues: read # para leer los issues
+      pull-requests: read # filtrar correctamente
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # necesario para commits automáticos confiables
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Issues Report
+        id: generate
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const { owner, repo } = context.repo;
+
+            // Constantes de configuración
+            const MAX_ISSUES_TO_FETCH = 10; // número de issues a buscar inicialmente
+            const MAX_ISSUES_TO_DISPLAY = 8; // número de issues a mostrar en el reporte
+            const MAX_TITLE_LENGTH = 50; // longitud máxima del título antes de truncar
+            const TRUNCATED_TITLE_LENGTH = 47; // longitud del título truncado (deja espacio para '...')
+
+            // Configuración de formato de fecha para Colombia
+            const DATE_FORMAT_OPTIONS = {
+              timeZone: 'America/Bogota',
+              year: 'numeric',
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            };
+
+            const DATE_FORMAT_SHORT_OPTIONS = {
+              timeZone: 'America/Bogota',
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit'
+            };
+
+            // Buscar los issues cerrados más recientes (excluyendo PRs)
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "closed",
+              per_page: MAX_ISSUES_TO_FETCH,
+              sort: "updated",
+              direction: "desc",
+            });
+
+            const recentIssues = issues
+              .filter(issue => !issue.pull_request)
+              .slice(0, MAX_ISSUES_TO_DISPLAY);
+
+            console.log(`✅ Issues filtrados (sin PRs): ${recentIssues.length}`);
+
+            // Formatear en Markdown
+            let markdown = `# 🧩 Issues cerrados recientemente\n\n`;
+            markdown += `> _Última actualización: **${new Date().toLocaleString('es-CO', DATE_FORMAT_OPTIONS)}**_\n\n---\n\n`;
+
+            if (recentIssues.length === 0) {
+              markdown += `No hay issues cerrados recientemente.\n\n`;
+              markdown += `> 🔍 [Ver todos los issues](https://github.com/${context.repo.owner}/${context.repo.repo}/issues)\n`;
+            } else {
+              markdown += `| # | Título | Cerrado el | Labels | Asignado |\n`;
+              markdown += `|:-:|:--------|:------------|:--------|:----------|\n`;
+
+              recentIssues.forEach((issue) => {
+                const labels = issue.labels.length > 0 
+                  ? issue.labels.map(l => `\`${l.name}\``).join(' ') 
+                  : '—';
+                const assignee = issue.assignee ? `@${issue.assignee.login}` : '—';
+                const date = new Date(issue.closed_at).toLocaleDateString('es-CO', DATE_FORMAT_SHORT_OPTIONS);
+                
+                // Truncar título si es muy largo
+                const title = issue.title.length > MAX_TITLE_LENGTH 
+                  ? issue.title.substring(0, TRUNCATED_TITLE_LENGTH) + '...' 
+                  : issue.title;
+                  
+                markdown += `| [#${issue.number}](${issue.html_url}) | ${title} | ${date} | ${labels} | ${assignee} |\n`;
+              });
+            }
+
+            markdown += `\n---\n\n`;
+            markdown += `> 🕒 Este archivo se actualiza automáticamente cuando se cierran issues.\n`;
+
+            const filePath = path.join(process.cwd(), 'RECENTLY_CLOSED.md');
+            fs.writeFileSync(filePath, markdown);
+
+            console.log("✅ Archivo actualizado:", filePath);
+
+      - name: Commit and Push changes
+        run: |
+          git config user.name "GitHub Action Bot"
+          git config user.email "action@github.com"
+
+          if [ ! -f RECENTLY_CLOSED.md ]; then
+            echo "⚠️ El archivo RECENTLY_CLOSED.md no existe, abortando commit."
+            exit 0
+          fi
+
+          git add RECENTLY_CLOSED.md
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ No hay cambios detectados. Nada que commitear."
+          else
+            echo "✅ Commit detectado, enviando cambios..."
+            git commit -m "ci: actualizar resumen de issues cerrados recientemente [skip ci]"
+            git push
+          fi
