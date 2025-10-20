@@ -1,13 +1,12 @@
 # 🧩 Issues cerrados recientemente
 
-> _Última actualización: **13 de octubre de 2025, 04:16 a. m.**_
+> _Última actualización: **20 de octubre de 2025, 04:16 a. m.**_
 
 ---
 
-| # | Título | Cerrado el | Labels | Asignado |
-|:-:|:--------|:------------|:--------|:----------|
-| [#2](https://github.com/Damsonite/coding_with_friends/issues/2) | Issue de prueba #2 | 10/10/2025 | — | — |
-| [#1](https://github.com/Damsonite/coding_with_friends/issues/1) | Issue de prueba #1 | 10/10/2025 | — | — |
+No hay issues cerrados recientemente.
+
+> 🔍 [Ver todos los issues](https://github.com/xaca/coding_with_friends/issues)
 
 ---
 
