@@ -75,6 +75,8 @@ function OnlineEvents() {
   const [isAnimating, setIsAnimating] = useState(false);
   const thumbnailsRef = useRef(null);
   const [isMobileView, setIsMobileView] = useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
+  const [isThumbnailsLoading, setIsThumbnailsLoading] = useState(true);
 
   useEffect(() => {
     const randomIndex = getRandomIndex();
@@ -165,9 +167,35 @@ function OnlineEvents() {
   };
 
   const handleVideoSelect = (video, index) => {
+    setIsVideoLoading(true);
     setSelectedVideo(video);
     setCurrentIndex(index);
   };
+
+  const handleVideoLoad = () => {
+    setIsVideoLoading(false);
+  };
+
+  const handleThumbnailLoad = () => {
+    setIsThumbnailsLoading(false);
+  };
+
+  // Componente Skeleton Loader para el video principal
+  const VideoSkeletonLoader = () => (
+    <div className="video-skeleton-loader">
+      <div className="skeleton-video-container">
+        <div className="skeleton-video"></div>
+        <div className="skeleton-video-info">
+          <div className="skeleton-title"></div>
+          <div className="skeleton-date"></div>
+        </div>
+        <div className="skeleton-navigation">
+          <div className="skeleton-button"></div>
+          <div className="skeleton-button"></div>
+        </div>
+      </div>
+    </div>
+  );
 
   const renderThumbnails = () => {
     if (isMobileView) {
@@ -181,6 +209,7 @@ function OnlineEvents() {
             src={getThumbnailUrl(video.URL)}
             alt={video.Title}
             loading="lazy"
+            onLoad={handleThumbnailLoad}
           />
           <h3>{formatTitle(video.Title)}</h3>
           <p>{video["Publish Date"]}</p>
@@ -198,6 +227,7 @@ function OnlineEvents() {
           src={getThumbnailUrl(video.URL)}
           alt={video.Title}
           loading="lazy"
+          onLoad={handleThumbnailLoad}
         />
         <h3>{formatTitle(video.Title)}</h3>
         <p>{video["Publish Date"]}</p>
@@ -211,6 +241,7 @@ function OnlineEvents() {
         <h1>Online Events💻 </h1>
         <div className="video-container">
           <div className="main-video">
+            {isVideoLoading && <VideoSkeletonLoader />}
             <iframe
               width="100%"
               height="480"
@@ -219,27 +250,33 @@ function OnlineEvents() {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              onLoad={handleVideoLoad}
+              style={{ display: isVideoLoading ? 'none' : 'block' }}
             ></iframe>
-            <div className="video-info">
-              <h2 className="title-two-lines">{formatTitle(selectedVideo.Title)}</h2>
-              <p>Published: {selectedVideo["Publish Date"]}</p>
-            </div>
-            <div className="navigation-buttons">
-              <button
-                onClick={handlePrevVideo}
-                className="nav-button prev"
-                title="Previous video"
-              >
-                ← Previous
-              </button>
-              <button
-                onClick={handleNextVideo}
-                className="nav-button next"
-                title="Next video"
-              >
-                Next →
-              </button>
-            </div>
+            {!isVideoLoading && (
+              <>
+                <div className="video-info">
+                  <h2 className="title-two-lines">{formatTitle(selectedVideo.Title)}</h2>
+                  <p>Published: {selectedVideo["Publish Date"]}</p>
+                </div>
+                <div className="navigation-buttons">
+                  <button
+                    onClick={handlePrevVideo}
+                    className="nav-button prev"
+                    title="Previous video"
+                  >
+                    ← Previous
+                  </button>
+                  <button
+                    onClick={handleNextVideo}
+                    className="nav-button next"
+                    title="Next video"
+                  >
+                    Next →
+                  </button>
+                </div>
+              </>
+            )}
           </div>
           <div className="video-thumbnails-container">
             {isMobileView && (

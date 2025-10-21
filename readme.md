@@ -100,6 +100,10 @@ Te invitamos a participar en el programa ESTUD-IA de Sapiencia, donde podrás ac
 
 ¡Es hora de contribuir al código abierto! 💻✨
 
+## 📋 Progreso del Proyecto
+
+¿Quieres ver qué se ha completado recientemente en el proyecto? Consulta nuestro [resumen de issues cerrados](RECENTLY_CLOSED.md)
+
 ## Posts para Redes Sociales
 
 ### Twitter - Cursos Sapiencia
