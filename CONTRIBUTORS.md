@@ -2,12 +2,13 @@
 - Danibeta33
 - Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
-- Matias Bedoya Rojas 
+- Matias Bedoya Rojas
 - Ricardo Guanilo
-- Manuela Giraldo 
+- Manuela Giraldo
 - Maicol Gutierrez / Maicolguti
 - DahianaGuzman
 - Julian Rodriguez / RdzJJ
 - Sara Sierra
 - Alfonso Jiménez / alfonsoj03
 - Sebastián Soto / SebasSotoA
+- Cristian Usme / Cristian-Usme
