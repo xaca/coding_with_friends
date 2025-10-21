@@ -1,6 +1,6 @@
-# Codign with Friends - Comunidad
+# Coding with Friends - Comunidad
 
-Repositorio informativo sobre los eventos de la comunidad Codign with friends de la Universidad Pontificia Bolivariana
+Repositorio informativo sobre los eventos de la comunidad coding with friends de la Universidad Pontificia Bolivariana
 
 Para hacer el despliegue, correr el comando
 
@@ -8,7 +8,7 @@ Para hacer el despliegue, correr el comando
 npm run cwf
 ```
 
-## Mensaje para compartir en whatsApp
+## Mensaje para compartir en WhatsApp
 
 (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
 
@@ -17,11 +17,11 @@ npm run cwf
 👨‍💻 *Explorando Angular y React: ¿Cuál elegir?*
 🎤 *Speakers:* Axel & Felipe
 
-Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descubrelo en nuestro último evento del año, disfrutaremos de un espacio de finalización de semestre lleno de mucho conocimiento, sorpresas y buenos amigos, cordialmente invitados. 🌟
+Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descúbrelo en nuestro último evento del año, disfrutaremos de un espacio de finalización de semestre lleno de mucho conocimiento, sorpresas y buenos amigos, cordialmente invitados. 🌟
 
 🎅 *Presencial, para todo público*🤶
 
-🗓️ *Fecha:* 14 de Noviembre
+🗓️ *Fecha:* 14 de noviembre
 ⏰ *Hora:* 17:00 - 20:00
 🌐 *Website:* https://www.codingwithfriends.club
 📍 *Lugar:* Aula 616 bloque 11, UPB.
@@ -34,17 +34,17 @@ Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descubrelo e
 
 📽️ Película de la semana 🎉🍿
 
-Te invitamos a un nuevo evento de Coding with friends, en esta oportunidad vamos a ver el estreno de la pelicula "One Battle After Another"
+Te invitamos a un nuevo evento de Coding with friends, en está oportunidad vamos a ver el estreno de la película "One Battle After Another"
 
 🎬 ¡No te lo pierdas!
 ¡Cordialmente invitados!
 
-🗓️ Fecha: 30 de Julio 
+🗓️ Fecha: 30 de julio 
 ⏰ Hora: 6:00 PM
 🌐 Website: https://codingwithfriends.club/#/cine
-📍 Lugar: Cinecolombia Centro comercial los Molinos
+📍 Lugar: Cinecolombia Centro Comercial Los Molinos
 
-ℹ️ En el sitio web esta toda la información para reservar tu entrada.
+ℹ️ En el sitio web está toda la información para reservar tu entrada.
 
 ## Cursos Sapiencia - Programa ESTUD-IA
 
@@ -58,12 +58,12 @@ Te invitamos a un nuevo evento de Coding with friends, en esta oportunidad vamos
 Te invitamos a participar en el programa ESTUD-IA de Sapiencia, donde podrás acceder a cursos 100% gratuitos en tecnología y desarrollo web.
 
 🚀 *Cursos destacados:*
-• 💻 Desarrollo Web Fullstack con React, Firebase y Javascript
-• ⚡ Lenguaje de Programación Javascript  
+• 💻 Desarrollo Web Full Stack con React, Firebase y JavaScript
+• ⚡ Lenguaje de Programación JavaScript  
 • 🌐 Programación Web
 • 🎨 Y muchos más...
 
-📅 *Período:* Octubre a Diciembre 2025
+📅 *Período:* octubre a diciembre 2025
 ⏰ *Horario:* Lunes a Viernes, 6:00 PM - 10:00 PM
 🏫 *Modalidad:* Mixta (Presencial UPB + Telepresencial)
 💰 *Costo:* 100% GRATUITO
@@ -159,13 +159,13 @@ Humanizing Tech: An Online Conversation with Bibiana Souza
 
 # TODO
 
-- Ajustar responsive iphone mini videos
+- Ajustar responsive iPhone mini videos
 - Revisar y ajustar diseño responsive
-- Agregar una sección que se llame instagram, con el feed de las últimas publicaciones de CWF en instagram
+- Agregar una sección que se llame Instagram, con el feed de las últimas publicaciones de CWF en Instagram
 - Call for speakers al correo (google forms + gap + google docs mail) 
     - Diseñar el call for speakers
     - Progamación usando Google App Script
-- Agregar traducción al ingles con [polyglot de airbnb](https://airbnb.io/polyglot.js/)
+- Agregar traducción al inglés con [Polyglot de Airbnb](https://airbnb.io/polyglot.js/)
 
 ## Mensaje para WhatsApp - Agenda de la semana
 

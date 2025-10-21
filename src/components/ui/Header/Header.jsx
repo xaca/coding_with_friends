@@ -1,5 +1,6 @@
 import logo from "../../../assets/img/logo.png";
 
+// Header component displays the top logo and branding
 function Header({logoPersonalizado}) {
   let imagen = logoPersonalizado || logo;
   return (

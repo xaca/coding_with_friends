@@ -1,3 +1,4 @@
+// Gallery component displays a grid of event photos with lightbox functionality.
 import listaDeFotos from "../../data/fotos.js";
 import foto1 from "../../../assets/img/fotos/IMG_0027.jpg";
 import foto2 from "../../../assets/img/fotos/IMG_0032.jpg";
@@ -30,21 +31,30 @@ import { useState, useEffect, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 import './Gallery.scss';
 
+// Main gallery function component
+// Gallery component displays a grid of event photos with lightbox functionality
 function Gallery() {
-  //let galeria = listaDeFotos();
+  // Array of images to display in the gallery
+  // let galeria = listaDeFotos(); // Uncomment to use dynamic photo list
+  // Array of images to display in the gallery
   let galeria = [foto1,foto2,foto3,foto4,foto5,foto6,foto7,foto8,foto9,foto10,foto11,foto12,foto13,foto14,foto15,foto16,foto17,foto18,foto19,foto20,foto21,foto22,foto23,foto24,foto25,foto26];
-  
+
+  // State for lightbox open/close
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  // State for currently displayed image in lightbox
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // State for slide direction in lightbox animation
   const [slideDirection, setSlideDirection] = useState('next');
+  // State for animation status
   const [isAnimating, setIsAnimating] = useState(false);
+  // State to check if device is mobile
   const [isMobile, setIsMobile] = useState(false);
-  
-  // Refs for touch events
+
+  // Refs for touch events (used for swipe navigation)
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
-  
-  // Masonry breakpoints
+
+  // Masonry breakpoints for responsive grid layout
   const breakpointColumnsObj = {
     default: 5,
     1100: 4,
@@ -52,8 +62,8 @@ function Gallery() {
     700: 2,
     500: 1
   };
-  
-  // Check if mobile on component mount
+
+  // Effect to check if device is mobile on mount and resize
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 767);

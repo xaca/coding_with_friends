@@ -5,6 +5,7 @@ import website_logo from "../../../../assets/img/website.svg";
 import { v4 as uuidv4 } from 'uuid';
 
 //TODO: Explicar que un componente puede tener componentes relacionados
+// Handles component displays social media handles for a speaker
 function Handles({ speaker })
 {
     let logos = [linkedin_logo, instagram_logo, github_logo, website_logo];
@@ -22,6 +23,7 @@ function Handles({ speaker })
       </>);
 }
 //TODO:Explicar que un componente puede retornar null para indicar empty
+// IsAlumni component checks if the speaker is an alumni
 function IsAlumni({speaker}){
     if(speaker.is_alumni){
         return (
@@ -33,6 +35,7 @@ function IsAlumni({speaker}){
     }
     return null;
 }
+// Card component displays detailed information about a speaker
 function Card({ speaker }) {
   const style = {
     backgroundImage: `url(${speaker.avatar})`

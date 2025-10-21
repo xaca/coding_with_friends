@@ -5,7 +5,7 @@ import Speaker from "../../ui/Speaker/Speaker";
 import MainLayout from "../../ui/MainLayout/MainLayout";
 import Info from "../../ui/Info/Info";
 import PastEvent from "../../ui/PastEvent/PastEvent";
-import avatar_speaker_1 from "../../../assets/img/speaker_01.jpg";
+import avatar_speaker_1 from "../../../assets/img/alonso.jpg";
 import avatar_speaker_2 from "../../../assets/img/speaker_02.jpg";
 import fondo_derecha from "../../../assets/img/esquina_derecha.png";
 import fondo_izquierda from "../../../assets/img/cassete_izquierda.png";
@@ -65,14 +65,14 @@ function InPersonEvent(){
             <DecoracionDerecha />
             <DecoracionIzquierda />
             <Info info={{
-                title:"Git, estrategias de Branching y su aplicación",
+                title:"Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código",
             logo:talks_logo,
             image:"",
-            date: `Miércoles 14 de mayo de 2025`,
-            venue: `Online - youtube`,
-            time: `10:00 - 12:00`,
-            youtube_url: "https://youtube.com/live/5Fw5QuW0JT4",
-            description: `La charla abordará los fundamentos de Git y cómo utilizarlo eficazmente para el control de versiones. Se explicarán distintas estrategias de branching como Git Flow, GitHub Flow y trunk-based development, destacando sus ventajas, desventajas y casos de uso. Además, se mostrará cómo sería un flujo de trabajo con un ejercicio práctico.`
+            date: `Jueves 23 de octubre de 2025`,
+            venue: `Auditorio Ignacio Viera`,
+            time: `05:30 - 8:00`,
+            youtube_url: "",
+            description: `En esta charla/demo compartiré cómo he estado usando Cursor como entorno principal para desarrollar aplicaciones full-stack. Durante los últimos 6 meses he reescrito proyectos completos mientras aprendía a acelerar el ciclo de feedback del agente para que trabaje de forma más autónoma y eficiente. Verás en vivo cómo estructuro un flujo de trabajo con que va más allá del autocomplete, y cerraré con 3 aprendizajes clave sobre por qué este enfoque realmente funciona.`
             }} />
             <About />
             <Register />
@@ -82,32 +82,24 @@ function InPersonEvent(){
             <h1>Biografías</h1>
             <section>
             <Speaker speaker={{
-                name:"Stefany Cárdenas Martínez",
+                name:"Alonso Suarez ",
                 avatar:avatar_speaker_1,
                 handles:[
-                    {id:0, url:"https://www.linkedin.com/in/stefacm/"},
-                    {id:2, url:"https://www.github.com/stefacm/"}
+                    {id:0, url:"https://ca.linkedin.com/in/alonsosuarez"},
+                    {id:2, url:"https://github.com/alonch"}
                 ],
                 is_alumni:false,
                 graduation_year:0,
-                description:`Stefany Cárdenas Martínez es Ingeniera de Sistemas egresada de la Universidad de La Amazonia y actualmente se desempeña como Desarrolladora de Software en PRAGMA S.A., con más de tres años de experiencia en desarrollo frontend. Ha trabajado con tecnologías como React.js, TypeScript, Gatsby, Next.js y Contentful, participando en proyectos digitales en sectores educativos y corporativos.
-Se caracteriza por ser una persona responsable, atenta al detalle y con buen desempeño en el trabajo en equipo, lo que le ha permitido adaptarse a diferentes entornos y aportar de manera efectiva en los proyectos en los que participa.`
-            }} />
-            <Speaker speaker={{
-                name:"Santiago Quintero García",
-                avatar:avatar_speaker_2,
-                handles:[
-                    {id:0, url:"https://www.linkedin.com/in/santiquinterog/"},
-                    {id:2, url:"https://www.github.com/santiquinterog/"}
-                ],
-                is_alumni:true,
-                graduation_year:2020,
-                description:`Ingeniero de Sistemas e Informática orientado al Desarrollo Web como Front-end, con conocimientos básicos de inglés y manejo de aplicaciones informáticas. A lo largo de la carrera se ha adquirido disciplina y capacidad de comunicación asertiva. Conocimientos en Marketing Automation, manejo de plataformas de SMS Marketing, Email Marketing y construcción de correos HTML. Egresado de la Universidad Pontificia Bolivariana donde también se ha ejercido como docente, dictando un curso de Maquetador Web en varias ocasiones. Con alto grado de responsabilidad social y ética profesional, bases para una mejor investigación en la adquisición de nuevos conocimientos, trabajo en equipo e innovación.`
-            }} />           
+                description:`I'm someone who's lucky enough to genuinely love what I do. My journey with tech started back in high school, running my cousin’s cybercafé—hacking around with host files and connecting to pirate game servers (for educational purposes, of course 😅).
+                
+                These days, I’m focused on rethinking how we work. I believe a lot of the systems we rely on were designed for a different era—and I’m curious: how would we solve those same problems if we had today’s tools and knowledge?
+                
+                Outside of work, I’m a proud dad of two 👨‍👩‍👧‍👧, a maker at heart 🛠—currently combining electronics and wood—and I dream of a future where building software feels like snapping LEGO blocks together 🌈.`
+            }} />                    
             </section>
             </section> 
             <img src={disco_bottom} alt="Disco bottom"  />
-            <PastEvent />
+            {/*<PastEvent />*/}
             </section>
         </MainLayout>
     </>);

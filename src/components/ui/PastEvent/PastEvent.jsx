@@ -1,4 +1,5 @@
 import './PastEvent.scss';
+// OpenPastEvent function opens a past event preview in a new tab
 function OpenPastEvent(){
 
   const childUrl = window.open('/preview', '_blank');
@@ -6,6 +7,7 @@ function OpenPastEvent(){
   childUrl.document.write(htmlContent);
 
 }
+// PastEvent component displays a list of past events
 function PastEvent(){
     const eventos = [
         { id: '01', emoji: '🌱', title: 'CWF - CONF (el inicio)' },
