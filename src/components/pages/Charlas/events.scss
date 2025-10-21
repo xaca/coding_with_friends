@@ -29,9 +29,7 @@ body{
     color: $texto_lista;
     background:$fondo_lista;
 }
-.lista_generica a{
-    /*color:var(--color-lista-impar);*/
-}
+
 .imagen_intro_evento{
     width: 60%;
     border-radius: 10px;
@@ -55,4 +53,52 @@ body{
 }
 a{
     color:rgb(26, 122, 45);
+}
+
+/* In-person event specific layout fixes */
+#in_person_event{
+    position: relative;
+    overflow: hidden;
+}
+
+#in_person_event .decoracion_derecha,
+#in_person_event .decoracion_izquierda{
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Clamp sizes and keep inside section so footer is not affected */
+#in_person_event .decoracion_derecha{
+    right: 0 !important;
+    top: 0 !important;
+    width: clamp(240px, 40vw, 525px) !important;
+    height: clamp(80px, 12vw, 170px) !important;
+    z-index: 0 !important;
+}
+
+#in_person_event .decoracion_izquierda{
+    left: -60px !important;
+    bottom: -40px  !important;
+    width: clamp(200px, 30vw, 336px) !important;
+    height: clamp(280px, 42vw, 478px) !important;
+    z-index: 0 !important;
+}
+
+/* Style the decorative images so they don’t expand layout unpredictably */
+#in_person_event > img[alt="Disco top"],
+#in_person_event > img[alt="Disco bottom"]{
+    display: block;
+    width: min(90%, 640px);
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+}
+
+/* Mobile tweaks for decoration offsets */
+@media (max-width: 500px){
+    #in_person_event .decoracion_izquierda{
+        left: -30px !important;
+        bottom: -20px !important;
+    }
 }
