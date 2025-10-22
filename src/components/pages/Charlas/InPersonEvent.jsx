@@ -60,10 +60,10 @@ function DecoracionIzquierda(){
 
 function InPersonEvent(){
     return (<>
-        <MainLayout logoPersonalizado={logo_evento}>
-            <section id="in_person_event">
             <DecoracionDerecha />
             <DecoracionIzquierda />
+        <MainLayout logoPersonalizado={logo_evento}>
+            <section id="in_person_event">
             <Info info={{
                 title:"Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código",
             logo:talks_logo,

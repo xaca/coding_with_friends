@@ -42,6 +42,9 @@ function Intro({info}){
           )}
         </div>
         <p className="fecha">
+          <span>Lugar:</span> {info.venue}
+        </p>
+        <p className="fecha">
           <span>Hora:</span> {info.time}
         </p><br />
         {info.youtube_url === "" ? <span className="mensaje_importante">
