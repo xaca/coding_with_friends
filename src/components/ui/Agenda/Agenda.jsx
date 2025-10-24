@@ -7,29 +7,22 @@ function Agenda() {
     <h1>Agenda</h1>
     <ul>
       <li className="item">
-        <span>[17:00 - 17:30]</span> 
+        <span>[17:00 - 17:40]</span> 
         <span>Llegada de participantes, espacio de networking</span>
         <br />
       </li>
       <li className="item">
-        <span>[17:40 - 18:30]</span>
-        <span>Lightning talk - Aprendiendo, creciendo y liderando: Cómo construí mi propia carrera</span>
+        <span>[18:00 - 19:00]</span>
+        <span>Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código</span>
         <span className="speaker">
-          / Valeria Moreno Zapata
+          / Alonso Suarez
         </span>
       </li>
       <li className="item">
-        <span>[18:40 - 19:20]</span> 
-        <span>Podcast en vivo - Más allá del código:docencia y liderazgo</span> 
+        <span>[19:10 - 20:00]</span> 
+        <span>Repositorio review - Participantes que esten en busqueda de empleo como full-stack developers</span> 
         <span className="speaker">
-          / Cristina Gómez Santamaría / Valen Ariza Gómez / Laura López Bedoya 
-        </span>
-      </li>
-      <li className="item">
-        <span>[19:30 - 20:00]</span> 
-        <span>Actividad de cierre</span> 
-        <span className="speaker">
-          / Valiente
+          Realsense Solutions - Canadá 🇨🇦 
         </span>
       </li>
     </ul>

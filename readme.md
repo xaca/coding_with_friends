@@ -12,19 +12,20 @@ npm run cwf
 
 (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
 
-🎄 *Última charla del 2024* 🦌
+🎃 *Última charla del 2025* 🎃
 
-👨‍💻 *Explorando Angular y React: ¿Cuál elegir?*
-🎤 *Speakers:* Axel & Felipe
+👨‍💻 *Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código*
 
-Comparación de dos famosos frameworks de frontend, ¿Cuál elegir? descúbrelo en nuestro último evento del año, disfrutaremos de un espacio de finalización de semestre lleno de mucho conocimiento, sorpresas y buenos amigos, cordialmente invitados. 🌟
+🎤 *Speaker:* Alonso Suarez 
 
-🎅 *Presencial, para todo público*🤶
+En esta charla/demo compartiré cómo he estado usando Cursor como entorno principal para desarrollar aplicaciones full-stack. Durante los últimos 6 meses he reescrito proyectos completos mientras aprendía a acelerar el ciclo de feedback del agente para que trabaje de forma más autónoma y eficiente. Verás en vivo cómo estructuro un flujo de trabajo con que va más allá del autocomplete, y cerraré con 3 aprendizajes clave sobre por qué este enfoque realmente funciona. 🌟
 
-🗓️ *Fecha:* 14 de noviembre
+👻 *Presencial, para todo público* 👻
+
+🗓️ *Fecha:* 23 de octubre
 ⏰ *Hora:* 17:00 - 20:00
 🌐 *Website:* https://www.codingwithfriends.club
-📍 *Lugar:* Aula 616 bloque 11, UPB.
+📍 *Lugar:* Auditorio Ignacio Viera, bloque 10, UPB.
 
 ¡Te invitamos a un nuevo evento! Participa de un evento de tecnología con contenido interesante y de vanguardia.
 

@@ -77,7 +77,7 @@ function InPersonEvent(){
             <About />
             <Register />
             <img src={disco_top} alt="Disco top" />
-            {/*<Agenda />*/}
+            <Agenda />
             <section id="speakers">
             <h1>Biografías</h1>
             <section>
