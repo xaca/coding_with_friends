@@ -398,13 +398,13 @@
 
   // iPhone mini and similar small devices (375px and down)
   @media (max-width: 375px) {
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
 
     .video-container {
       width: 100%;
-      max-width: 355px;
+      max-width: 340px; // Reduced to allow for safe margins
       margin: 0 auto;
-      padding: 0 0.5rem;
+      padding: 0 0.25rem; // Reduced padding
     }
 
     .main-video {
@@ -412,22 +412,25 @@
       
       iframe {
         width: 100%;
-        border-radius: 8px;
+        height: auto; // Allow responsive height
+        aspect-ratio: 16/9; // Maintain video aspect ratio
+        border-radius: 6px; // Slightly reduced for small screens
       }
 
       .video-info {
-        padding: 0 0.5rem;
+        padding: 0.25rem; // Consistent padding
       }
 
       .navigation-buttons {
-        padding: 0 0.5rem;
-        gap: 0.4rem;
-        max-width: 355px;
-        margin: 0.5rem auto 0;
+        padding: 0 0.25rem;
+        gap: 0.3rem;
+        max-width: 340px;
+        margin: 0.3rem auto 0;
         flex-direction: row;
+        justify-content: space-between;
         
         .nav-button {
-          width: 50%;
+          width: calc(50% - 0.15rem); // Account for gap
           padding: 0.4rem 0.3rem;
           font-size: 0.8rem;
           min-width: 0;
