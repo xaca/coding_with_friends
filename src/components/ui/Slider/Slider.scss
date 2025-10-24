@@ -114,6 +114,22 @@
     opacity: 1;
 }
 
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    .carousel-prev,
+    .carousel-next {
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 1.2em;
+    }
+    
+    .carousel-bullet {
+        min-height: 44px;
+        min-width: 44px;
+        margin: 0 10px;
+    }
+}
+
 /* Pagination */
 
 .carousel-pagination {
@@ -155,14 +171,98 @@
     background-color: #fff;
     cursor: default;
 }
-/*Celular*/
-@media (max-width: 420px){
-    .contenedor_texto h2{
-        font-size: 25px;
+/*Tablet*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    .carousel {
+        width: 95%;
+        margin: 15px auto;
     }
-    .contenedor_texto p{
-        font-size: 15px;
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .contenedor_texto {
+        padding: 50px;
+    }
+    
+    .contenedor_texto h2 {
+        font-size: 32px;
+    }
+    
+    .contenedor_texto p {
+        font-size: 18px;
     }
 }
-/*Tablet*/
-@media (min-width: 501px) and (max-width:810px) {}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .carousel {
+        width: 98%;
+        margin: 10px auto;
+    }
+    
+    .carousel-container {
+        height: 250px;
+    }
+    
+    .carousel-item {
+        height: 250px;
+    }
+    
+    .contenedor_texto {
+        padding: 30px 20px;
+    }
+    
+    .contenedor_texto h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .contenedor_texto p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .carousel-prev,
+    .carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9em;
+    }
+    
+    .carousel-prev {
+        left: 1%;
+    }
+    
+    .carousel-next {
+        right: 1%;
+    }
+}
+
+/*Small Mobile*/
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 220px;
+    }
+    
+    .carousel-item {
+        height: 220px;
+    }
+    
+    .contenedor_texto {
+        padding: 20px 15px;
+    }
+    
+    .contenedor_texto h2 {
+        font-size: 20px;
+    }
+    
+    .contenedor_texto p {
+        font-size: 13px;
+    }
+}

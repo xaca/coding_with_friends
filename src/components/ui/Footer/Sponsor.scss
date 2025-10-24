@@ -4,16 +4,73 @@
     margin:0;
     height: auto;
     padding-bottom: 30px;
+    box-sizing: border-box;
 }
 #sponsors h2{
     margin-left: 20px;
     padding-top:30px;
     color:var(--color-texto-pata);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .enlace_sponsor{
     margin-right: 10px;
     text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+}
+.enlace_sponsor img {
+    max-width: 100%;
+    height: auto;
 }
 .autor{
     color:var(--color-frase) !important;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 600px) {
+    #sponsors {
+        padding-bottom: 20px;
+    }
+    
+    #sponsors h2 {
+        margin-left: 15px;
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .enlace_sponsor {
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+    
+    .enlace_sponsor img {
+        max-width: 120px;
+        height: auto;
+    }
+    
+    .autor {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #sponsors h2 {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    
+    .enlace_sponsor {
+        margin-right: 15px;
+    }
+    
+    .enlace_sponsor img {
+        max-width: 150px;
+        height: auto;
+    }
 }

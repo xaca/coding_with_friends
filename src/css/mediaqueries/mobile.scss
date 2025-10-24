@@ -1,5 +1,5 @@
 /*Celular*/
-@media (max-width: 420px)  {
+@media (max-width: 600px)  {
     .torneos{
         width: 300px;
         height: auto;
@@ -54,8 +54,8 @@
         display: inline list-item;
     }
 }
-/* Celuar Pro Max */
-@media (min-width: 421px) and (max-width:500px) {
+/* Tablet pequeña */
+@media (min-width: 481px) and (max-width: 600px) {
     .tarjeta_speaker{
         width: 320px;
         margin-bottom: 20px;

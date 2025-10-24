@@ -57,7 +57,7 @@ function Gallery() {
   // Masonry breakpoints for responsive grid layout
   const breakpointColumnsObj = {
     default: 5,
-    1100: 4,
+    1200: 4,
     900: 3,
     700: 2,
     500: 1

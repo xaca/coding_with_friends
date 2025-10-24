@@ -23,6 +23,8 @@
     white-space: normal;
     transition: all 0.3s ease;
     transform: translateY(0);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .active{
     background: white;
@@ -39,7 +41,8 @@
 }
 
 .menu a:focus {
-    outline: none;
+    outline: 2px solid var(--color-frase);
+    outline-offset: 2px;
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -48,6 +51,24 @@
 .menu a:active {
     transform: translateY(0);
     transition: all 0.15s ease;
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    .menu a {
+        min-height: 44px; /* Minimum touch target size */
+        padding: 12px 15px;
+    }
+    
+    .menu a:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .menu a:focus {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 }
 a{
     color:var(--color-enlaces_general);
@@ -62,53 +83,167 @@ a.autor{
     text-decoration: none;
 }
 
-// Mobile responsive styles
-@media (max-width: 768px) {
+// Tablet responsive styles
+@media (min-width: 601px) and (max-width: 1024px) {
     .menu {
-        width: 90%;
-        margin: 15px 0;
+        width: 95%;
+        margin: 15px auto;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .menu a {
+        flex: 0 1 auto;
+        min-width: 140px;
+        max-width: 180px;
+        padding: 12px 16px;
+        font-size: 13px;
+        line-height: 1.3;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+    }
+    
+    // Ajustes específicos para iPad en landscape
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .menu {
+            flex-wrap: nowrap;
+            gap: 8px;
+            padding: 16px;
+        }
+        
+        .menu a {
+            flex: 1;
+            min-width: 120px;
+            max-width: none;
+            font-size: 12px;
+            padding: 10px 8px;
+        }
+    }
+    
+    // Ajustes específicos para iPad en portrait
+    @media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+        .menu {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .menu a {
+            flex: 0 1 calc(50% - 6px);
+            min-width: 160px;
+            max-width: 200px;
+            font-size: 14px;
+        }
+    }
+    
+    // Estilos específicos para textos largos
+    .menu a[href*="hacktoberfest"] {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+    
+    .menu a[href*="frases-motivacionales"] {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+    
+    .menu a[href*="cursos-sapiencia"] {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
+}
+
+// Tablet pequeña (iPad mini, tablets pequeñas)
+@media (min-width: 481px) and (max-width: 768px) {
+    .menu {
+        width: 98%;
+        margin: 12px auto;
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .menu a {
+        flex: 0 1 calc(33.333% - 6px);
+        min-width: 140px;
+        max-width: 160px;
+        padding: 10px 8px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    // Ajustes para textos largos en tablets pequeñas
+    .menu a[href*="hacktoberfest"] {
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+    
+    .menu a[href*="frases-motivacionales"] {
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+    
+    .menu a[href*="cursos-sapiencia"] {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+}
+
+// Mobile responsive styles
+@media (max-width: 600px) {
+    .menu {
+        width: 95%;
+        margin: 10px auto;
         padding: 15px;
+        flex-direction: column;
         gap: 6px;
     }
     
     .menu a {
-        min-height: 36px;
-        padding: 6px 12px;
+        width: 100%;
+        min-height: 40px;
+        padding: 8px 12px;
         font-size: 14px;
         line-height: 1.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
+// Small mobile screens
 @media (max-width: 480px) {
     .menu {
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
+        width: 98%;
+        margin: 8px auto;
         padding: 12px;
     }
     
     .menu a {
-        width: 100%;
-        padding: 5px 10px;
+        min-height: 36px;
+        padding: 6px 10px;
         font-size: 13px;
         line-height: 1.2;
     }
 }
 
-// For very small screens, make it horizontal again
+// Very small screens
 @media (max-width: 360px) {
     .menu {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 8px 0;
         padding: 10px;
     }
     
     .menu a {
-        min-width: 90%;
-        min-height: 30px;
+        min-height: 32px;
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 5px 8px;
     }
 }

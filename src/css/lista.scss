@@ -2,7 +2,9 @@ ul {
     padding: 0;
     text-align: left;
     width: 80%;
+    max-width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .item {
     list-style-type: none;
@@ -10,6 +12,9 @@ ul {
     height: auto;
     line-height: 50px;
     padding-left: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 .item span:nth-child(2){
     line-height: 23px; /* Titulo de la actividad */
@@ -39,4 +44,54 @@ ul {
 }
 #agenda li:last-child{
     border-radius: 0 0 20px 20px;
+}
+
+/* Responsive styles for lists */
+@media (max-width: 600px) {
+    ul {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .item {
+        padding-left: 15px;
+        line-height: 40px;
+    }
+    
+    .item span {
+        font-size: 14px;
+    }
+    
+    .item span:nth-child(2) {
+        line-height: 18px;
+        margin-left: 10px;
+    }
+    
+    .lista_generica {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    ul {
+        width: 90%;
+    }
+    
+    .item {
+        padding-left: 25px;
+        line-height: 45px;
+    }
+    
+    .item span {
+        font-size: 16px;
+    }
+    
+    .item span:nth-child(2) {
+        line-height: 20px;
+        margin-left: 15px;
+    }
+    
+    .lista_generica {
+        margin-left: 30px;
+    }
 }

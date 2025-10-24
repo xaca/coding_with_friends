@@ -3,18 +3,25 @@
 body,html{
     overflow-x: hidden;
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 h1,h2{
     color: var(--color-titulos);
     width: 70%;
+    max-width: 100%;
     margin: 20px auto;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 h1{
     font-weight: 900;
@@ -42,10 +49,13 @@ div {
 }
 .frase{
     width:70%;
+    max-width: 100%;
     margin:60px auto;
     font-size: 24pt;
     text-align: center;
     color:var(--color-frase);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .logo_principal {
     width: 90%;
@@ -59,6 +69,7 @@ div {
     background: var(--color-boton);
     padding: 12px 60px;
     width:80%;
+    max-width: 300px;
     height: 50px;
     line-height: 50px;
     font-size: 24px;
@@ -68,10 +79,24 @@ div {
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 5px  var(--color-sombra);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 #btn_registro:hover{
     background: var(--color-texto-boton);
     color: var(--color-boton);
+    transform: translateY(-2px);
+    box-shadow: 7px 7px var(--color-sombra);
+}
+
+#btn_registro:focus {
+    outline: 2px solid var(--color-frase);
+    outline-offset: 2px;
+}
+
+#btn_registro:active {
+    transform: translateY(0);
+    box-shadow: 3px 3px var(--color-sombra);
 }
 .fecha{
     color: var(--color-texto);
@@ -107,6 +132,94 @@ div {
 }
 iframe .teQAzf{
     background-color: white;
+}
+
+/* Responsive styles for general elements */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+        width: 90%;
+    }
+    
+    h2 {
+        font-size: 16px;
+        width: 90%;
+    }
+    
+    .frase {
+        width: 90%;
+        font-size: 18pt;
+        margin: 40px auto;
+    }
+    
+    #btn_registro {
+        width: 90%;
+        font-size: 18px;
+        padding: 8px 40px;
+        height: 45px;
+        line-height: 45px;
+    }
+    
+    .logo_principal {
+        width: 95%;
+    }
+    
+    .descripcion {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .anuncio {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    
+    .destacado {
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .seccion {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 20px;
+        width: 80%;
+    }
+    
+    h2 {
+        font-size: 17px;
+        width: 80%;
+    }
+    
+    .frase {
+        width: 80%;
+        font-size: 20pt;
+        margin: 50px auto;
+    }
+    
+    #btn_registro {
+        width: 70%;
+        font-size: 20px;
+    }
+    
+    .logo_principal {
+        width: 85%;
+    }
+    
+    .destacado {
+        width: 80%;
+        padding: 30px;
+    }
+    
+    .seccion {
+        width: 85%;
+    }
 }
 
 
