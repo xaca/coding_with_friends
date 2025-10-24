@@ -1,12 +1,12 @@
 # 🧩 Issues cerrados recientemente
 
-> _Última actualización: **20 de octubre de 2025, 04:16 a. m.**_
+> _Última actualización: **24 de octubre de 2025, 07:46 a. m.**_
 
 ---
 
-No hay issues cerrados recientemente.
-
-> 🔍 [Ver todos los issues](https://github.com/xaca/coding_with_friends/issues)
+| # | Título | Cerrado el | Labels | Asignado |
+|:-:|:--------|:------------|:--------|:----------|
+| [#23](https://github.com/xaca/coding_with_friends/issues/23) | Agregar Tu Nombre a Contribuidores | 24/10/2025 | `Hacktoberfest` `hacktoberfest-accepted` `good-first-issue` | — |
 
 ---
 
