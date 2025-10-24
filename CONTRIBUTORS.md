@@ -1,9 +1,16 @@
 - sebas_vitz
-
-
-Name: [Sara Chavez] (https://github.com/Sarachavez5) 
-Place: Medellín-Colombia
-About: Student at UPB 
-Progamming langaje: JS, Python 
-Email: sarachavez500@gmail.com  
-
+- Danibeta33
+- JuanSMarin2
+- Matias Bedoya Rojas
+- Ricardo Guanilo
+- Manuela Giraldo
+- DahianaGuzman
+- Sara Sierra
+- [Sara Chavez] (https://github.com/Sarachavez5) 
+- Jacobo Rodríguez] (https://github.com/jacobo1304)
+- [Maicol Gutierrez] (https://github.com/Maicolguti)
+- [Julian Rodriguez] (https://github.com/RdzJJ)
+- [Alfonso Jiménez] (https://github.com/alfonsoj03)
+- [Sebastián Soto] (https://github.com/SebasSotoA)
+- [Cristian Usme] (https://github.com/Cristian-Usme)
+- [Samuel Pérez] (https://github.com/samuelperezh)

@@ -2,6 +2,7 @@ import logo_pragma from "../../../assets/img/pragma.png";
 import logo_upb_tec from "../../../assets/img/upb_tec_logo.png";
 import logo_upb from "../../../assets/img/logo_upb.png";
 
+// Sponsors component displays sponsor logos or information
 function Sponsors(){
     return (<>
     <footer id="sponsors">

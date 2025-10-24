@@ -29,4 +29,33 @@
         width: 80%;
         margin: 12px auto;
     }
+    
+    /* Estilos específicos para Cine en tablet */
+    .cine-container {
+        padding: 15px;
+    }
+
+    .skeleton-loader {
+        width: 95%;
+    }
+
+    .skeleton-inner {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .cine-form-iframe {
+        width: 95%;
+        max-width: none;
+    }
+
+    .skeleton-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skeleton-button {
+        width: 100%;
+        max-width: 200px;
+    }
 }

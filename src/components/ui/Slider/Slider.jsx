@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import SliderConfig from "./SliderConfig.js";
 import { MdKeyboardArrowRight,MdKeyboardArrowLeft } from "react-icons/md";
 
+// Slider component displays a carousel of images or content
 function Slider({id_slider}){
 
     useEffect(() => {

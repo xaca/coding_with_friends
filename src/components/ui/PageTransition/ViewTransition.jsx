@@ -6,11 +6,15 @@ export function ViewTransitionWrapper({ children }) {
 
   useEffect(() => {
     const mainContent = document.querySelector(".main-content");
-    if (mainContent) {
-      mainContent.style.animation = "none";
-      mainContent.offsetHeight;
-      mainContent.style.animation = "slide-in 0.3s ease-out";
-    }
+    if (!mainContent) return;
+
+    // Reset y aplicar animación
+    mainContent.style.animation = "none";
+    void mainContent.offsetHeight; // Forzar reflow
+    
+    // Animación más suave
+    mainContent.style.animation = "slideIn 0.4s ease-out both";
+
   }, [location.pathname]);
 
   return <>{children}</>;

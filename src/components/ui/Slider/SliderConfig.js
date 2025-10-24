@@ -1,4 +1,5 @@
 //edited form Ryan Morr
+// SliderConfig class defines configuration for the slider component
 class SliderConfig{
   
   constructor(parent_node){

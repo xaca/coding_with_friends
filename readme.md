@@ -49,8 +49,7 @@ Te invitamos a un nuevo evento de Coding with friends, en está oportunidad vamo
 ## Cursos Sapiencia - Programa ESTUD-IA
 
 ╔══════════════════════════════════════════════════════════════╗
-║  (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)  ║
-╚══════════════════════════════════════════════════════════════╝
+║  (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)                  ╚══════════════════════════════════════════════════════════════╝
 
 🎓✨ *¡OPORTUNIDAD ÚNICA DE FORMACIÓN GRATUITA!* ✨📚
 
@@ -100,6 +99,10 @@ Te invitamos a participar en el programa ESTUD-IA de Sapiencia, donde podrás ac
 📚 *Registro:* https://hacktoberfest.com/
 
 ¡Es hora de contribuir al código abierto! 💻✨
+
+## 📋 Progreso del Proyecto
+
+¿Quieres ver qué se ha completado recientemente en el proyecto? Consulta nuestro [resumen de issues cerrados](RECENTLY_CLOSED.md)
 
 ## Posts para Redes Sociales
 
@@ -167,3 +170,20 @@ Humanizing Tech: An Online Conversation with Bibiana Souza
     - Diseñar el call for speakers
     - Progamación usando Google App Script
 - Agregar traducción al inglés con [Polyglot de Airbnb](https://airbnb.io/polyglot.js/)
+
+## Mensaje para WhatsApp - Agenda de la semana
+
+(◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
+
+📅 Agenda de la semana
+
+🎓 Cursos Sapiencia – ¡Último día! Cierre hoy.
+🌐 Website: https://codingwithfriends.club/#/cursos-sapiencia
+
+🍿 Salida a cine – Mañana
+🌐 Website: https://codingwithfriends.club/#/cine
+
+🎃 HacktoberFest 2025 – Todo el mes
+🌐 Website: https://codingwithfriends.club/#/hacktoberfest
+
+¡Te esperamos! Comparte este mensaje y participa. 🚀

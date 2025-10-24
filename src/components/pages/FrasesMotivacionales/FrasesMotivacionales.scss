@@ -1,0 +1,101 @@
+.frases-page {
+  .hero {
+    padding: 32px 20px 10px;
+    text-align: center;
+
+    .hero-content {
+      max-width: 980px;
+      margin: 0 auto;
+
+      h1 {
+        color: var(--color-titulos);
+        font-weight: 900;
+        font-size: clamp(22px, 4vw, 32px);
+        margin: 0 auto 8px;
+      }
+
+      .hero-subtitle {
+        color: var(--color-titulos);
+        font-size: clamp(14px, 2.4vw, 18px);
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .frases {
+    width: 90%;
+    max-width: 980px;
+    margin: 20px auto 80px;
+    text-align: center;
+    color: var(--color-texto);
+
+    .quote-box {
+      width: min(900px, 95%);
+      margin: 24px auto 20px;
+      background: var(--color-fondo-destacado);
+      border: 1px solid var(--color-borde-tarjetas);
+      border-radius: 16px;
+      padding: clamp(20px, 4vw, 36px);
+      box-shadow: 5px 5px var(--color-sombra);
+    }
+
+    .quote-text {
+      color: var(--color-titulos);
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+      font-size: clamp(20px, 4.2vw, 30px);
+      margin: 0;
+      animation: fraseFade 240ms ease;
+    }
+
+    .actions {
+      margin-top: 18px;
+    }
+
+    .tip {
+      margin-top: 18px;
+      opacity: 0.9;
+    }
+  }
+
+  /* Botón consistente con tu sistema (similar a btn-primary de otras páginas) */
+  .btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde-tarjetas);
+    padding: 10px 28px;
+    min-height: 50px;
+    line-height: 28px;
+    font-size: 18px;
+    background: var(--color-boton);
+    color: var(--color-texto-boton);
+    box-shadow: 5px 5px var(--color-sombra);
+    transition: transform 120ms ease, background 160ms ease, color 160ms ease;
+
+    &:hover {
+      background: var(--color-texto-boton);
+      color: var(--color-boton);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Animación ligera para cambio de frase */
+@keyframes fraseFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accesibilidad: reduce animación si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  .frases-page .quote-text { animation: none !important; }
+  .frases-page .btn-primary { transition: none !important; }
+}
