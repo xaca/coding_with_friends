@@ -12,3 +12,4 @@
 - Alfonso Jiménez / alfonsoj03
 - Sebastián Soto / SebasSotoA
 - Cristian Usme / Cristian-Usme
+- Samuel Pérez / samuelperezh
