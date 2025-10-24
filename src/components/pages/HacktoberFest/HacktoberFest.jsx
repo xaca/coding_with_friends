@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import MainLayout from '../../ui/MainLayout/MainLayout';
 import '../../../css/variables.scss';
 import '../../../css/generales.scss';
@@ -7,6 +8,35 @@ import '../../../css/mediaqueries/desktop.scss';
 import './HacktoberFest.scss';
 
 export default function HacktoberFest() {
+  const [challenges, setChallenges] = useState([]);
+  const [vibecodersChallenges, setVibecodersChallenges] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch issues from JSON
+  useEffect(() => {
+    fetch('/issues.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch issues');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setChallenges(data.challenges || []);
+        setVibecodersChallenges(data.vibecodersChallenges || []);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error fetching issues:', err);
+        setError(err.message);
+        setLoading(false);
+        // Fallback to empty arrays
+        setChallenges([]);
+        setVibecodersChallenges([]);
+      });
+  }, []);
+
   // Smooth scroll function
   const scrollToChallenges = () => {
     const challengesSection = document.getElementById('challenges');
@@ -17,163 +47,6 @@ export default function HacktoberFest() {
       });
     }
   };
-
-  // Coding challenges data
-  const challenges = [
-    // Easy Level
-    {
-      id: 1,
-      title: "Implementar Toggle de Modo Oscuro",
-      description: "Agregar un interruptor de modo oscuro/claro al sitio web con transiciones suaves y persistencia de preferencias del usuario.",
-      difficulty: "Fácil",
-      tags: ["UI/UX", "CSS", "JavaScript"],
-      href: 'https://github.com/xaca/coding_with_friends/issues/8',
-      points: 15,
-      example: "Crear un botón toggle que cambie entre temas claro y oscuro con persistencia en localStorage"
-    },
-    {
-      id: 2,
-      title: "Corregir Problemas de Responsive Móvil",
-      description: "Resolver problemas de visualización de videos en iPhone mini y problemas de diseño móvil mencionados en la sección TODO.",
-      difficulty: "Fácil",
-      tags: ["Responsive", "Mobile", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/9',
-      points: 20,
-      example: "Corregir problemas de tamaño de video y diseño en iPhone mini y otros dispositivos móviles pequeños"
-    },
-    {
-      id: 3,
-      title: "Agregar Integración de Feed de Instagram",
-      description: "Crear una sección que muestre las últimas publicaciones de Instagram de CWF usando Instagram Basic Display API.",
-      difficulty: "Fácil",
-      tags: ["API", "Redes Sociales", "React"],
-      href:'https://github.com/xaca/coding_with_friends/issues/10',
-      points: 25,
-      example: "Mostrar las últimas 6 publicaciones de Instagram de la cuenta @coding.with.friends"
-    },
-    {
-      id: 4,
-      title: "Mejorar Diseño Responsive Móvil",
-      description: "Revisar y corregir problemas de diseño responsive en todos los tamaños y orientaciones de dispositivos.",
-      difficulty: "Fácil",
-      tags: ["Responsive", "CSS", "Mobile"],
-      href:'https://github.com/xaca/coding_with_friends/issues/11',
-      points: 18,
-      example: "Asegurar que todos los componentes se vean bien en móvil, tablet y escritorio"
-    },
-    {
-      id: 5,
-      title: "Agregar Soporte de Traducción al Inglés",
-      description: "Implementar Polyglot.js para cambio de idioma inglés/español en todo el sitio web.",
-      difficulty: "Fácil",
-      tags: ["i18n", "Traducción", "JavaScript"],
-      href:'https://github.com/xaca/coding_with_friends/issues/12',
-      points: 22,
-      example: "Agregar selector de idioma y traducir todo el contenido de texto al inglés"
-    },
-    // Medium Level
-    {
-      id: 6,
-      title: "Crear Formulario de Llamada a Ponentes",
-      description: "Diseñar e implementar una integración con Google Forms para aplicaciones de ponentes con estilos personalizados.",
-      difficulty: "Medio",
-      tags: ["Formularios", "Google Forms", "Integración"],
-      href:'https://github.com/xaca/coding_with_friends/issues/13',
-      points: 30,
-      example: "Crear un formulario estilizado que envíe a Google Forms para aplicaciones de ponentes"
-    },
-    {
-      id: 7,
-      title: "Implementar Optimización SEO",
-      description: "Agregar meta tags, datos estructurados, sitemap y mejorar la visibilidad en motores de búsqueda.",
-      difficulty: "Medio",
-      tags: ["SEO", "Meta Tags", "Datos Estructurados"],
-      href:'https://github.com/xaca/coding_with_friends/issues/14',
-      points: 35,
-      example: "Agregar etiquetas Open Graph, Twitter cards y datos estructurados JSON-LD"
-    },
-    {
-      id: 8,
-      title: "Agregar Estados de Carga y Animaciones",
-      description: "Implementar indicadores de carga suaves y micro-animaciones en todo el sitio.",
-      difficulty: "Medio",
-      tags: ["Animaciones", "UX", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/15',
-      points: 28,
-      example: "Agregar skeleton loaders, efectos hover de botones y animaciones de transición de página"
-    },
-    {
-      id: 9,
-      title: "Mejorar Características de Accesibilidad",
-      description: "Implementar etiquetas ARIA, navegación por teclado, soporte para lectores de pantalla y cumplimiento WCAG.",
-      difficulty: "Medio",
-      tags: ["Accesibilidad", "ARIA", "WCAG"],
-      href:'https://github.com/xaca/coding_with_friends/issues/16',
-      points: 32,
-      example: "Agregar etiquetas ARIA apropiadas, navegación por teclado y soporte para lectores de pantalla"
-    },
-    {
-      id: 10,
-      title: "Mejorar Compartir en Redes Sociales y Marca",
-      description: "Agregar favicon personalizado, botones de compartir en redes sociales y mejorar la consistencia de marca.",
-      difficulty: "Medio",
-      tags: ["Marca", "Compartir Social", "Favicon"],
-      href:'https://github.com/xaca/coding_with_friends/issues/17',
-      points: 25,
-      example: "Crear favicon personalizado, agregar botones de compartir WhatsApp/Twitter, mejorar consistencia visual"
-    },
-    // Advanced Level
-    {
-      id: 11,
-      title: "Diseñar Micro-interacciones Avanzadas",
-      description: "Crear efectos hover sofisticados, animaciones de botones y sistemas de retroalimentación interactiva.",
-      difficulty: "Avanzado",
-      tags: ["Micro-interacciones", "CSS", "UX"],
-      href:'https://github.com/xaca/coding_with_friends/issues/18',
-      points: 40,
-      example: "Agregar efectos hover complejos, animaciones de estado de botones y retroalimentación interactiva"
-    },
-    {
-      id: 12,
-      title: "Agregar Transiciones Suaves de Página",
-      description: "Implementar transiciones de página y animaciones de ruta para una mejor experiencia de navegación.",
-      difficulty: "Avanzado",
-      tags: ["Animaciones", "Routing", "UX"],
-      href:'https://github.com/xaca/coding_with_friends/issues/19',
-      points: 35,
-      example: "Agregar transiciones suaves entre páginas y cambios de ruta"
-    },
-    {
-      id: 13,
-      title: "Agregar Pruebas Unitarias e Integración",
-      description: "Escribir suites de pruebas para componentes e interacciones de usuario usando Jest y React Testing Library.",
-      difficulty: "Avanzado",
-      tags: ["Testing", "Jest", "React Testing Library"],
-      href:'https://github.com/xaca/coding_with_friends/issues/20',
-      points: 45,
-      example: "Escribir pruebas comprensivas para componentes React e interacciones de usuario"
-    },
-    {
-      id: 14,
-      title: "Mejorar Estilos de Botones y Enlaces",
-      description: "Mejorar estados hover de botones, indicadores de foco e interacciones de enlaces para mejor UX.",
-      difficulty: "Avanzado",
-      tags: ["CSS", "UX", "Estilos"],
-      href:'https://github.com/xaca/coding_with_friends/issues/21',
-      points: 30,
-      example: "Crear estilos de botones consistentes con estados hover, focus y active"
-    },
-    {
-      id: 15,
-      title: "Agregar Animaciones de Scroll",
-      description: "Implementar animaciones activadas por scroll y efectos de revelado para secciones de contenido.",
-      difficulty: "Avanzado",
-      tags: ["Animaciones", "Scroll", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/22',
-      points: 38,
-      example: "Agregar animaciones de fade-in y efectos de revelado mientras los usuarios hacen scroll por el contenido"
-    }
-  ];
 
   // Vibecoders community highlights
   const vibecodersHighlights = [
@@ -200,100 +73,6 @@ export default function HacktoberFest() {
       description: "Mantente conectado a través de todas nuestras plataformas",
       icon: "🌐",
       action: "Unirse a la Comunidad"
-    }
-  ];
-
-  // Vibecoders beginner challenges
-  const vibecodersChallenges = [
-    {
-      id: 1,
-      title: "Agregar Tu Nombre a Contribuidores",
-      description: "Agrega tu nombre a nuestra lista de contribuidores para ser parte de la comunidad",
-      difficulty: "Súper Fácil",
-      time: "5 min",
-      reward: "Insignia de Contribuidor",
-      example: "Agregar tu nombre al archivo CONTRIBUTORS.md",
-      href:'https://github.com/xaca/coding_with_friends/issues/23'
-    },
-    {
-      id: 2,
-      title: "Mejorar Comentarios del Código",
-      description: "Agrega comentarios útiles al código existente para hacerlo más legible",
-      difficulty: "Fácil",
-      time: "15-20 min",
-      reward: "Insignia de Ayudante",
-      example: "Agregar comentarios explicando qué hace una función",
-      href:'https://github.com/xaca/coding_with_friends/issues/26'
-    },
-    {
-      id: 3,
-      title: "Agregar Sonidos de Interacción",
-      description: "Implementa sonidos sutiles para botones y hover effects",
-      difficulty: "Fácil",
-      time: "15-25 min",
-      reward: "Insignia de Diseñador de Audio",
-      example: "Sonido suave al hacer hover en botones o al hacer clic",
-      href:'https://github.com/xaca/coding_with_friends/issues/27'
-    },
-    {
-      id: 4,
-      title: "Corregir Errores en README",
-      description: "Ayuda a mejorar la documentación de nuestro proyecto corrigiendo errores ortográficos",
-      difficulty: "Súper Fácil",
-      time: "5-10 min",
-      reward: "Insignia de Comunidad",
-      example: "Corregir 'recieve' por 'receive' en README.md",
-      href:'https://github.com/xaca/coding_with_friends/issues/24'
-    },
-    {
-      id: 5,
-      title: "Crear un Generador de Frases Motivacionales",
-      description: "Agrega un botón que muestre frases motivacionales aleatorias para desarrolladores",
-      difficulty: "Fácil",
-      time: "15-20 min",
-      reward: "Insignia de Motivador",
-      example: "Botón que muestre '¡Sigue codificando! 💪' o 'Los errores son oportunidades de aprendizaje 🚀'",
-      href:'https://github.com/xaca/coding_with_friends/issues/28'
-    },
-    {
-      id: 6,
-      title: "Agregar Emojis a los Títulos",
-      description: "Haz que los títulos sean más divertidos agregando emojis relevantes",
-      difficulty: "Súper Fácil",
-      time: "3-5 min",
-      reward: "Insignia de Emoji Master",
-      example: "Cambiar 'Eventos' por '🎉 Eventos' o 'Contacto' por '📞 Contacto'",
-      href:'https://github.com/xaca/coding_with_friends/issues/25'
-    },
-    {
-      id: 7,
-      title: "Crear un Componente de Carga Simple",
-      description: "Construye un spinner de carga básico o indicador de progreso",
-      difficulty: "Fácil",
-      time: "25-30 min",
-      reward: "Insignia de Constructor",
-      example: "Crear una animación de círculo giratorio",
-      href:'https://github.com/xaca/coding_with_friends/issues/29'
-    },
-    {
-      id: 8,
-      title: "Implementar Efecto de 'Typing' en Texto",
-      description: "Haz que algunos textos aparezcan como si se estuvieran escribiendo en tiempo real",
-      difficulty: "Fácil",
-      time: "20-30 min",
-      reward: "Insignia de Escriba Digital",
-      example: "El título principal aparece letra por letra con efecto de cursor parpadeante",
-      href:'https://github.com/xaca/coding_with_friends/issues/30'
-    },
-    {
-      id: 9,
-      title: "Agregar Enlaces de Redes Sociales",
-      description: "Ayúdanos a conectar agregando enlaces de redes sociales a nuestras páginas",
-      difficulty: "Fácil",
-      time: "15-20 min",
-      reward: "Insignia de Conector",
-      example: "Agregar enlaces de Instagram, Twitter, LinkedIn",
-      href:'https://github.com/xaca/coding_with_friends/issues/31'
     }
   ];
 
@@ -418,29 +197,51 @@ export default function HacktoberFest() {
         <section id="challenges" className="challenges">
           <h2>🎯 Desafíos de Programación</h2>
           <p className="challenges-intro">
-            Elige entre estos 15 desafíos para contribuir a proyectos de código abierto. 
+            Elige entre estos desafíos para contribuir a proyectos de código abierto. 
             Cada desafío está diseñado para ayudarte a aprender mientras generas un impacto real.
           </p>
           
+          {loading && (
+            <div className="loading-state">
+              <p>⏳ Cargando desafíos...</p>
+            </div>
+          )}
+
+          {error && (
+            <div className="error-state">
+              <p>⚠️ Error al cargar desafíos. Por favor, intenta más tarde.</p>
+            </div>
+          )}
+
+          {!loading && !error && challenges.length === 0 && (
+            <div className="empty-state">
+              <p>📭 No hay desafíos disponibles en este momento.</p>
+            </div>
+          )}
+
           <div className="challenges-grid">
             {challenges.map((challenge) => (
-              <div key={challenge.id} className={`challenge-card ${challenge.difficulty.toLowerCase()}`}>
+              <div key={challenge.id} className={`challenge-card ${challenge.difficulty ? challenge.difficulty.toLowerCase().replace(/\s+/g, '-') : ''}`}>
                 <div className="challenge-header">
-                  <span className="difficulty-badge">{challenge.difficulty}</span>
-                  {/*<span className="points">{challenge.points} pts</span>*/}
+                  <span className="difficulty-badge">{challenge.difficulty || 'N/A'}</span>
+                  {challenge.points && <span className="points">{challenge.points} pts</span>}
                 </div>
                 <h3 className="challenge-title">{challenge.title}</h3>
                 <p className="challenge-description">{challenge.description}</p>
-                <div className="challenge-tags">
-                  {challenge.tags.map((tag, index) => (
-                    <span key={index} className="tag">{tag}</span>
-                  ))}
-                </div>
-                <div className="challenge-example">
-                  <strong>Example:</strong> {challenge.example}
-                </div>
+                {challenge.tags && challenge.tags.length > 0 && (
+                  <div className="challenge-tags">
+                    {challenge.tags.map((tag, index) => (
+                      <span key={index} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+                {challenge.example && (
+                  <div className="challenge-example">
+                    <strong>Example:</strong> {challenge.example}
+                  </div>
+                )}
                 <button
-                  onClick={() => { if (challenge.href) window.location.href = challenge.href }}
+                  onClick={() => { if (challenge.url) window.open(challenge.url, '_blank') }}
                   className="challenge-btn"
                 >
                   Iniciar Desafío
@@ -476,27 +277,38 @@ export default function HacktoberFest() {
               ¡Perfecto para nuevos miembros! Estas tareas fáciles te ayudan a comenzar contribuyendo a nuestra comunidad. 
               Cada desafío está diseñado para completarse en menos de 30 minutos.
             </p>
+
+            {loading && (
+              <div className="loading-state">
+                <p>⏳ Cargando desafíos...</p>
+              </div>
+            )}
             
             <div className="vibecoders-challenges-grid">
               {vibecodersChallenges.map((challenge) => (
                 <div key={challenge.id} className="vibecoder-challenge-card">
                   <div className="challenge-content">
                     <div className="challenge-header">
-                      <span className="difficulty-badge vibecoder">{challenge.difficulty}</span>
-                      <span className="time-estimate">{challenge.time}</span>
+                      <span className="difficulty-badge vibecoder">{challenge.difficulty || 'N/A'}</span>
+                      {challenge.time && <span className="time-estimate">{challenge.time}</span>}
+                      {challenge.estimatedTime && <span className="time-estimate">{challenge.estimatedTime}</span>}
                     </div>
                     <h4 className="challenge-title">{challenge.title}</h4>
                     <p className="challenge-description">{challenge.description}</p>
-                    <div className="challenge-example">
-                      <strong>Ejemplo:</strong> {challenge.example}
-                    </div>
-                    {/*<div className="challenge-reward">
-                      <span className="reward-icon">🏆</span>
-                      <span className="reward-text">{challenge.reward}</span>
-                    </div>*/}
+                    {challenge.example && (
+                      <div className="challenge-example">
+                        <strong>Ejemplo:</strong> {challenge.example}
+                      </div>
+                    )}
+                    {challenge.reward && (
+                      <div className="challenge-reward">
+                        <span className="reward-icon">🏆</span>
+                        <span className="reward-text">{challenge.reward}</span>
+                      </div>
+                    )}
                   </div>
                   <button
-                    onClick={() => { if (challenge.href) window.location.href = challenge.href }}
+                    onClick={() => { if (challenge.url) window.open(challenge.url, '_blank') }}
                     className="vibecoder-challenge-btn"
                   >
                     Iniciar Desafío
