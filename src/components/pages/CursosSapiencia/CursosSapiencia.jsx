@@ -151,7 +151,7 @@ export default function CursosSapiencia() {
           <p>Para más información sobre el programa ESTUD-IA:</p>
           <div className="contact-info">
             <p><strong>Sitio web:</strong> <a href="https://sapiencia.gov.co" target="_blank" rel="noopener noreferrer">sapiencia.gov.co</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@sapiencia.gov.co">info@sapiencia.gov.co</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@sapiencia.gov.co" target="_blank" rel="noopener noreferrer">info@sapiencia.gov.co</a></p>
             <p><strong>Teléfono:</strong> (+57 4) 444 7947</p>
           </div>
           <p className="final-message">
