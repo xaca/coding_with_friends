@@ -1,15 +1,16 @@
 - sebas_vitz
 - Danibeta33
-- Jacobo Rodríguez / jacobo1304
 - JuanSMarin2
 - Matias Bedoya Rojas
 - Ricardo Guanilo
 - Manuela Giraldo
-- Maicol Gutierrez / Maicolguti
 - DahianaGuzman
-- Julian Rodriguez / RdzJJ
 - Sara Sierra
-- Alfonso Jiménez / alfonsoj03
-- Sebastián Soto / SebasSotoA
-- Cristian Usme / Cristian-Usme
-- Samuel Pérez / samuelperezh
+- [Sara Chavez] (https://github.com/Sarachavez5) 
+- Jacobo Rodríguez] (https://github.com/jacobo1304)
+- [Maicol Gutierrez] (https://github.com/Maicolguti)
+- [Julian Rodriguez] (https://github.com/RdzJJ)
+- [Alfonso Jiménez] (https://github.com/alfonsoj03)
+- [Sebastián Soto] (https://github.com/SebasSotoA)
+- [Cristian Usme] (https://github.com/Cristian-Usme)
+- [Samuel Pérez] (https://github.com/samuelperezh)

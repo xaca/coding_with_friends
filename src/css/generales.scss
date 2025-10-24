@@ -9,6 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    transition: var(--transition-theme);
 }
 h1,h2{
     color: var(--color-titulos);

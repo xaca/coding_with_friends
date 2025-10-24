@@ -5,6 +5,7 @@
     background:var(--color-fondo-menu);
     border-radius: 20px;
     display: flex;
+    gap: 8px;
     box-sizing:border-box;
     text-align: center;
 }
@@ -93,6 +94,20 @@ a.autor{
     text-decoration: none;
 }
 
+.theme-toggle{
+    margin-left: auto;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde-tarjetas);
+    background: var(--color-boton);
+    color: var(--color-texto-boton);
+    cursor: pointer;
+    transition: var(--transition-theme);
+}
+.theme-toggle:hover{
+    filter: brightness(1.05);
+}
+
 // Mobile responsive styles
 @media (max-width: 768px) {
     .menu {
@@ -142,4 +157,28 @@ a.autor{
         font-size: 12px;
         padding: 4px 8px;
     }
+}
+
+// Modo oscuro: mejorar visibilidad del texto del menú
+[data-theme="dark"] .menu a {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .menu a:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .menu a:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+// Modo oscuro: estilo para el elemento activo/seleccionado
+[data-theme="dark"] .menu a.active {
+    background: #ffffff !important;
+    color: #1a3a1a !important;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }

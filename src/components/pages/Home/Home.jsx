@@ -13,8 +13,10 @@ import "./Home.scss";
 // Main Home function returns the slider and gallery components
 function Home(){
     return(<>
-        <Slider id_slider={"slider_1"} />
-        <Gallery />
+        <div id="home">
+            <Slider id_slider={"slider_1"} />
+            <Gallery />
+        </div>
     </>);
 }
 

@@ -6,6 +6,8 @@ import MainLayout from './components/ui/MainLayout/MainLayout'
 // Render the main Router inside StrictMode for development checks
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router />
+    <ThemeProvider>
+      <Router />
+    </ThemeProvider>
   </StrictMode>,
 )
