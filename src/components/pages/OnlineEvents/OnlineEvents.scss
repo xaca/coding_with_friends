@@ -144,8 +144,8 @@
     }
   }
 
-  // Tablet styles (max-width: 810px)
-  @media (max-width: 810px) {
+  // Tablet styles (max-width: 1024px)
+  @media (max-width: 1024px) {
     max-width: 740px;
     padding: 1.5rem;
     height: auto;
@@ -199,8 +199,10 @@
       background: #f8f8f8;      
       border-radius: 8px;
       margin: 0 auto;
-      width: 690px;
+      width: 100%;
+      max-width: 690px;
       overflow-y: hidden;
+      box-sizing: border-box;
     }
 
     .thumbnail-nav {
@@ -231,23 +233,68 @@
     .video-thumbnails {
       height: 100%;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
+      gap: 1rem;
       overflow: visible;
       padding-right: 0;
+      align-items: stretch;
+      justify-items: center;
 
       .thumbnail {
-        margin:4px;
+        margin: 4px;
+        width: 100%;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
         h3 {
           font-size: 0.75rem;
           margin: 0.25rem 0 0.15rem;
           height: 2.1rem;
+          text-align: center;
+          width: 100%;
         }
 
         p {
           font-size: 0.65rem;
+          text-align: center;
+          width: 100%;
         }
       }
+    }
+  }
+
+  // Tablet medium (601px - 768px)
+  @media (min-width: 601px) and (max-width: 768px) {
+    .video-thumbnails-container {
+      width: 100%;
+      max-width: 600px;
+      height: 160px;
+      gap: 0.8rem;
+    }
+
+    .video-thumbnails {
+      gap: 0.8rem;
+
+      .thumbnail {
+        max-width: 180px;
+        
+        h3 {
+          font-size: 0.7rem;
+          height: 1.9rem;
+        }
+
+        p {
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+    .thumbnail-nav {
+      width: 28px;
+      height: 28px;
+      font-size: 0.9rem;
     }
   }
 

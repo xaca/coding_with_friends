@@ -1,30 +1,79 @@
 #sponsors{
     width: 100%;
     background-color: var(--color-pata);
-    margin:0;
+    margin: 0;
     height: auto;
-    padding-bottom: 30px;
+    padding: 30px 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 #sponsors h2{
-    margin-left: 20px;
-    padding-top:30px;
-    color:var(--color-texto-pata);
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: var(--color-texto-pata);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    text-align: center;
 }
 .enlace_sponsor{
-    margin-right: 10px;
+    margin: 0 15px 15px 0;
     text-decoration: none;
     display: inline-block;
     max-width: 100%;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
 }
 .enlace_sponsor img {
     max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.enlace_sponsor:hover {
+    transform: translateY(-2px);
+}
+
+.enlace_sponsor:hover img {
+    transform: scale(1.05);
 }
 .autor{
-    color:var(--color-frase) !important;
+    color: var(--color-frase) !important;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+}
+
+/* Tablet pequeña (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    #sponsors {
+        padding: 18px 25px 25px;
+        text-align: center;
+    }
+    
+    #sponsors h2 {
+        font-size: 20px;
+        margin: 0 0 18px 0;
+        padding-top: 0;
+    }
+    
+    .enlace_sponsor {
+        margin: 0 15px 12px 0;
+        display: inline-block;
+    }
+    
+    .enlace_sponsor img {
+        max-width: 140px;
+        height: auto;
+    }
+    
+    .autor {
+        margin-top: 18px;
+        font-size: 15px;
+    }
 }
 
 /* Responsive styles for footer */
@@ -59,18 +108,70 @@
     }
 }
 
+/* Tablet styles */
 @media (min-width: 601px) and (max-width: 1024px) {
+    #sponsors {
+        padding: 20px 30px 30px;
+        text-align: center;
+    }
+    
     #sponsors h2 {
-        font-size: 20px;
-        margin-left: 30px;
+        font-size: 22px;
+        margin: 0 0 20px 0;
+        padding-top: 0;
+        text-align: center;
     }
     
     .enlace_sponsor {
-        margin-right: 15px;
+        margin: 0 20px 15px 0;
+        display: inline-block;
+        vertical-align: middle;
     }
     
     .enlace_sponsor img {
-        max-width: 150px;
+        max-width: 180px;
         height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .enlace_sponsor:hover img {
+        transform: scale(1.05);
+    }
+    
+    .autor {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    /* Layout para tablets en landscape */
+    @media (orientation: landscape) {
+        #sponsors {
+            padding: 15px 20px 25px;
+        }
+        
+        .enlace_sponsor {
+            margin: 0 15px 10px 0;
+        }
+        
+        .enlace_sponsor img {
+            max-width: 160px;
+        }
+    }
+    
+    /* Layout para tablets en portrait */
+    @media (orientation: portrait) {
+        #sponsors {
+            padding: 25px 20px 35px;
+        }
+        
+        .enlace_sponsor {
+            margin: 0 25px 20px 0;
+        }
+        
+        .enlace_sponsor img {
+            max-width: 200px;
+        }
     }
 }
