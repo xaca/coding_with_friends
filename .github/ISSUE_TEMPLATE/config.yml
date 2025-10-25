@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discusión General
+    url: https://github.com/xaca/coding_with_friends/discussions
+    about: Para preguntas generales o discusiones sobre el proyecto
+  - name: 📚 Documentación
+    url: https://github.com/xaca/coding_with_friends#readme
+    about: Lee la documentación del proyecto
