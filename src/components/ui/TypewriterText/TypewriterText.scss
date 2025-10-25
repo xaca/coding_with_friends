@@ -1,0 +1,67 @@
+
+.typewriter-text {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 2px;
+  transition: opacity 0.1s ease-in-out;
+  
+  &.visible {
+    opacity: 1;
+  }
+  
+  &:not(.visible) {
+    opacity: 0;
+  }
+}
+
+
+.typewriter-cursor {
+  color: var(--banner-titulos, #DCEA28);
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  font-family: 'Courier New', monospace;
+}
+
+
+.typewriter-text {
+  will-change: contents;
+}
+
+
+@media (max-width: 420px) {
+  .typewriter-cursor {
+    font-size: 0.9em;
+  }
+}
+
+
+@media (min-width: 501px) and (max-width: 810px) {
+  .typewriter-cursor {
+    font-size: 1.1em;
+  }
+}
+
+[data-theme="dark"] .typewriter-cursor {
+  color: var(--banner-titulos, #DCEA28);
+}
+
+
+#banner_1 .typewriter-cursor {
+  color: var(--banner-1-texto, #DDED62);
+}
+
+#banner_2 .typewriter-cursor {
+  color: var(--banner-2-texto, #FBFE58);
+}
+
+#banner_3 .typewriter-cursor {
+  color: var(--banner-3-texto, #161a19);
+}
