@@ -12,12 +12,12 @@ function Slider({id_slider}){
     useEffect(() => {
         const sliderInstance = new SliderConfig(document.getElementById(id_slider)); 
         
-        // Override the slideTo method to track current slide
+    
         const originalSlideTo = sliderInstance.slideTo.bind(sliderInstance);
         sliderInstance.slideTo = (index) => {
             originalSlideTo(index);
             setCurrentSlide(index);
-            // Reset typewriter for the new slide
+            
             setTypewriterKeys(prev => {
                 const newKeys = [...prev];
                 newKeys[index] = prev[index] + 1;

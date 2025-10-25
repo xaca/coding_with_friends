@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import './TypewriterText.scss';
 
-// Helper function to get the next character or emoji properly
+
 function getNextChar(text, index) {
   if (index >= text.length) return { char: '', nextIndex: index };
   
   const currentChar = text[index];
   const nextChar = text[index + 1];
   
-  // Check if we have a surrogate pair (emoji)
+ 
   if (nextChar && 
       currentChar.codePointAt(0) >= 0xD800 && currentChar.codePointAt(0) <= 0xDBFF &&
       nextChar.codePointAt(0) >= 0xDC00 && nextChar.codePointAt(0) <= 0xDFFF) {
@@ -35,12 +35,12 @@ function TypewriterText({
   useEffect(() => {
     if (!text) return;
 
-    // Reset state when restart is triggered or component remounts
+    
     setDisplayedText('');
     setCurrentIndex(0);
     setIsTyping(false);
 
-    // Start typing after delay
+    
     const startTimer = setTimeout(() => {
       setIsTyping(true);
       setCurrentIndex(0);
@@ -59,7 +59,7 @@ function TypewriterText({
     }
 
     const timer = setTimeout(() => {
-      // Use the helper function to get the next character/emoji
+      
       const { char, nextIndex } = getNextChar(text, currentIndex);
       
       setDisplayedText(prev => prev + char);
@@ -69,7 +69,7 @@ function TypewriterText({
     return () => clearTimeout(timer);
   }, [isTyping, currentIndex, text, speed, onComplete]);
 
-  // Cursor blinking effect
+  
   useEffect(() => {
     if (!cursor) return;
 
