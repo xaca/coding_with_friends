@@ -23,7 +23,7 @@ h2 {
     text-align: center;
 }
 
-
+//Added typewriter effect
 .typewriter {
     display: inline-block;
     overflow: hidden;
@@ -80,7 +80,7 @@ h2 {
         width: var(--end, 20ch);
     }
 
-    
+
 }
 
 @keyframes blink {
