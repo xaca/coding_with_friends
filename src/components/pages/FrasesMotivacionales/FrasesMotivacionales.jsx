@@ -134,7 +134,7 @@ export default function FrasesMotivacionales() {
         {/* Hero / encabezado simple para consistencia visual */}
         <section className="hero">
           <div className="hero-content">
-            <h1>✨ Frases Motivacionales</h1>
+            <h1 className="typewriter tw-medium2">✨ Frases Motivacionales</h1>
             <p className="hero-subtitle">
               Un pequeño empujón para tu día de código
             </p>
