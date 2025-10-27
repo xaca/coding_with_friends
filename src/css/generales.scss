@@ -1,9 +1,12 @@
 @use './view-transitions.scss';
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-body,html{
+body,
+html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -11,43 +14,130 @@ body {
     background-color: var(--color-fondo);
     transition: var(--transition-theme);
 }
-h1,h2{
+
+h1,
+h2 {
     color: var(--color-titulos);
     width: 70%;
     margin: 20px auto;
     text-align: center;
 }
-h1{
+
+//Added typewriter effect
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .12em solid currentColor;
     font-weight: 900;
-    font-size: 22px;
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+    animation:
+        typing var(--duration, 2s) steps(var(--steps, 16), end) forwards,
+        blink var(--blink, .7s) step-end infinite;
+    position: relative;
 }
-h2{
+
+
+.tw-short {
+    --end: 12ch;
+    --duration: 1.2s;
+    --steps: 8;
+}
+
+.tw-medium {
+    --end: 15ch;
+    --duration: 2s;
+    --steps: 16;
+}
+
+.tw-medium1 {
+    --end: 19ch;
+    --duration: 2s;
+    --steps: 16;
+}
+
+.tw-medium2 {
+    --end: 23ch;
+    --duration: 2s;
+    --steps: 16;
+}
+
+
+.tw-long {
+    --end: 30ch;
+    --duration: 3s;
+    --steps: 28;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--end, 20ch);
+    }
+
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.no-typewriter {
+    animation: none !important;
+    width: auto !important;
+    border-right: none !important;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .typewriter {
+        animation: none !important;
+        width: auto !important;
+        border-right: none !important;
+    }
+}
+
+h2 {
     font-weight: 700;
     font-size: 18px;
 }
-.mensaje_importante{
+
+.mensaje_importante {
     font-weight: 400;
     font-size: 16px;
-    color:var(--color-destacado);
+    color: var(--color-destacado);
 }
-section{
+
+section {
     padding: 20px;
     margin-bottom: 60px;
 }
+
 div {
     width: 100%;
     text-align: center;
 }
-.foto{
+
+.foto {
     width: 20%;
 }
-.frase{
-    width:70%;
-    margin:60px auto;
+
+.frase {
+    width: 70%;
+    margin: 60px auto;
     font-size: 24pt;
     text-align: center;
-    color:var(--color-frase);
+    color: var(--color-frase);
 }
+
 .logo_principal {
     width: 90%;
     max-width: 682px;
@@ -73,6 +163,7 @@ div {
         opacity: 0;
         transform: translateY(-20px) scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -84,62 +175,69 @@ div {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
-#btn_registro{
+
+#btn_registro {
     display: block;
     text-decoration: none;
     color: var(--color-texto-boton);
     background: var(--color-boton);
     padding: 12px 60px;
-    width:80%;
+    width: 80%;
     height: 50px;
     line-height: 50px;
     font-size: 24px;
     border-radius: 10px;
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 5px  var(--color-sombra);
+    box-shadow: 5px 5px var(--color-sombra);
 }
-#btn_registro:hover{
+
+#btn_registro:hover {
     background: var(--color-texto-boton);
     color: var(--color-boton);
 }
-.fecha{
+
+.fecha {
     color: var(--color-texto);
 }
-.fecha span{
+
+.fecha span {
     font-weight: 600;
 }
-.descripcion{
+
+.descripcion {
     text-align: left;
     font-size: 14px;
     letter-spacing: -.5px;
 }
-.anuncio{
+
+.anuncio {
     text-align: left;
-    margin:30px;
+    margin: 30px;
 }
-.destacado{
+
+.destacado {
     width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: left;
     margin-bottom: 60px;
     background: var(--color-fondo-destacado);
     border-radius: 10px;
     padding: 40px;
 }
-.imagen_evento{
+
+.imagen_evento {
     display: block;
     margin: 0 auto;
 }
-.seccion{
+
+.seccion {
     width: 80%;
     margin: 20px auto;
 }
-iframe .teQAzf{
+
+iframe .teQAzf {
     background-color: white;
 }
-
-
-  

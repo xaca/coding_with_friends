@@ -7,10 +7,11 @@
 - DahianaGuzman
 - Sara Sierra
 - [Sara Chavez] (https://github.com/Sarachavez5) 
-- Jacobo Rodríguez] (https://github.com/jacobo1304)
+- [Jacobo Rodríguez] (https://github.com/jacobo1304)
 - [Maicol Gutierrez] (https://github.com/Maicolguti)
 - [Julian Rodriguez] (https://github.com/RdzJJ)
 - [Alfonso Jiménez] (https://github.com/alfonsoj03)
 - [Sebastián Soto] (https://github.com/SebasSotoA)
 - [Cristian Usme] (https://github.com/Cristian-Usme)
 - [Samuel Pérez] (https://github.com/samuelperezh)
+- [Shristi Sharma] (https://github.com/shristi005/coding_with_friends)

@@ -37,7 +37,7 @@ export default function HacktoberFest() {
       description: "Resolver problemas de visualización de videos en iPhone mini y problemas de diseño móvil mencionados en la sección TODO.",
       difficulty: "Fácil",
       tags: ["Responsive", "Mobile", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/9',
+      href: 'https://github.com/xaca/coding_with_friends/issues/9',
       points: 20,
       example: "Corregir problemas de tamaño de video y diseño en iPhone mini y otros dispositivos móviles pequeños"
     },
@@ -47,7 +47,7 @@ export default function HacktoberFest() {
       description: "Crear una sección que muestre las últimas publicaciones de Instagram de CWF usando Instagram Basic Display API.",
       difficulty: "Fácil",
       tags: ["API", "Redes Sociales", "React"],
-      href:'https://github.com/xaca/coding_with_friends/issues/10',
+      href: 'https://github.com/xaca/coding_with_friends/issues/10',
       points: 25,
       example: "Mostrar las últimas 6 publicaciones de Instagram de la cuenta @coding.with.friends"
     },
@@ -57,7 +57,7 @@ export default function HacktoberFest() {
       description: "Revisar y corregir problemas de diseño responsive en todos los tamaños y orientaciones de dispositivos.",
       difficulty: "Fácil",
       tags: ["Responsive", "CSS", "Mobile"],
-      href:'https://github.com/xaca/coding_with_friends/issues/11',
+      href: 'https://github.com/xaca/coding_with_friends/issues/11',
       points: 18,
       example: "Asegurar que todos los componentes se vean bien en móvil, tablet y escritorio"
     },
@@ -67,7 +67,7 @@ export default function HacktoberFest() {
       description: "Implementar Polyglot.js para cambio de idioma inglés/español en todo el sitio web.",
       difficulty: "Fácil",
       tags: ["i18n", "Traducción", "JavaScript"],
-      href:'https://github.com/xaca/coding_with_friends/issues/12',
+      href: 'https://github.com/xaca/coding_with_friends/issues/12',
       points: 22,
       example: "Agregar selector de idioma y traducir todo el contenido de texto al inglés"
     },
@@ -78,7 +78,7 @@ export default function HacktoberFest() {
       description: "Diseñar e implementar una integración con Google Forms para aplicaciones de ponentes con estilos personalizados.",
       difficulty: "Medio",
       tags: ["Formularios", "Google Forms", "Integración"],
-      href:'https://github.com/xaca/coding_with_friends/issues/13',
+      href: 'https://github.com/xaca/coding_with_friends/issues/13',
       points: 30,
       example: "Crear un formulario estilizado que envíe a Google Forms para aplicaciones de ponentes"
     },
@@ -88,7 +88,7 @@ export default function HacktoberFest() {
       description: "Agregar meta tags, datos estructurados, sitemap y mejorar la visibilidad en motores de búsqueda.",
       difficulty: "Medio",
       tags: ["SEO", "Meta Tags", "Datos Estructurados"],
-      href:'https://github.com/xaca/coding_with_friends/issues/14',
+      href: 'https://github.com/xaca/coding_with_friends/issues/14',
       points: 35,
       example: "Agregar etiquetas Open Graph, Twitter cards y datos estructurados JSON-LD"
     },
@@ -98,7 +98,7 @@ export default function HacktoberFest() {
       description: "Implementar indicadores de carga suaves y micro-animaciones en todo el sitio.",
       difficulty: "Medio",
       tags: ["Animaciones", "UX", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/15',
+      href: 'https://github.com/xaca/coding_with_friends/issues/15',
       points: 28,
       example: "Agregar skeleton loaders, efectos hover de botones y animaciones de transición de página"
     },
@@ -108,7 +108,7 @@ export default function HacktoberFest() {
       description: "Implementar etiquetas ARIA, navegación por teclado, soporte para lectores de pantalla y cumplimiento WCAG.",
       difficulty: "Medio",
       tags: ["Accesibilidad", "ARIA", "WCAG"],
-      href:'https://github.com/xaca/coding_with_friends/issues/16',
+      href: 'https://github.com/xaca/coding_with_friends/issues/16',
       points: 32,
       example: "Agregar etiquetas ARIA apropiadas, navegación por teclado y soporte para lectores de pantalla"
     },
@@ -118,7 +118,7 @@ export default function HacktoberFest() {
       description: "Agregar favicon personalizado, botones de compartir en redes sociales y mejorar la consistencia de marca.",
       difficulty: "Medio",
       tags: ["Marca", "Compartir Social", "Favicon"],
-      href:'https://github.com/xaca/coding_with_friends/issues/17',
+      href: 'https://github.com/xaca/coding_with_friends/issues/17',
       points: 25,
       example: "Crear favicon personalizado, agregar botones de compartir WhatsApp/Twitter, mejorar consistencia visual"
     },
@@ -129,7 +129,7 @@ export default function HacktoberFest() {
       description: "Crear efectos hover sofisticados, animaciones de botones y sistemas de retroalimentación interactiva.",
       difficulty: "Avanzado",
       tags: ["Micro-interacciones", "CSS", "UX"],
-      href:'https://github.com/xaca/coding_with_friends/issues/18',
+      href: 'https://github.com/xaca/coding_with_friends/issues/18',
       points: 40,
       example: "Agregar efectos hover complejos, animaciones de estado de botones y retroalimentación interactiva"
     },
@@ -139,7 +139,7 @@ export default function HacktoberFest() {
       description: "Implementar transiciones de página y animaciones de ruta para una mejor experiencia de navegación.",
       difficulty: "Avanzado",
       tags: ["Animaciones", "Routing", "UX"],
-      href:'https://github.com/xaca/coding_with_friends/issues/19',
+      href: 'https://github.com/xaca/coding_with_friends/issues/19',
       points: 35,
       example: "Agregar transiciones suaves entre páginas y cambios de ruta"
     },
@@ -149,7 +149,7 @@ export default function HacktoberFest() {
       description: "Escribir suites de pruebas para componentes e interacciones de usuario usando Jest y React Testing Library.",
       difficulty: "Avanzado",
       tags: ["Testing", "Jest", "React Testing Library"],
-      href:'https://github.com/xaca/coding_with_friends/issues/20',
+      href: 'https://github.com/xaca/coding_with_friends/issues/20',
       points: 45,
       example: "Escribir pruebas comprensivas para componentes React e interacciones de usuario"
     },
@@ -159,7 +159,7 @@ export default function HacktoberFest() {
       description: "Mejorar estados hover de botones, indicadores de foco e interacciones de enlaces para mejor UX.",
       difficulty: "Avanzado",
       tags: ["CSS", "UX", "Estilos"],
-      href:'https://github.com/xaca/coding_with_friends/issues/21',
+      href: 'https://github.com/xaca/coding_with_friends/issues/21',
       points: 30,
       example: "Crear estilos de botones consistentes con estados hover, focus y active"
     },
@@ -169,7 +169,7 @@ export default function HacktoberFest() {
       description: "Implementar animaciones activadas por scroll y efectos de revelado para secciones de contenido.",
       difficulty: "Avanzado",
       tags: ["Animaciones", "Scroll", "CSS"],
-      href:'https://github.com/xaca/coding_with_friends/issues/22',
+      href: 'https://github.com/xaca/coding_with_friends/issues/22',
       points: 38,
       example: "Agregar animaciones de fade-in y efectos de revelado mientras los usuarios hacen scroll por el contenido"
     }
@@ -213,7 +213,7 @@ export default function HacktoberFest() {
       time: "5 min",
       reward: "Insignia de Contribuidor",
       example: "Agregar tu nombre al archivo CONTRIBUTORS.md",
-      href:'https://github.com/xaca/coding_with_friends/issues/23'
+      href: 'https://github.com/xaca/coding_with_friends/issues/23'
     },
     {
       id: 2,
@@ -223,7 +223,7 @@ export default function HacktoberFest() {
       time: "15-20 min",
       reward: "Insignia de Ayudante",
       example: "Agregar comentarios explicando qué hace una función",
-      href:'https://github.com/xaca/coding_with_friends/issues/26'
+      href: 'https://github.com/xaca/coding_with_friends/issues/26'
     },
     {
       id: 3,
@@ -233,7 +233,7 @@ export default function HacktoberFest() {
       time: "15-25 min",
       reward: "Insignia de Diseñador de Audio",
       example: "Sonido suave al hacer hover en botones o al hacer clic",
-      href:'https://github.com/xaca/coding_with_friends/issues/27'
+      href: 'https://github.com/xaca/coding_with_friends/issues/27'
     },
     {
       id: 4,
@@ -243,7 +243,7 @@ export default function HacktoberFest() {
       time: "5-10 min",
       reward: "Insignia de Comunidad",
       example: "Corregir 'recieve' por 'receive' en README.md",
-      href:'https://github.com/xaca/coding_with_friends/issues/24'
+      href: 'https://github.com/xaca/coding_with_friends/issues/24'
     },
     {
       id: 5,
@@ -253,7 +253,7 @@ export default function HacktoberFest() {
       time: "15-20 min",
       reward: "Insignia de Motivador",
       example: "Botón que muestre '¡Sigue codificando! 💪' o 'Los errores son oportunidades de aprendizaje 🚀'",
-      href:'https://github.com/xaca/coding_with_friends/issues/28'
+      href: 'https://github.com/xaca/coding_with_friends/issues/28'
     },
     {
       id: 6,
@@ -263,7 +263,7 @@ export default function HacktoberFest() {
       time: "3-5 min",
       reward: "Insignia de Emoji Master",
       example: "Cambiar 'Eventos' por '🎉 Eventos' o 'Contacto' por '📞 Contacto'",
-      href:'https://github.com/xaca/coding_with_friends/issues/25'
+      href: 'https://github.com/xaca/coding_with_friends/issues/25'
     },
     {
       id: 7,
@@ -273,7 +273,7 @@ export default function HacktoberFest() {
       time: "25-30 min",
       reward: "Insignia de Constructor",
       example: "Crear una animación de círculo giratorio",
-      href:'https://github.com/xaca/coding_with_friends/issues/29'
+      href: 'https://github.com/xaca/coding_with_friends/issues/29'
     },
     {
       id: 8,
@@ -283,7 +283,7 @@ export default function HacktoberFest() {
       time: "20-30 min",
       reward: "Insignia de Escriba Digital",
       example: "El título principal aparece letra por letra con efecto de cursor parpadeante",
-      href:'https://github.com/xaca/coding_with_friends/issues/30'
+      href: 'https://github.com/xaca/coding_with_friends/issues/30'
     },
     {
       id: 9,
@@ -293,7 +293,7 @@ export default function HacktoberFest() {
       time: "15-20 min",
       reward: "Insignia de Conector",
       example: "Agregar enlaces de Instagram, Twitter, LinkedIn",
-      href:'https://github.com/xaca/coding_with_friends/issues/31'
+      href: 'https://github.com/xaca/coding_with_friends/issues/31'
     }
   ];
 
@@ -349,10 +349,10 @@ export default function HacktoberFest() {
         {/* Hero Section */}
         <section className="hero">
           <div className="hero-content">
-            <h1>🎃 HacktoberFest 2025</h1>
+            <h1 className="typewriter tw-medium1">🎃 HacktoberFest 2025</h1>
             <p className="hero-subtitle">Una celebración de un mes de todo lo relacionado con código abierto</p>
             <p className="hero-description">
-              Únete a casi 90,000 desarrolladores en todo el mundo contribuyendo a proyectos de código abierto. 
+              Únete a casi 90,000 desarrolladores en todo el mundo contribuyendo a proyectos de código abierto.
               ¡Obtén tu insignia digital y ayuda a construir el futuro del código abierto!
             </p>
             {/*<div className="hero-stats">
@@ -370,15 +370,15 @@ export default function HacktoberFest() {
               </div>
             </div>*/}
             <div className="hero-actions">
-              <a 
-                href="https://hacktoberfest.com/" 
-                target="_blank" 
+              <a
+                href="https://hacktoberfest.com/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Regístrate en HacktoberFest
               </a>
-              <button 
+              <button
                 onClick={scrollToChallenges}
                 className="btn-secondary"
               >
@@ -394,13 +394,13 @@ export default function HacktoberFest() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                HacktoberFest es una celebración de un mes del software de código abierto, 
-                patrocinado por DigitalOcean y MLH. Fomenta la participación en 
+                HacktoberFest es una celebración de un mes del software de código abierto,
+                patrocinado por DigitalOcean y MLH. Fomenta la participación en
                 la comunidad de código abierto contribuyendo a proyectos en GitHub.
               </p>
               <p>
-                Desde 2014, HacktoberFest ha crecido de 676 participantes a casi 
-                90,000 desarrolladores en todo el mundo. Este año, los participantes recibirán 
+                Desde 2014, HacktoberFest ha crecido de 676 participantes a casi
+                90,000 desarrolladores en todo el mundo. Este año, los participantes recibirán
                 una insignia digital evolutiva por sus contribuciones.
               </p>
             </div>
@@ -418,10 +418,10 @@ export default function HacktoberFest() {
         <section id="challenges" className="challenges">
           <h2>🎯 Desafíos de Programación</h2>
           <p className="challenges-intro">
-            Elige entre estos 15 desafíos para contribuir a proyectos de código abierto. 
+            Elige entre estos 15 desafíos para contribuir a proyectos de código abierto.
             Cada desafío está diseñado para ayudarte a aprender mientras generas un impacto real.
           </p>
-          
+
           <div className="challenges-grid">
             {challenges.map((challenge) => (
               <div key={challenge.id} className={`challenge-card ${challenge.difficulty.toLowerCase()}`}>
@@ -454,10 +454,10 @@ export default function HacktoberFest() {
         <section className="vibecoders">
           <h2>🌟 Comunidad Vibecoders</h2>
           <p className="vibecoders-intro">
-            Únete a nuestra vibrante comunidad de desarrolladores y entusiastas de la tecnología. 
+            Únete a nuestra vibrante comunidad de desarrolladores y entusiastas de la tecnología.
             ¡Inspírate con nuestros destacados de la comunidad y participa!
           </p>
-          
+
           <div className="vibecoders-grid">
             {vibecodersHighlights.map((highlight, index) => (
               <div key={index} className="vibecoder-card">
@@ -473,10 +473,10 @@ export default function HacktoberFest() {
           <div className="vibecoders-challenges">
             <h3>🎯 Desafíos para Principiantes</h3>
             <p className="challenges-intro">
-              ¡Perfecto para nuevos miembros! Estas tareas fáciles te ayudan a comenzar contribuyendo a nuestra comunidad. 
+              ¡Perfecto para nuevos miembros! Estas tareas fáciles te ayudan a comenzar contribuyendo a nuestra comunidad.
               Cada desafío está diseñado para completarse en menos de 30 minutos.
             </p>
-            
+
             <div className="vibecoders-challenges-grid">
               {vibecodersChallenges.map((challenge) => (
                 <div key={challenge.id} className="vibecoder-challenge-card">
@@ -523,10 +523,10 @@ export default function HacktoberFest() {
         <section className="pr-guide">
           <h2>📝 Guía de Pull Request</h2>
           <p className="pr-intro">
-            ¿Nuevo en contribuir al código abierto? Sigue esta guía paso a paso 
+            ¿Nuevo en contribuir al código abierto? Sigue esta guía paso a paso
             para hacer tu primer pull request exitosamente.
           </p>
-          
+
           <div className="pr-steps">
             {prSteps.map((step) => (
               <div key={step.step} className="pr-step">
@@ -545,10 +545,10 @@ export default function HacktoberFest() {
         <section className="pr-video">
           <h2>🎥 Explicación Detallada de Pull Requests</h2>
           <p className="video-intro">
-            Aprende paso a paso cómo crear y gestionar pull requests de manera efectiva. 
+            Aprende paso a paso cómo crear y gestionar pull requests de manera efectiva.
             Este video tutorial te guiará a través del proceso completo con ejemplos prácticos.
           </p>
-          
+
           <div className="video-container">
             <iframe
               width="100%"
@@ -561,7 +561,7 @@ export default function HacktoberFest() {
               className="youtube-player"
             ></iframe>
           </div>
-          
+
           <div className="video-description">
             <h3>¿Qué aprenderás en este video?</h3>
             <ul className="video-benefits">
@@ -585,88 +585,88 @@ export default function HacktoberFest() {
               <div className="partner-category">
                 <h3>Socios de Plataforma</h3>
                 <div className="ppartner-category">
-                <div className="partner-logos">
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="partner-link"
-                  >
-                    GitHub
-                  </a>
-                  <a 
-                    href="https://gitlab.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="partner-link"
-                  >
-                    GitLab
-                  </a>
-                  <a 
-                    href="https://education.github.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="partner-link"
-                  >
-                    GitHub Education
-                  </a>
-                  <a 
-                    href="https://bitbucket.org" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="partner-link"
-                  >
-                    Bitbucket
-                  </a>
-                  <a 
-                    href="https://sourceforge.net" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="partner-link"
-                  >
-                    SourceForge
-                  </a>
+                  <div className="partner-logos">
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="partner-link"
+                    >
+                      GitHub
+                    </a>
+                    <a
+                      href="https://gitlab.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="partner-link"
+                    >
+                      GitLab
+                    </a>
+                    <a
+                      href="https://education.github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="partner-link"
+                    >
+                      GitHub Education
+                    </a>
+                    <a
+                      href="https://bitbucket.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="partner-link"
+                    >
+                      Bitbucket
+                    </a>
+                    <a
+                      href="https://sourceforge.net"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="partner-link"
+                    >
+                      SourceForge
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="partner-category">
                 <h3>Organizaciones de la Comunidad</h3>
                 <div className="partner-logos">
-                  <a 
-                    href="https://cncf.io" 
-                    target="_blank" 
+                  <a
+                    href="https://cncf.io"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="partner-link"
                   >
                     Cloud Native Computing Foundation
                   </a>
-                  <a 
-                    href="https://opensource.org" 
-                    target="_blank" 
+                  <a
+                    href="https://opensource.org"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="partner-link"
                   >
                     Open Source Initiative
                   </a>
-                  <a 
-                    href="https://dev.to" 
-                    target="_blank" 
+                  <a
+                    href="https://dev.to"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="partner-link"
                   >
                     DEV Community
                   </a>
-                  <a 
-                    href="https://stackoverflow.com" 
-                    target="_blank" 
+                  <a
+                    href="https://stackoverflow.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="partner-link"
                   >
                     Stack Overflow
                   </a>
-                  <a 
-                    href="https://www.freecodecamp.org" 
-                    target="_blank" 
+                  <a
+                    href="https://www.freecodecamp.org"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="partner-link"
                   >
@@ -682,21 +682,21 @@ export default function HacktoberFest() {
         <section className="cta">
           <h2>¿Listo para Empezar a Contribuir?</h2>
           <p>
-            Únete a miles de desarrolladores en todo el mundo para hacer el código abierto mejor. 
+            Únete a miles de desarrolladores en todo el mundo para hacer el código abierto mejor.
             Tus contribuciones importan y ayudan a construir el futuro de la tecnología.
           </p>
           <div className="cta-actions">
-            <a 
-              href="https://hacktoberfest.com/" 
-              target="_blank" 
+            <a
+              href="https://hacktoberfest.com/"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
               Regístrate Ahora
             </a>
-            <a 
-              href="https://discord.gg/hacktoberfest" 
-              target="_blank" 
+            <a
+              href="https://discord.gg/hacktoberfest"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
             >
@@ -705,28 +705,28 @@ export default function HacktoberFest() {
           </div>
         </section>
         <section className="pr-guide">
-        <div className="pr-resources">
+          <div className="pr-resources">
             <h3>Recursos Adicionales</h3>
             <div className="resource-links">
-              <a 
-                href="https://www.youtube.com/watch?v=8MQN0U1AwgU" 
-                target="_blank" 
+              <a
+                href="https://www.youtube.com/watch?v=8MQN0U1AwgU"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="resource-link"
               >
                 📺 Video Tutorial Detallado de PR
               </a>
-              <a 
-                href="https://docs.github.com/en/pull-requests" 
-                target="_blank" 
+              <a
+                href="https://docs.github.com/en/pull-requests"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="resource-link"
               >
                 📚 Documentación de PR de GitHub
               </a>
-              <a 
-                href="https://opensource.guide/how-to-contribute/" 
-                target="_blank" 
+              <a
+                href="https://opensource.guide/how-to-contribute/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="resource-link"
               >

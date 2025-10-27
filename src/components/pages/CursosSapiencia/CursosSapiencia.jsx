@@ -54,7 +54,7 @@ export default function CursosSapiencia() {
     <MainLayout>
       <div className="cursos-sapiencia">
         <section className="intro">
-          <h1>Programa ESTUD-IA de Sapiencia 🎓</h1>
+          <h1 className="typewriter tw-long">Programa ESTUD-IA de Sapiencia 🎓</h1>
           {/*<p className="mensaje_importante">
             Te recomendamos la ruta Desarrollo Web Fullstack con React, Firebase y Javascript para la creación de páginas web
           </p>*/}

@@ -238,7 +238,7 @@ function OnlineEvents() {
   return (
     <MainLayout>
       <div className="online-events">
-        <h1>Online Events💻 </h1>
+        <h1 className='typewriter tw-medium'>Online Events💻 </h1>
         <div className="video-container">
           <div className="main-video">
             {isVideoLoading && <VideoSkeletonLoader />}
