@@ -70,7 +70,7 @@ h2 {
     --steps: 28;
 }
 
-/* Keyframes: typing animates width to var(--end) and blink changes caret visibility */
+
 @keyframes typing {
     from {
         width: 0;
@@ -80,7 +80,7 @@ h2 {
         width: var(--end, 20ch);
     }
 
-    /* fallback */
+    
 }
 
 @keyframes blink {
@@ -89,14 +89,14 @@ h2 {
     }
 }
 
-/* Opt-out: add class no-typewriter to a heading to skip animation */
+
 .no-typewriter {
     animation: none !important;
     width: auto !important;
     border-right: none !important;
 }
 
-/* Respect users who prefer reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
     .typewriter {
         animation: none !important;
