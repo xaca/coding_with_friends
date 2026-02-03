@@ -3,7 +3,7 @@ import MainLayout from "../../ui/MainLayout/MainLayout";
 import "./Cine.scss"; 
 
 function Cine() { 
-    const form_url = "https://forms.gle/KQUyQvfyu4qzZvQq9"; 
+    const form_url = "https://forms.gle/gBceMBFCi32bo5qw6"; 
     const [isLoading, setIsLoading] = useState(true); 
     const [loadError, setLoadError] = useState(false); 
 
