@@ -35,15 +35,16 @@ En esta charla/demo compartiré cómo he estado usando Cursor como entorno princ
 
 📽️ Película de la semana 🎉🍿
 
-Te invitamos a un nuevo evento de Coding with friends, en está oportunidad vamos a ver el estreno de la película "One Battle After Another"
+Te invitamos a un nuevo evento de Coding with friends, en está oportunidad vamos a ver el estreno de la película "Kill Bill: The Whole Bloody Affair
+Kill Bill"
 
 🎬 ¡No te lo pierdas!
 ¡Cordialmente invitados!
 
-🗓️ Fecha: 30 de julio 
-⏰ Hora: 6:00 PM
+🗓️ Fecha: 18 de febrero 
+⏰ Hora: 6:30 PM (Duración 4h 35 m)
 🌐 Website: https://codingwithfriends.club/#/cine
-📍 Lugar: Cinecolombia Centro Comercial Los Molinos
+📍 Lugar: Cinecolombia Centro Comercial Unicentro
 
 ℹ️ En el sitio web está toda la información para reservar tu entrada.
 
