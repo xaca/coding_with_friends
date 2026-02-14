@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2025-10-24T07:46:00Z",
+  "challenges": [
+    {
+      "id": 8,
+      "number": 8,
+      "title": "Implementar Toggle de Modo Oscuro",
+      "description": "Agregar un interruptor de modo oscuro/claro al sitio web con transiciones suaves y persistencia de preferencias del usuario.",
+      "state": "open",
+      "difficulty": "Fácil",
+      "points": 15,
+      "tags": ["UI/UX", "CSS", "JavaScript"],
+      "labels": ["Hacktoberfest", "good-first-issue"],
+      "url": "https://github.com/xaca/coding_with_friends/issues/8",
+      "assignee": "Sarachavez5",
+      "example": "Crear un botón toggle que cambie entre temas claro y oscuro con persistencia en localStorage",
+      "estimatedTime": "2-3 horas",
+      "category": "challenges"
+    }
+  ],
+  "vibecodersChallenges": [
+    {
+      "id": 23,
+      "number": 23,
+      "title": "Agregar Tu Nombre a Contribuidores",
+      "description": "Agrega tu nombre a nuestra lista de contribuidores para ser parte de la comunidad",
+      "state": "closed",
+      "difficulty": "Súper Fácil",
+      "time": "5 min",
+      "reward": "Insignia de Contribuidor",
+      "labels": ["Hacktoberfest", "hacktoberfest-accepted", "good-first-issue"],
+      "url": "https://github.com/xaca/coding_with_friends/issues/23",
+      "assignee": null,
+      "example": "Agregar tu nombre al archivo CONTRIBUTORS.md",
+      "category": "vibecoders"
+    }
+  ]
+}
