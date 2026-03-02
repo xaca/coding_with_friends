@@ -138,26 +138,19 @@ Programa ESTUD-IA de @SapienciaMed ofrece cursos 100% GRATUITOS en desarrollo we
 
 ## Última charla
 
-*Más allá del código: docencia y liderazgo*
+*¡CELEBREMOS EL DÍA DE LA MUJER EN DATASOUL!* 💜🚀
 
-🎤 Speakers:  Cristina Gómez Santamaría, Valen Ariza Gómez, Laura López Bedoya, Valeria Moreno Zapata
+Te invitamos a una edición especial de Coding with Friends para resaltar el liderazgo femenino en tecnología.
 
-DataSoul: ¡Hola! Somos Valen y Lau, creadoras y hosts de DataSoul Podcast, un espacio seguro para compartir experiencias trabajando en la industria tech, así como hablar de temas de los que poco se habla pero que todos enfrentamos en algún momento. 🌟
+🎙 *Episodio en vivo con:* Ana Isabel Oviedo
+🗓 *Fecha:* Jueves, 5 de marzo
+🕔 *Hora:* 5:00 PM - 8:00 PM
+📍 *Lugar:* Auditorio Ignacio Viera (Arquidiseño), UPB.
 
-En este episodio nos acompañará Cristina Gómez, DS Project Lead en Mercado Libre Colombia. Hablaremos sobre cómo las habilidades de docente pueden convertirse en una base sólida para el liderazgo de equipos. Nuestra invitada, nos contará su experiencia, retos y aprendizajes sobre trabajar en la academia y en la industria tech.
+Evento presencial y abierto a todo público. ¡Ven y conectemos con el talento que transforma el futuro! 👩‍💻✨
 
-¡No te pierdas este episodio en vivo!
-
-👩‍💻 Presencial, para todo público 👨‍💻
-
-🗓️ Fecha: 12 de Marzo 
-⏰ Hora: 17:00 - 20:00 
-🌐 Website: https://www.codingwithfriends.club 
-📍 Lugar: Auditorio Ignacio Viera bloque 10, UPB.
-
-¡Te invitamos a un nuevo evento! Participa de un evento de tecnología con contenido interesante y de vanguardia.
-
-Humanizing Tech: An Online Conversation with Bibiana Souza
+🌐 *Regístrate aquí:*
+https://codingwithfriends.club/#/charlas
 
 ## Recursos
 
