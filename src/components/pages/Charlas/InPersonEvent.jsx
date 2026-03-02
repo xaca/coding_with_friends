@@ -2,17 +2,21 @@ import About from "../../ui/About/About";
 import Agenda from "../../ui/Agenda/Agenda";
 import Register from "../../ui/Register/Register";
 import Speaker from "../../ui/Speaker/Speaker";
-import MainLayout from "../../ui/MainLayout/MainLayout";
+import Header from "../../ui/Header/Header";
+import Menu from "../../ui/Menu/Menu";
+import Footer from "../../ui/Footer/Footer";
 import Info from "../../ui/Info/Info";
 import PastEvent from "../../ui/PastEvent/PastEvent";
-import avatar_speaker_1 from "../../../assets/img/alonso.jpg";
-import avatar_speaker_2 from "../../../assets/img/speaker_02.jpg";
+import logo_evento from "../../../assets/img/logo_evento_datasoul.svg";
+import avatar_speaker_1 from "../../../assets/img/01_speaker.png";
+import avatar_speaker_2 from "../../../assets/img/02_speaker.png";
+import avatar_speaker_3 from "../../../assets/img/03_speaker.png";
 import fondo_derecha from "../../../assets/img/esquina_derecha.png";
 import fondo_izquierda from "../../../assets/img/cassete_izquierda.png";
 import disco_top from "../../../assets/img/disco_top.png";
 import disco_bottom from "../../../assets/img/disco_bottom.png";
-import logo_evento from "../../../assets/img/logo_talk.png";
-import talks_logo from "../../../assets/img/talks_logo.png";
+import datasoul_retrato from "../../../assets/img/datasoul_retrato.jpg";
+import datasoul_logo from "../../../assets/img/datasoul_logo.jpg";
 import "./events.scss";
 import "../../../css/speakers.scss";
 import "../../../css/lista.scss";
@@ -29,8 +33,8 @@ function DecoracionDerecha(){
         position:"absolute",
         right:0,
         top:0,
-        width:"525px",
-        height:"170px",
+        width:"567px",
+        height:"136px",
         zIndex: "-1",
         backgroundImage: `url(${fondo_derecha})`
     }
@@ -60,48 +64,62 @@ function DecoracionIzquierda(){
 
 function InPersonEvent(){
     return (<>
-            <DecoracionDerecha />
-            <DecoracionIzquierda />
-        <MainLayout logoPersonalizado={logo_evento}>
-            <section id="in_person_event">
-            <Info info={{
-                title:"Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código",
-            logo:talks_logo,
-            image:"",
-            date: `Jueves 23 de octubre de 2025`,
-            venue: `Auditorio Ignacio Viera`,
-            time: `05:30 - 8:00`,
-            youtube_url: "",
-            description: `En esta charla/demo compartiré cómo he estado usando Cursor como entorno principal para desarrollar aplicaciones full-stack. Durante los últimos 6 meses he reescrito proyectos completos mientras aprendía a acelerar el ciclo de feedback del agente para que trabaje de forma más autónoma y eficiente. Verás en vivo cómo estructuro un flujo de trabajo con que va más allá del autocomplete, y cerraré con 3 aprendizajes clave sobre por qué este enfoque realmente funciona.`
-            }} />
-            <About />
-            <Register />
-            <img src={disco_top} alt="Disco top" />
-            <Agenda />
-            <section id="speakers">
-            <h1>Biografías</h1>
-            <section>
+        <section id="in_person_event">
+        <DecoracionDerecha />
+        <DecoracionIzquierda />
+        <Header logoPersonalizado={logo_evento} />
+        <Menu />
+        <Info info={{
+            logo:datasoul_logo,
+            image:datasoul_retrato,
+            date: `Jueves 5 de marzo de 2026`,
+            venue: `Auditorio Ignacio Viera (Arquidiseño)`,
+            time: `17:00 - 20:00`
+        }} />
+        <About />
+        <Register />
+        <img src={disco_top} alt="Disco top" />
+        <Agenda />
+        <section id="speakers">
+        <h1>Biografías</h1>
+        <section>
             <Speaker speaker={{
-                name:"Alonso Suarez ",
+                name:"Valen Ariza Gómez",
                 avatar:avatar_speaker_1,
                 handles:[
-                    {id:0, url:"https://ca.linkedin.com/in/alonsosuarez"},
-                    {id:2, url:"https://github.com/alonch"}
+                    {id:0, url:"https://www.linkedin.com/in/valearizag/"},
+                    {id:1, url:"https://www.instagram.com/valearizag/"}
+                ],
+                is_alumni:true,
+                graduation_year:2020,
+                description:`Ingeniera en telecomunicaciones por profesión e ingeniera de datos por pasión, con +3 años de experiencia. Cuenta con habilidades para la construcción de pipelines (ETL) automatizadas mediante implementaciones end-to-end basadas en datos. Es capaz de entender las necesidades de sus clientes y a partir de ahí ha diseñado y aprovisionado arquitecturas en Microsoft Azure costo-eficientes. También cuenta con experiencia en Gobierno de datos relacionado con el framework DAMA usando la herramienta Microsoft Purview.`
+            }} />
+            <Speaker speaker={{
+                name:"Laura López Bedoya",
+                avatar:avatar_speaker_2,
+                handles:[
+                    {id:0, url:"https://www.linkedin.com/in/lauralpezb/"},
+                    {id:1, url:"https://www.instagram.com/lauralpezb/"}
+                ],
+                is_alumni:true,
+                graduation_year:2019,
+                description:`Científico de datos. Estoy interesado en la comprensión y aplicación del aprendizaje automático y el análisis de datos para generar conocimientos y soluciones valiosas.`
+            }} />
+            <Speaker speaker={{
+                name:"Ana Isabel Oviedo",
+                avatar:avatar_speaker_3,
+                handles:[
+                    {id:0, url:"https://www.linkedin.com/in/ana-isabel-oviedo-carrascal-88808944/"},
                 ],
                 is_alumni:false,
-                graduation_year:0,
-                description:`I'm someone who's lucky enough to genuinely love what I do. My journey with tech started back in high school, running my cousin’s cybercafé—hacking around with host files and connecting to pirate game servers (for educational purposes, of course 😅).
-                
-                These days, I’m focused on rethinking how we work. I believe a lot of the systems we rely on were designed for a different era—and I’m curious: how would we solve those same problems if we had today’s tools and knowledge?
-                
-                Outside of work, I’m a proud dad of two 👨‍👩‍👧‍👧, a maker at heart 🛠—currently combining electronics and wood—and I dream of a future where building software feels like snapping LEGO blocks together 🌈.`
-            }} />                    
-            </section>
-            </section> 
-            <img src={disco_bottom} alt="Disco bottom"  />
-            {/*<PastEvent />*/}
-            </section>
-        </MainLayout>
+                description:`PhD. Investigadora, Consultora y Docente con experiencia en proyectos de Ciencia de Datos. Áreas de interés en Analítica de datos, Minería de Datos, Aprendizaje de Máquinas, Procesamiento multimedia e Inteligencia Artificial. `
+            }} />            
+        </section>
+        </section> 
+        <img src={disco_bottom} alt="Disco bottom"  />
+        <PastEvent />
+    </section>
+    <Footer />
     </>);
 }
 export default InPersonEvent;

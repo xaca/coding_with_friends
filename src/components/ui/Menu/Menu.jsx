@@ -10,10 +10,10 @@ function Menu(){
     <nav className="menu">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/charlas">Charlas</NavLink>
-        <NavLink to="/cine">Cine</NavLink>
         <NavLink to="/online-events">Online</NavLink>
+        {/* <NavLink to="/cine">Cine</NavLink>
         <NavLink to="/cursos-sapiencia">Cursos Sapiencia</NavLink>
-        <NavLink to="/hacktoberfest">HacktoberFest</NavLink>
+        <NavLink to="/hacktoberfest">HacktoberFest</NavLink> */}
         <NavLink to="/frases-motivacionales">Frases Motivacionales</NavLink>
         {/*<NavLink to="/deportes">Deportes</NavLink>*/}
         <button className="theme-toggle" aria-label="Toggle dark mode" onClick={toggleTheme}>

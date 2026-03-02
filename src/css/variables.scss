@@ -1,50 +1,88 @@
 :root{
-    --color-titulos: #1c2506; 
-    --color-texto: #222222; 
-    --color-boton: #f2f2f2; 
-    --color-texto-boton: #242424;
-    --color-borde-tarjetas: #e6e6e6;
-    --color-lista-par: #f5f5f5;
-    --color-lista-texto-par: #242424;
-    --color-lista-impar: #ffffff;
-    --color-lista-texto-impar: #242424;
-    --color-fondo:#ffffff; 
-    --color-enlaces_menu: #011204;
-    --color-enlaces_general: #242424;
-    --color-pata: #1f2937; 
-    --color-texto-pata: #F2F2F0;
-    --color-sombra: #24242420;
-    --color-fecha: #6b7280;
-    --color-fondo-destacado: #f7f7f7;
+    /* Colores neutros base - Light Theme */
+    --color-fondo: #FFFFFF;
+    --color-textura-1: #F9FAFB;
+    --color-textura-2: #F3F4F6;
+    --color-textura-3: #E5E7EB;
+    --color-texto: #1F2937;
+    --color-titulos: #111827;
+    --color-subtitulos: #4B5563;
+    --color-texto-secundario: #6B7280;
+    --color-sombra: #00000010;
+    --color-sombra-media: #00000020;
+    
+    /* Componentes de interfaz */
+    --color-boton: #F3F4F6;
+    --color-texto-boton: #1F2937;
+    --color-boton-hover: #E5E7EB;
+    --color-boton-activo: #D1D5DB;
+    --color-borde-tarjetas: #E5E7EB;
+    --color-borde-input: #D1D5DB;
+    
+    /* Elementos de lista */
+    --color-lista-par: #F9FAFB;
+    --color-lista-texto-par: #1F2937;
+    --color-lista-impar: #FFFFFF;
+    --color-lista-texto-impar: #1F2937;
+    
+    /* Elementos específicos */
+    --color-enlaces_menu: #111827;
+    --color-enlaces_general: #1F2937;
+    --color-pata: #1F2937;
+    --color-texto-pata: #F9FAFB;
+    --color-fecha: #6B7280;
+    --color-fondo-destacado: #F3F4F6;
     --color-destacado: #111827;
-    --color-home:#d3e3b9;
-    --color-frase:#516300;
-    --color-fondo-cine:#ffffff;
-    --color-fondo-menu:#b6cb15;
+    
+    /* Colores heredados (ajustados al tema neutro) */
+    --color-home: #E5E7EB;
+    --color-frase: #4B5563;
+    --color-fondo-cine: #FFFFFF;
+    --color-fondo-menu: #F3F4F6;
+    
+    /* Transiciones suave */
     --transition-theme: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
   }
 
 [data-theme="dark"]{
-    --color-titulos: #DDED63; 
-    --color-texto: #A6A39F; 
-    --color-boton: #242424; 
-    --color-texto-boton: #A6A39F;
-    --color-borde-tarjetas: #2f2f2f;
-    --color-lista-par: #403D38;
-    --color-lista-texto-par: #F2F2F0;
-    --color-lista-impar: #242424;
-    --color-lista-texto-impar: #ffffff;
-    --color-fondo:#090A0A; 
-    --color-enlaces_menu: #011204;
-    --color-enlaces_general: #F2F2F0;
-    --color-pata: #111111; 
-    --color-texto-pata: #F2F2F0;
-    --color-sombra: #F2F2F0;
-    --color-fecha: #9ca3af;
-    --color-fondo-destacado: #111111;
-    --color-destacado: #F2F2F0;
-    --color-home:#090A0A;
-    --color-frase:#DDED63;
-    --color-fondo-cine:#d3e3b9;
-    --color-fondo-menu:#b6cb15;
+    /* Colores neutros base - Dark Theme */
+    --color-fondo: #0F172A;
+    --color-textura-1: #1E293B;
+    --color-textura-2: #334155;
+    --color-textura-3: #475569;
+    --color-texto: #E2E8F0;
+    --color-titulos: #F8FAFC;
+    --color-subtitulos: #CBD5E1;
+    --color-texto-secundario: #94A3B8;
+    --color-sombra: #00000040;
+    --color-sombra-media: #00000060;
+    
+    /* Componentes de interfaz */
+    --color-boton: #1E293B;
+    --color-texto-boton: #E2E8F0;
+    --color-boton-hover: #334155;
+    --color-boton-activo: #475569;
+    --color-borde-tarjetas: #334155;
+    --color-borde-input: #475569;
+    
+    /* Elementos de lista */
+    --color-lista-par: #1E293B;
+    --color-lista-texto-par: #E2E8F0;
+    --color-lista-impar: #0F172A;
+    --color-lista-texto-impar: #F8FAFC;
+    
+    /* Elementos específicos */
+    --color-enlaces_menu: #F8FAFC;
+    --color-enlaces_general: #E2E8F0;
+    --color-pata: #0A0F1C;
+    --color-texto-pata: #E2E8F0;
+    --color-fecha: #94A3B8;
+    --color-fondo-destacado: #1E293B;
+    --color-destacado: #F8FAFC;
+    
+    /* Colores heredados (ajustados al tema neutro) */
+    --color-home: #0F172A;
+    --color-frase: #E2E8F0;
+    --color-fondo-cine: #1E293B;
+    --color-fondo-menu: #334155;
   }

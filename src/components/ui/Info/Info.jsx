@@ -24,7 +24,7 @@ function Intro({info}){
           <span>Fecha:</span> {info.date}</p>
         <br />
         <div>
-          {info.youtube_url === "" ? (
+          {!info.youtube_url ? (
             <div>
               <p>
                 El evento se realizará en el campus laureles de la Universidad Pontificia Bolivariana de Medellín (clic <a href="https://www.upb.edu.co/es/universidad/nuestro-campus/campus-medellin/laureles/como-llegar" target="_blank">aquí</a> para ver como llegar).
