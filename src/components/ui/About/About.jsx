@@ -10,6 +10,8 @@ function About(){
       </p><br />
       <span className="mensaje_importante">Espera proximamente más eventos</span>
     </section>
+    <h2>Evento pasado</h2>
+    <iframe width="80%" height="480" src="https://www.youtube.com/embed/XYA13AytL2A?si=DSQnjahj-TCcBTJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </>);
 }
 

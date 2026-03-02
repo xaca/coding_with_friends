@@ -105,6 +105,22 @@ div {
     background: var(--color-texto-boton);
     color: var(--color-boton);
 }
+
+/* Global link styles with theme variables */
+a {
+    color: var(--color-enlaces_general);
+    text-decoration: none;
+    transition: color var(--transition-theme);
+}
+a:visited {
+    color: var(--color-enlaces_general);
+}
+a:hover,
+a:focus {
+    color: var(--color-enlaces_general);
+    text-decoration: underline;
+}
+
 .fecha{
     color: var(--color-texto);
 }

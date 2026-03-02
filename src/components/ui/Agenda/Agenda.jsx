@@ -13,17 +13,14 @@ function Agenda() {
       </li>
       <li className="item">
         <span>[18:00 - 19:00]</span>
-        <span>Construyendo Full-Stack con Cursor: Un Nuevo Paradigma de Colaboración con tu Agente de Código</span>
+        <span>Episodio en vivo DataSoul Podcast </span>
         <span className="speaker">
-          / Alonso Suarez
+          / Ana Isabel Oviedo
         </span>
       </li>
       <li className="item">
         <span>[19:10 - 20:00]</span> 
-        <span>Repositorio review - Participantes que esten en busqueda de empleo como full-stack developers</span> 
-        <span className="speaker">
-          Realsense Solutions - Canadá 🇨🇦 
-        </span>
+        <span>Rifas, networking y foto del evento</span> 
       </li>
     </ul>
     <br />
