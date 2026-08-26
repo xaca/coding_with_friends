@@ -1,0 +1,204 @@
+name: Sync GitHub Issues to JSON
+
+on:
+    # Ejecutar diariamente a las 6:00 AM UTC
+    schedule:
+        - cron: "0 6 * * *"
+
+    # Ejecutar cuando se cree, edite o cierre un issue
+    issues:
+        types:
+            [
+                opened,
+                edited,
+                closed,
+                reopened,
+                labeled,
+                unlabeled,
+                assigned,
+                unassigned,
+            ]
+
+    # Permitir ejecución manual
+    workflow_dispatch:
+
+jobs:
+    sync-issues:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write # para actualizar el archivo
+            issues: read # para leer los issues
+            pull-requests: read # filtrar correctamente
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # necesario para commits automáticos confiables
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Generate Issues JSON
+              id: generate
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const fs = require('fs');
+                      const path = require('path');
+
+                      const { owner, repo } = context.repo;
+
+                      console.log('🔍 Fetching issues from repository...');
+
+                      // Fetch all open issues (excluding PRs)
+                      const { data: issues } = await github.rest.issues.listForRepo({
+                        owner,
+                        repo,
+                        state: "open",
+                        per_page: 100,
+                        sort: "created",
+                        direction: "desc",
+                      });
+
+                      const filteredIssues = issues.filter(issue => !issue.pull_request);
+                      console.log(`✅ Found ${filteredIssues.length} open issues`);
+
+                      // Helper function to parse issue body for metadata
+                      function parseIssueMetadata(body) {
+                        if (!body) return {};
+                        
+                        const metadata = {
+                          difficulty: null,
+                          points: null,
+                          tags: [],
+                          example: null,
+                          estimatedTime: null
+                        };
+
+                        // Parse Dificultad
+                        const difficultyMatch = body.match(/[•\-]\s*Dificultad:\s*(.+)/i);
+                        if (difficultyMatch) {
+                          metadata.difficulty = difficultyMatch[1].trim();
+                        }
+
+                        // Parse Puntos
+                        const pointsMatch = body.match(/[•\-]\s*Puntos:\s*(\d+)/i);
+                        if (pointsMatch) {
+                          metadata.points = parseInt(pointsMatch[1], 10);
+                        }
+
+                        // Parse Tecnologías/Tags
+                        const tagsMatch = body.match(/[•\-]\s*Tecnolog[íi]as?:\s*(.+)/i);
+                        if (tagsMatch) {
+                          metadata.tags = tagsMatch[1].split(',').map(tag => tag.trim());
+                        }
+
+                        // Parse Tiempo estimado
+                        const timeMatch = body.match(/[•\-]\s*Tiempo estimado:\s*(.+)/i);
+                        if (timeMatch) {
+                          metadata.estimatedTime = timeMatch[1].trim();
+                        }
+
+                        // Parse Example (from Ejemplo de Implementación section)
+                        const exampleMatch = body.match(/##\s*Ejemplo de Implementación\s*\n+(.+?)(?:\n\n|$)/is);
+                        if (exampleMatch) {
+                          metadata.example = exampleMatch[1].trim();
+                        }
+
+                        return metadata;
+                      }
+
+                      // Helper function to determine category based on labels and issue number
+                      function determineCategory(issue) {
+                        const issueNumber = issue.number;
+                        
+                        // Issues 23-31 are vibecoders challenges (based on your component data)
+                        if (issueNumber >= 23 && issueNumber <= 31) {
+                          return 'vibecoders';
+                        }
+                        
+                        // Issues 8-22 are main challenges
+                        if (issueNumber >= 8 && issueNumber <= 22) {
+                          return 'challenges';
+                        }
+
+                        // Default to challenges for new issues
+                        return 'challenges';
+                      }
+
+                      // Process each issue
+                      const challenges = [];
+                      const vibecodersChallenges = [];
+
+                      for (const issue of filteredIssues) {
+                        const metadata = parseIssueMetadata(issue.body);
+                        const category = determineCategory(issue);
+
+                        const processedIssue = {
+                          id: issue.number,
+                          number: issue.number,
+                          title: issue.title,
+                          description: issue.body ? issue.body.split('\n')[0].replace(/^#+\s*/, '').trim() : '',
+                          state: issue.state,
+                          difficulty: metadata.difficulty,
+                          points: metadata.points,
+                          tags: metadata.tags,
+                          labels: issue.labels.map(l => l.name),
+                          url: issue.html_url,
+                          assignee: issue.assignee ? issue.assignee.login : null,
+                          example: metadata.example,
+                          estimatedTime: metadata.estimatedTime,
+                          category: category,
+                          createdAt: issue.created_at,
+                          updatedAt: issue.updated_at
+                        };
+
+                        // Separate into categories
+                        if (category === 'vibecoders') {
+                          // For vibecoders, use 'time' instead of 'estimatedTime'
+                          processedIssue.time = metadata.estimatedTime;
+                          processedIssue.reward = `Reto completado`; // Default reward
+                          vibecodersChallenges.push(processedIssue);
+                        } else {
+                          challenges.push(processedIssue);
+                        }
+                      }
+
+                      // Create final JSON structure
+                      const issuesData = {
+                        lastUpdated: new Date().toISOString(),
+                        totalChallenges: challenges.length,
+                        totalVibecoders: vibecodersChallenges.length,
+                        challenges: challenges.sort((a, b) => a.number - b.number),
+                        vibecodersChallenges: vibecodersChallenges.sort((a, b) => a.number - b.number)
+                      };
+
+                      // Write to file
+                      const filePath = path.join(process.cwd(), 'public', 'issues.json');
+                      fs.writeFileSync(filePath, JSON.stringify(issuesData, null, 2));
+
+                      console.log(`✅ Generated issues.json with ${challenges.length} challenges and ${vibecodersChallenges.length} vibecoders challenges`);
+                      console.log(`📝 File written to: ${filePath}`);
+
+            - name: Commit and Push changes
+              run: |
+                  git config user.name "GitHub Action Bot"
+                  git config user.email "action@github.com"
+
+                  if [ ! -f public/issues.json ]; then
+                    echo "⚠️ El archivo issues.json no existe, abortando commit."
+                    exit 0
+                  fi
+
+                  git add public/issues.json
+
+                  if git diff --cached --quiet; then
+                    echo "ℹ️ No hay cambios detectados. Nada que commitear."
+                  else
+                    echo "✅ Cambios detectados, enviando actualización..."
+                    git commit -m "ci: actualizar issues.json desde GitHub Issues [skip ci]"
+                    git push
+                  fi
