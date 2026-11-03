@@ -6,7 +6,7 @@ import { ThemeProvider } from './components/ui/Theme/ThemeProvider'
 // Render the main Router inside StrictMode for development checks
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider>
+    <ThemeProvider> 
       <Router />
     </ThemeProvider>
   </StrictMode>,
