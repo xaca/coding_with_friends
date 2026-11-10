@@ -1,32 +1,73 @@
 [
     {
         "id": 1,
-        "titulo": "Taller de Tailwind CSS v4",
-        "descripcion": "Aprende las novedades y mejores prácticas para dominar Tailwind CSS v4 en tus proyectos web.",
+        "etiqueta": "CHARLA ONLINE · UPB",
+        "titulo": "Prepárate para conseguir el trabajo que sueñas",
+        "facilitador": "Luisa Fernanda Chica",
+        "rol": "Directora de crecimiento",
+        "fecha": "2026-09-10",
+        "horaInicio": "17:00",
+        "horaFin": "18:00",
         "tipo": "online",
-        "fecha": "15 de Octubre, 2026",
-        "hora": "18:00 hrs",
-        "imagen": "https://via.placeholder.com/200x200",
-        "enlace": "https://ejemplo.com/registro-tailwind"
+        "enlace": "https://us02web.zoom.us/meeting/register/uhKszAaVR-e7EE1k22UNeA"
     },
     {
         "id": 2,
-        "titulo": "Meetup de Desarrolladores",
-        "descripcion": "Encuentro presencial para compartir experiencias, hacer networking y discutir sobre el futuro del software.",
-        "tipo": "presencial",
-        "fecha": "22 de Octubre, 2026",
-        "hora": "19:30 hrs",
-        "imagen": "https://via.placeholder.com/200x200",
-        "enlace": "https://ejemplo.com/meetup-devs"
+        "etiqueta": "CHARLA ONLINE · UPB",
+        "titulo": "App móviles: arquitecturas modernas",
+        "facilitador": "Darry Morales",
+        "rol": "Arquitecto de soluciones Mobile",
+        "fecha": "2026-09-15",
+        "horaInicio": "17:00",
+        "horaFin": "18:00",
+        "tipo": "online",
+        "enlace": "https://us02web.zoom.us/meeting/register/cUl3DEchRqCwPX0cvQ6jCg"
     },
     {
         "id": 3,
-        "titulo": "Meetup de Desarrolladores",
-        "descripcion": "Encuentro presencial para compartir experiencias, hacer networking y discutir sobre el futuro del software.",
-        "tipo": "presencial",
-        "fecha": "22 de Octubre, 2026",
-        "hora": "19:30 hrs",
-        "imagen": "https://via.placeholder.com/200x200",
-        "enlace": "https://ejemplo.com/meetup-devs"
+        "etiqueta": "PRESENCIAL · CUPOS LIMITADOS",
+        "titulo": "Visita estudiantes UPB a Pragma",
+        "lugar": "Sede Pragma - Edificio SELF",
+        "direccion": "Carrera 42 # 5 sur 47, piso 16, Medellín",
+        "fecha": "2026-09-17",
+        "horaInicio": "10:00",
+        "horaFin": "12:00",
+        "tipo": "presencial"
+    },
+    {
+        "id": 4,
+        "etiqueta": "CHARLA ONLINE · UPB",
+        "titulo": "Monitoreo y Observabilidad",
+        "facilitador": "Walter Armando Llano Suárez",
+        "rol": "Arquitecto CloudOps",
+        "fecha": "2026-09-22",
+        "horaInicio": "17:00",
+        "horaFin": "18:00",
+        "tipo": "online",
+        "enlace": "https://us02web.zoom.us/meeting/register/ooXIvjegSEGNWEsX0yL4IQ"
+    },
+    {
+        "id": 5,
+        "etiqueta": "CHARLA ONLINE · UPB",
+        "titulo": "Bases UX/UI para desarrolladores",
+        "facilitador": "Andrés Sucerquia",
+        "rol": "Analista profesional",
+        "fecha": "2026-10-06",
+        "horaInicio": "17:00",
+        "horaFin": "18:00",
+        "tipo": "online",
+        "enlace": "https://us02web.zoom.us/meeting/register/wKwpF0rxQTeYPE4a_WQhqw"
+    },
+    {
+        "id": 6,
+        "etiqueta": "CHARLA ONLINE · UPB",
+        "titulo": "Diseñando experiencias centradas en el usuario",
+        "facilitador": "Andrea Rojo",
+        "rol": "Analista profesional",
+        "fecha": "2026-10-15",
+        "horaInicio": "17:00",
+        "horaFin": "18:00",
+        "tipo": "online",
+        "enlace": "https://us02web.zoom.us/meeting/register/agqfXqExRKygDji4tuMN2w"
     }
 ]
