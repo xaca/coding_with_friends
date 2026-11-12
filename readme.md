@@ -36,6 +36,35 @@ los **próximos** de los **pasados** según la fecha y hora de finalización.
 - Campos opcionales: `facilitador`, `rol`, `lugar`, `direccion`, `horaFin`, `enlace`, `textoBoton`.
 - `tipo` puede ser `online` o `presencial`. Si no hay `textoBoton`, se usa "Mirar online" o "Registrarme".
 
+## Torneos estudiantiles (página Deportes)
+
+La página [Deportes](https://codingwithfriends.club/#/deportes) muestra los torneos de voleibol y baloncesto de la comunidad.
+Todo se alimenta de `public/torneos.json`: el organizador solo registra los equipos y los marcadores, y la página calcula sola:
+
+- **Tabla de posiciones** de la fase de grupos, con los puntos oficiales de cada deporte (voleibol FIVB: 3 por ganar 3-0 o 3-1, 2 por ganar 3-2 y 1 por perder 2-3; baloncesto FIBA: 2 por victoria y 1 por derrota). Desempata por victorias y diferencia.
+- **Fase final** (semifinales y final) y el **campeón**.
+- **Calendario** de próximos partidos y resultados.
+
+```json
+{
+    "id": "voleibol-2026-2",
+    "nombre": "Interfacultades CWF de Voleibol 2026-2",
+    "deporte": "voleibol",
+    "lugar": "Coliseo UPB, bloque 21",
+    "equipos": [
+        { "id": "sistemas", "nombre": "Ing. de Sistemas", "color": "#6CA300" }
+    ],
+    "partidos": [
+        { "id": 1, "fase": "grupos", "fecha": "2026-10-27", "hora": "17:00", "local": "sistemas", "visitante": "diseno", "marcador": [3, 1] },
+        { "id": 9, "fase": "final", "fecha": "2026-11-24", "hora": "17:30" }
+    ]
+}
+```
+
+- `deporte`: `voleibol` o `baloncesto`. `fase`: `grupos`, `semifinal` o `final`.
+- `marcador` va en sets para voleibol y en puntos para baloncesto. Un partido sin `marcador` aparece como próximo.
+- Los equipos de semifinal y final se escriben cuando se conocen; mientras tanto se muestran como "Por definir".
+
 ## Mensaje para compartir en WhatsApp
 
 (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)
