@@ -8,6 +8,34 @@ Para hacer el despliegue, correr el comando
 npm run cwf
 ```
 
+## Publicar eventos en la agenda
+
+La sección [Eventos](https://codingwithfriends.club/#/eventos) se alimenta de `public/eventos.json`.
+Para publicar un evento basta con agregar un objeto a ese archivo; la página separa sola
+los **próximos** de los **pasados** según la fecha y hora de finalización.
+
+```json
+{
+    "id": 7,
+    "etiqueta": "PRESENCIAL · UPB",
+    "titulo": "Nombre del evento",
+    "facilitador": "Nombre del speaker",
+    "rol": "Cargo del speaker",
+    "lugar": "Auditorio Ignacio Viera, bloque 10",
+    "direccion": "UPB, Medellín",
+    "fecha": "2026-12-03",
+    "horaInicio": "17:00",
+    "horaFin": "20:00",
+    "tipo": "presencial",
+    "enlace": "https://enlace-de-registro",
+    "textoBoton": "Registrarme"
+}
+```
+
+- `fecha` va en formato `AAAA-MM-DD` y las horas en formato 24 h (`HH:MM`).
+- Campos opcionales: `facilitador`, `rol`, `lugar`, `direccion`, `horaFin`, `enlace`, `textoBoton`.
+- `tipo` puede ser `online` o `presencial`. Si no hay `textoBoton`, se usa "Mirar online" o "Registrarme".
+
 ## Torneos estudiantiles (página Deportes)
 
 La página [Deportes](https://codingwithfriends.club/#/deportes) muestra los torneos de voleibol y baloncesto de la comunidad.
@@ -77,7 +105,7 @@ Te invitamos a un nuevo evento de Coding with Friends. En esta oportunidad nos r
 ## Cursos Sapiencia - Programa ESTUD-IA
 
 ╔══════════════════════════════════════════════════════════════╗
-║  (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)                  ╚══════════════════════════════════════════════════════════════╝
+║  (◕‿◕) ℂ𝕠𝕕𝕚𝕟𝕘 𝕨𝕚𝕥𝕙 𝕗𝕣𝕚𝕖𝕟𝕕𝕤 (•◡•)                  ╚═════════════════════════════════════════════════════════════╝
 
 🎓✨ *¡OPORTUNIDAD ÚNICA DE FORMACIÓN GRATUITA!* ✨📚
 
@@ -103,7 +131,7 @@ Te invitamos a participar en el programa ESTUD-IA de Sapiencia, donde podrás ac
 ╔══════════════════════════════════════════════════════════════╗
 ║  ¡NO DEJES PASAR ESTA OPORTUNIDAD DE CRECER PROFESIONALMENTE!  ║
 ║                           🎯💪🚀                              ║
-╚══════════════════════════════════════════════════════════════╝
+╚════════════════════════════════════════════════════════════╝
 
 ## HacktoberFest 2025
 
