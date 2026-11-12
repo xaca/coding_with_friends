@@ -178,6 +178,21 @@ Evento presencial y abierto a todo público. ¡Ven y conectemos con el talento q
 🌐 *Regístrate aquí:*
 https://codingwithfriends.club/#/charlas
 
+## Formulario de Call for Speakers
+
+El botón "Postula tu charla" del slider enlaza al formulario de Google Forms configurado en la constante `FORM_CHARLA_URL` de `src/components/ui/Slider/Slider.jsx`.
+
+> **Importante:** el formulario actualmente es propiedad de una cuenta personal. Para que la comunidad y el profesor conserven acceso a las respuestas a largo plazo, se recomienda transferir la propiedad a la cuenta institucional del profesor antes de finalizar el semestre.
+
+Pasos para transferirlo:
+
+1. Abrir el formulario en Google Drive.
+2. Compartir → Transferir propiedad.
+3. Elegir la cuenta institucional del profesor y confirmar.
+4. Verificar que el profesor pueda ver las respuestas.
+
+El enlace del formulario no cambia al transferir la propiedad, por lo que `FORM_CHARLA_URL` sigue funcionando. Solo si se crea un formulario nuevo hay que actualizar esa constante.
+
 ## Recursos
 
 - [Plantilla tabla de posiciones](https://codepen.io/xaca/pen/jbYEJL)
@@ -189,6 +204,7 @@ https://codingwithfriends.club/#/charlas
 - Agregar una sección que se llame Instagram, con el feed de las últimas publicaciones de CWF en Instagram
 - Call for speakers al correo (google forms + gap + google docs mail) 
     - Diseñar el call for speakers
+    - Transferir la propiedad del formulario a la cuenta institucional del profesor
     - Progamación usando Google App Script
 - Agregar traducción al inglés con [Polyglot de Airbnb](https://airbnb.io/polyglot.js/)
 
